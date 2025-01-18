@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
 import { MdLocationOn, MdPhone } from 'react-icons/md';
@@ -38,10 +39,11 @@ export function Footer() {
           
           {/* Seção de TW Elements */}
           <div>
+            <Link href='/'>
 <picture className="flex justify-center md:justify-start" >
     <img src="/logo.png" alt="" className="w-64 lg:w-full" />
 </picture>
-
+</Link>
 
             <p className='mt-6 tracking-wide'>
             Há mais de 10 anos especializada em soluções tecnológicas para o ramo imobiliário.
@@ -107,7 +109,7 @@ export function Footer() {
   <p className="mb-4 flex items-center justify-center md:justify-start">
     <span className="me-3">
       {/* Ícone de E-mail (Escuro) */}
-      <MdEmail size={20} className="text-black" />
+      <MdEmail size={20} />
     </span>
     <a href="mailto:info@example.com" className="">
       faleconosco@nido.com.br

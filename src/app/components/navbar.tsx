@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { MdPhone } from "react-icons/md";
-import { FaBars, FaFacebookF, FaInstagram, FaLinkedinIn, FaChevronDown, FaTimes } from "react-icons/fa";
+import { FaBars, FaFacebookF, FaInstagram, FaLinkedinIn, FaChevronDown, FaTimes, FaWhatsapp } from "react-icons/fa";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,31 +30,33 @@ export function Navbar() {
       {/* Navbar */}
       <nav className="bg-white mx-auto max-w-screen-xl">
         {/* Top Section - Logo, Contact and SAC */}
-        <div className="flex items-center justify-between p-4">
+        <div className="flex items-center justify-between p-4 gap-4">
           {/* Logo */}
           <div className="flex items-center space-x-4">
+            <Link href='/'>
             <picture>
-            <img src="/logo.png" alt="Logo" className="h-12 sm:h-16" />
+            <img src="/logo-nido-porto.png" alt="Logo" className="h-full sm:h-24" />
             </picture>
+            </Link>
           </div>
 
           {/* Desktop Phone and SAC */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Link href="tel:+551234567890">
+            <Link href="tel:+551145083724">
               <p className="text-gray-800 hover:text-sky-500 ">
                 <MdPhone className="inline-block mr-2" size={18} />
-                +55 12 3456-7890
+                (11) 4508-3724
               </p>
             </Link>
-            <Link href="tel:+551234567891">
+            <Link href="https://wa.me/5511953052059" target="_blank">
               <p className="text-gray-800 hover:text-sky-500">
-                <MdPhone className="inline-block mr-2" size={18} />
-                +55 12 3456-7891
+      <FaWhatsapp className="inline-block mr-2" size={20} />
+      (11) 95305-2059
               </p>
             </Link>
-            <button className="bg-blue-500 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-600">
-              SAC
-            </button>
+            <a href="http://portal.nido.com.br/index.php/site/login" target="_blank" className="bg-sky-500 text-white px-4 py-2 rounded-md text-sm hover:bg-sky-500/90">
+              Área do Cliente
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -70,10 +72,10 @@ export function Navbar() {
         {isMenuOpen && (
           <div className="lg:hidden bg-white absolute top-0 left-0 w-full h-screen flex flex-col p-6 space-y-6 shadow-lg z-50">
             {/* Close Button and Logo */}
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex justify-between items-center mb-6 gap-4">
               {/* Logo on the left */}
               <picture>
-              <img src="/logo.png" alt="Logo" className="h-12 sm:h-16" />
+              <img src="/logo-nido-porto.png" alt="Logo" className="h-full sm:h-24" />
               </picture>
 
               {/* Close Button on the right */}
@@ -123,18 +125,18 @@ export function Navbar() {
 
               {/* Contact Info and SAC */}
               <div className="mt-6">
-                <Link href="tel:+551234567890">
-                  <p className="text-gray-800 hover:text-sky-500">
-                    <MdPhone className="inline-block mr-2" size={18} />
-                    +55 12 3456-7890
-                  </p>
-                </Link>
-                <Link href="tel:+551234567891">
-                  <p className="text-gray-800 hover:text-sky-500">
-                    <MdPhone className="inline-block mr-2" size={18} />
-                    +55 12 3456-7891
-                  </p>
-                </Link>
+              <Link href="tel:+551145083724">
+              <p className="text-gray-800 hover:text-sky-500 ">
+                <MdPhone className="inline-block mr-2" size={18} />
+                (11) 4508-3724
+              </p>
+            </Link>
+                <Link href="https://wa.me/5511953052059" target="_blank">
+              <p className="text-gray-800 hover:text-sky-500 my-3">
+      <FaWhatsapp className="inline-block mr-2" size={20} />
+      (11) 95305-2059
+              </p>
+            </Link>
                 <div className="flex space-x-4 mt-4">
                   <Link href="https://facebook.com">
                     <FaFacebookF size={20} className="text-gray-800 hover:text-sky-500" />
@@ -146,9 +148,12 @@ export function Navbar() {
                     <FaLinkedinIn size={20} className="text-gray-800 hover:text-sky-500" />
                   </Link>
                 </div>
-                <button className="bg-blue-500 text-white px-4 py-2 rounded-md text-sm hover:bg-blue-600 mt-6">
-                  SAC
-                </button>
+                <div className="mt-6">
+                <Link href="http://portal.nido.com.br/index.php/site/login" className="bg-sky-500 text-white px-4 py-2 rounded-md text-sm hover:bg-sky-500/90">
+                  Área do Cliente
+                </Link>
+                </div>
+
               </div>
             </div>
           </div>
