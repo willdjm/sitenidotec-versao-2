@@ -1,10 +1,10 @@
 export function Cards() {
     return (
-      <div className="mx-auto max-w-screen-xl p-6">
+      <div className="mx-auto max-w-screen-xl p-6 mt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Card 1 */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="w-full h-36 overflow-hidden p-8 flex items-center justify-center">
+          <div className="bg-white border rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <div className="w-full h-40 overflow-hidden p-8 flex items-center justify-center">
               <picture>
                 <img
                   src="/logo_imovel.png"
@@ -27,8 +27,8 @@ export function Cards() {
           </div>
   
           {/* Card 2 */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="w-full h-36 overflow-hidden p-8 flex items-center justify-center">
+          <div className="bg-white border rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <div className="w-full h-40 overflow-hidden p-8 flex items-center justify-center">
               <picture>
                 <img
                   src="/logo-adm.png"
@@ -51,8 +51,8 @@ export function Cards() {
           </div>
   
           {/* Card 3 */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="w-full h-36 overflow-hidden p-8 flex items-center justify-center">
+          <div className="bg-white border rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <div className="w-full h-40 overflow-hidden p-8 flex items-center justify-center">
               <picture>
                 <img
                   src="/logo_sites.png"
@@ -75,8 +75,8 @@ export function Cards() {
           </div>
   
           {/* Card 4 */}
-          <div className="bg-white rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="w-full h-36 overflow-hidden p-8 flex items-center justify-center">
+          <div className="bg-white border rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
+            <div className="w-full h-40 overflow-hidden p-8 flex items-center justify-center">
               <picture>
                 <img
                   src="/logo-sistema-corretor.png"
