@@ -11,6 +11,10 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        sky: {
+          500: '#0071bc',
+        },
+
       },
     },
   },
