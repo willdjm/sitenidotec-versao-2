@@ -173,7 +173,7 @@ export function Navbar() {
           <Link href="/nidoadm">
             <p className="text-gray-800 hover:text-sky-500">NIDOAdm</p>
           </Link>
-          <Link href="/sites-imobiliarias">
+          <Link href="/sites-para-imobiliaria">
             <p className="text-gray-800 hover:text-sky-500">Sites para Imobiliárias</p>
           </Link>
           <Link href="/sistemas-corretores">
