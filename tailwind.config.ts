@@ -14,6 +14,9 @@ export default {
         sky: {
           500: '#0071bc',
         },
+        zinc: {
+          300: '#ececec',
+        },
 
       },
     },

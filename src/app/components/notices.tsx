@@ -1,4 +1,5 @@
-export function Notices() {
+export function Notices({ numNotices = 6 }) {
+    // Array com todas as notícias
     const news = [
       {
         title: 'How to use sticky note for problem solving',
@@ -36,17 +37,32 @@ export function Notices() {
         image: 'https://images.unsplash.com/photo-1624996379697-f01d168b1a52?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
         link: '#',
       },
+      {
+        title: 'The future of Artificial Intelligence',
+        date: '1 January 2025',
+        image: 'https://images.unsplash.com/photo-1573513137657-fc6887e4b788?ixid=MnwzMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=500',
+        link: '#',
+      },
+      {
+        title: 'How to grow your personal brand',
+        date: '12 December 2024',
+        image: 'https://images.unsplash.com/photo-1547457862-41da79a2b9d2?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg5OXwwfDF8c2VhY3J8Mnx8cGFydCUyMGJyYW5kfGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1080',
+        link: '#',
+      },
     ];
   
+    // Selecionando as últimas `numNotices` notícias
+    const latestNews = news.slice(0, numNotices);
+  
     return (
-      <section className="bg-white dark:bg-gray-900">
-        <div className="container px-6 py-10 mx-auto max-w-screen-xl">
+      <section className="bg-white dark:bg-gray-900 p-6">
+        <div className="container mx-auto max-w-screen-xl">
           <h1 className="text-2xl font-semibold text-sky-500 capitalize lg:text-2xl dark:text-white border-b-2 border-sky-500 dark:border-white/10">
             Últimas Notícias
           </h1>
   
           <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-            {news.map((item, index) => (
+            {latestNews.map((item, index) => (
               <div key={index} className="lg:flex group">
                 {/* Imagem clicável com hover */}
                 <a href={item.link} className="flex-shrink-0">

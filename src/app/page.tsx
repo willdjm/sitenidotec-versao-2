@@ -10,7 +10,7 @@ export default function Home() {
   <Navbar/>
   <Banner/>
   <Cards/>
-  <Notices/>
+  <Notices numNotices={6} />
   <Footer/>
 </main>
   );
