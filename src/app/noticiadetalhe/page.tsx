@@ -3,16 +3,17 @@ import { Cards } from "../components/cards";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
 import { NoticesList } from "../noticias/components/noticiasLista";
-import { About } from "./components/empresa";
+import { NoticiasDetalhes } from "./components/detalhe";
 
-export default function Empresa() {
+
+export default function NoticiaDetalhe() {
   return (
 <main>
   <Navbar/>
   <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg" imageText="Texto"/>
-  <About/>
-  <Cards/>
-  <NoticesList numNotices={3} showPagination={false}  />
+  <NoticiasDetalhes/>
+    <NoticesList numNotices={3} showPagination={false} title="Demais notícias" />
+    <Cards/>
   <Footer/>
 </main>
   );

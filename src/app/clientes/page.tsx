@@ -1,16 +1,17 @@
 import { BannerPages } from "../components/bannersPages";
-import { Cards } from "../components/cards";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
-import { SuporteTreinamento } from "./components/suporteTecnicoETreinamento";
+import { NoticesList } from "../noticias/components/noticiasLista";
+import { Clientes } from "./components/clientes";
 
-export default function SuporteTecnicoETreinamento() {
+export default function PageClientes() {
   return (
 <main>
   <Navbar/>
       <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg" imageText="Texto"/>
-  <SuporteTreinamento/>
-  <Cards/>
+  <Clientes/>
+
+  <NoticesList numNotices={3} showPagination={false}  />
   <Footer/>
 </main>
   );

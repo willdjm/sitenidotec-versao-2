@@ -15,9 +15,16 @@ interface NewsItem {
 interface NoticesProps {
   numNotices?: number;  // Número de notícias a serem exibidas
   showPagination?: boolean;  // Controla a exibição da paginação
+  title?: string;  // Título opcional para o <h1>
+  showTitle?: boolean;  // Controla a exibição do <h1>
 }
 
-export function Notices({ numNotices = 12, showPagination = true }: NoticesProps) {
+export function NoticesList({
+  numNotices = 12,
+  showPagination = true,
+  title = 'Últimas Notícias',
+  showTitle = true
+}: NoticesProps) {
   // O estado das notícias será baseado nos dados importados
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -34,9 +41,12 @@ export function Notices({ numNotices = 12, showPagination = true }: NoticesProps
   return (
     <section className="bg-white dark:bg-gray-900 p-6">
       <div className="container mx-auto max-w-screen-xl">
-        <h1 className="text-2xl font-semibold text-sky-500 capitalize lg:text-2xl dark:text-white border-b-2 border-sky-500 dark:border-white/10">
-          Últimas Notícias
-        </h1>
+        {/* Exibe o título h1 somente se showTitle for true */}
+        {showTitle && (
+          <h1 className="text-2xl font-semibold text-sky-500 capitalize lg:text-2xl dark:text-white border-b-2 border-sky-500 dark:border-white/10">
+            {title}
+          </h1>
+        )}
 
         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
           {currentNotices.map((item: NewsItem) => (
@@ -44,7 +54,7 @@ export function Notices({ numNotices = 12, showPagination = true }: NoticesProps
               <Link href={`/noticias/${item.id}`}>
                 <picture>
                   <img
-                    className="object-cover w-full h-56 lg:h-64 rounded-t-lg transform transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    className="rounded-t-lg transform transition-transform duration-300 ease-in-out group-hover:scale-105"
                     src={item.image}
                     alt={item.title}
                   />
@@ -58,10 +68,14 @@ export function Notices({ numNotices = 12, showPagination = true }: NoticesProps
                   </p>
                 </Link>
 
-                <span className="text-sm text-gray-500 dark:text-gray-300">{item.date}</span>
+                {/* Exibe um trecho do texto da notícia (limitando a 100 caracteres) */}
+                <p className="text-base text-gray-600 mt-2 dark:text-gray-200">
+                  {item.text.length > 100 ? `${item.text.slice(0, 70)}...` : item.text}
+                </p>
 
-                <p className="mt-2 text-gray-700 dark:text-gray-400 text-sm line-clamp-3">
-                  {item.text}
+                {/* Exibe a data da notícia */}
+                <p className="text-sm text-gray-500 mt-2 dark:text-gray-300">
+                  {item.date}
                 </p>
               </div>
             </div>

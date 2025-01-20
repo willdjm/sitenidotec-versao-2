@@ -7,12 +7,11 @@ interface BannerProps {
   mobileImage: string; // Caminho da imagem para mobile
   tabletImage: string; // Caminho da imagem para tablet
   desktopImage: string; // Caminho da imagem para desktop
-  imageText: string; // Texto que aparece sobre a imagem
 }
 
-export const BannerPages: React.FC<BannerProps> = ({ mobileImage, tabletImage, desktopImage, imageText }) => {
+export const BannerPages: React.FC<BannerProps> = ({ mobileImage, tabletImage, desktopImage }) => {
   return (
-    <div className="relative w-full h-96 lg:h-[30rem] overflow-hidden shadow-lg">
+    <div className="relative w-full h-80 lg:h-[30rem] overflow-hidden shadow-lg">
       {/* Imagens responsivas para diferentes tamanhos de tela */}
       <picture>
       <img
@@ -35,9 +34,10 @@ export const BannerPages: React.FC<BannerProps> = ({ mobileImage, tabletImage, d
         className="absolute top-0 left-0 w-full h-full object-cover hidden lg:block" // visível apenas em desktop
       />
       </picture>
-      <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-10 flex items-center justify-center">
+      {/* OPÇÃO DE TEXO NA IMAGEM */}
+      {/* <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-10 flex items-center justify-center">
         <h2 className="text-white text-3xl font-bold">{imageText}</h2>
-      </div>
+      </div> */}
     </div>
   );
 };

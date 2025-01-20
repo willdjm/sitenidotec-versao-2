@@ -1,8 +1,7 @@
 import { BannerPages } from "../components/bannersPages";
+import { CardsPage } from "../components/cardsPage";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
-import { Notices } from "../noticias/components/notices";
-import { CardsPage } from "./components/cardsPage";
 import { SitesParaImob } from "./components/sites";
 
 export default function Sites() {
@@ -11,8 +10,7 @@ export default function Sites() {
   <Navbar/>
       <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg" imageText="Texto"/>
   <SitesParaImob/>
-  <CardsPage/>
-  <Notices numNotices={3} showPagination={false}  />
+  <CardsPage hideCards={[3]} />
   <Footer/>
 </main>
   );

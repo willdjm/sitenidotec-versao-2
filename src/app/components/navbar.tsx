@@ -28,7 +28,7 @@ export function Navbar() {
   return (
     <div className="w-full">
       {/* Navbar */}
-      <nav className="bg-white mx-auto max-w-screen-xl">
+      <nav className="bg-whreite lg:shadow-none shadow-md mx-auto max-w-screen-xl">
         {/* Top Section - Logo, Contact and SAC */}
         <div className="flex items-center justify-between p-4 gap-4">
           {/* Logo */}

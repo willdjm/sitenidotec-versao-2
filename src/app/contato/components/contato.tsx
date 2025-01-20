@@ -6,9 +6,9 @@ import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
 export const ContactSection = () => {
   return (
     <div className="mx-auto max-w-screen-xl lg:p-10 p-4">
-      <div className="mb-5">
-        <h2 className="w-full text-2xl text-center lg:text-start text-sky-500">Entre em contato</h2>
-      </div>
+      <h1 className="text-2xl font-semibold text-sky-500 mb-5 lg:mb-10 lg:text-2xl dark:text-white border-b-2 border-sky-500 dark:border-white/10 w-full">
+      Entre em contato
+      </h1>
       <div className="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
         {/* Card de Email */}
         <div className="flex flex-col items-center gap-3 p-8 bg-white rounded-2xl shadow-xl border transition-transform duration-300 ease-in-out transform hover:scale-105">
