@@ -8,7 +8,7 @@ export default function PageParceiros() {
   return (
 <main>
   <Navbar/>
-      <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg"/>
+      <BannerPages mobileImage="/banner-parceiros.png" tabletImage="/banner-parceiros.png" desktopImage="/banner-parceiros.png"/>
   <Parceiros/>
 
   <NoticesList numNotices={3} showPagination={false}  />

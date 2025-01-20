@@ -8,7 +8,7 @@ export default function PageClientes() {
   return (
 <main>
   <Navbar/>
-      <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg"/>
+      <BannerPages mobileImage="/banner-clientes.png" tabletImage="/banner-clientes.png" desktopImage="/banner-clientes.png"/>
   <Clientes/>
 
   <NoticesList numNotices={3} showPagination={false}  />

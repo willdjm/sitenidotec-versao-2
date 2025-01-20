@@ -14,7 +14,7 @@ export default function Contato() {
   <ContactSection/>
   <ContactForm/>
   <Cards titleText="Nossos Produtos Imobiliários" />
-  <NoticesList numNotices={3} showPagination={false}  />
+  <NoticesList numNotices={6} showPagination={false}  />
   <Footer/>
 </main>
   );
