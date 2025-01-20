@@ -2,7 +2,7 @@ import { Banner } from "./components/banners";
 import { Cards } from "./components/cards";
 import { Footer } from "./components/footer";
 import { Navbar } from "./components/navbar";
-import { Notices } from "./components/notices";
+import { Notices } from "./noticias/components/notices";
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
   <Navbar/>
   <Banner/>
   <Cards/>
-  <Notices numNotices={6} />
+  <Notices numNotices={6} showPagination={false}  />
   <Footer/>
 </main>
   );

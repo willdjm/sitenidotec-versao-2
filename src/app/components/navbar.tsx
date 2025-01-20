@@ -160,7 +160,7 @@ export function Navbar() {
         )}
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex justify-center space-x-8 py-4 border-t border-gray-200 text-center w-full">
+        <div className="hidden lg:flex justify-center space-x-8 py-4 border-t  border-gray-200 text-center w-full">
           <Link href="/">
             <p className="text-gray-800 hover:text-sky-500">Home</p>
           </Link>
@@ -176,7 +176,7 @@ export function Navbar() {
           <Link href="/sites-para-imobiliaria">
             <p className="text-gray-800 hover:text-sky-500">Sites para Imobiliárias</p>
           </Link>
-          <Link href="/sistemas-corretores">
+          <Link href="/sistema-para-corretores">
             <p className="text-gray-800 hover:text-sky-500">Sistemas para Corretores</p>
           </Link>
 
@@ -194,10 +194,10 @@ export function Navbar() {
                 ref={dropdownRef}
                 className="ml-4 space-y-2 mt-2 absolute left-0 bg-white shadow-lg w-48 border border-gray-300 rounded-md z-50"
               >
-                <Link href="/suporte-tecnico">
+                <Link href="/suporte-tecnico-e-treinamento">
                   <p className="text-gray-800 hover:text-sky-500 px-4 py-2">Suporte Técnico</p>
                 </Link>
-                <Link href="/treinamento-gestao-ti">
+                <Link href="/gestao-de-ti">
                   <p className="text-gray-800 hover:text-sky-500 px-4 py-2">Treinamento e Gestão de TI</p>
                 </Link>
               </div>
