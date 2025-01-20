@@ -9,7 +9,7 @@ export default function NIDOAdm() {
   return (
 <main>
   <Navbar/>
-      <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg" imageText="Texto"/>
+      <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg"/>
   <Administrativo/>
   <CardsPage hideCards={[2]} />
   <NoticesList numNotices={3} showPagination={false}  />
