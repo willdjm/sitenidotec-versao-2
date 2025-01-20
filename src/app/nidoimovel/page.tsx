@@ -9,7 +9,7 @@ export default function NIDOImovel() {
   return (
 <main>
   <Navbar/>
-    <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg"/>
+    <BannerPages mobileImage="/banner-nidoimovel.png" tabletImage="/banner-nidoimovel.png" desktopImage="/banner-nidoimovel.png"/>
   <Imovel/>
   <CardsPage hideCards={[1]} />
   <NoticesList numNotices={6} showPagination={false}  />

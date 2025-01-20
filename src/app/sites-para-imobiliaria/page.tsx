@@ -8,7 +8,7 @@ export default function Sites() {
   return (
 <main>
   <Navbar/>
-      <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg"/>
+      <BannerPages mobileImage="/banner-site.png" tabletImage="/banner-site.png" desktopImage="/banner-site.png"/>
   <SitesParaImob/>
   <CardsPage hideCards={[3]} />
   <Footer/>

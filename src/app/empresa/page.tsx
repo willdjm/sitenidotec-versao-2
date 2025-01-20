@@ -9,7 +9,7 @@ export default function Empresa() {
   return (
 <main>
   <Navbar/>
-  <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg"/>
+  <BannerPages mobileImage="/banner-empresa.png" tabletImage="/banner-empresa.png" desktopImage="/banner-empresa.png"/>
   <About/>
   <Cards/>
   <NoticesList numNotices={6} showPagination={false}  />
