@@ -107,10 +107,10 @@ export function Navbar() {
               <Link href="/sistemas-corretores">
                 <p className="text-gray-800 hover:text-sky-500 py-1">Sistemas para Corretores</p>
               </Link>
-              <Link href="/clientes">
+              <Link href="/suporte-tecnico-e-treinamento">
                 <p className="text-gray-800 hover:text-sky-500 py-1">Suporte Técnico e Treinamento</p>
               </Link>
-              <Link href="/parceiros">
+              <Link href="/gestao-de-ti">
                 <p className="text-gray-800 hover:text-sky-500 py-1">Gestão de TI</p>
               </Link>
               <Link href="/clientes">
@@ -195,10 +195,10 @@ export function Navbar() {
                 className="ml-4 space-y-2 mt-2 absolute left-0 bg-white shadow-lg w-48 border border-gray-300 rounded-md z-50"
               >
                 <Link href="/suporte-tecnico-e-treinamento">
-                  <p className="text-gray-800 hover:text-sky-500 px-4 py-2">Suporte Técnico</p>
+                  <p className="text-gray-800 hover:text-sky-500 px-4 py-2">Suporte Técnico e Treinamento</p>
                 </Link>
                 <Link href="/gestao-de-ti">
-                  <p className="text-gray-800 hover:text-sky-500 px-4 py-2">Treinamento e Gestão de TI</p>
+                  <p className="text-gray-800 hover:text-sky-500 px-4 py-2">Gestão de TI</p>
                 </Link>
               </div>
             )}

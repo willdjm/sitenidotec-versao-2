@@ -8,7 +8,7 @@ export default function SuporteTecnicoETreinamento() {
   return (
 <main>
   <Navbar/>
-      <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg"/>
+      <BannerPages mobileImage="/banner-treinamento.png" tabletImage="/banner-treinamento.png" desktopImage="/banner-treinamento.png"/>
   <SuporteTreinamento/>
   <Cards/>
   <Footer/>

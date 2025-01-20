@@ -8,7 +8,7 @@ export default function GestaoDeTI() {
   return (
 <main>
   <Navbar/>
-      <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg"/>
+      <BannerPages mobileImage="/banner-gestao.png" tabletImage="/banner-gestao.png" desktopImage="/banner-gestao.png"/>
   <GestaoTI/>
 
   <NoticesList numNotices={6} showPagination={false}  />
