@@ -23,7 +23,7 @@ export const Clientes = () => {
 
   return (
     <section className="mx-auto max-w-screen-xl my-10 p-4 lg:p-0">
-      <h1 className="text-2xl font-semibold text-sky-500 lg:text-2xl border-sky-500 w-full mb-5">
+      <h1 className="text-2xl font-semibold text-sky-500 lg:text-2xl border-b-2 border-sky-500 w-full mb-5">
         Alguns clientes que já contam com as soluções NIDOTEC
       </h1>
 
