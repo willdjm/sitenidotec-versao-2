@@ -11,7 +11,7 @@ export default function PageClientes() {
       <BannerPages mobileImage="/banner-clientes.png" tabletImage="/banner-clientes.png" desktopImage="/banner-clientes.png"/>
   <Clientes/>
 
-  <NoticesList numNotices={3} showPagination={false}  />
+  <NoticesList numNotices={6} showPagination={false}  />
   <Footer/>
 </main>
   );

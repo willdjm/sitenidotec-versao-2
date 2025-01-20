@@ -23,11 +23,11 @@ export const Clientes = () => {
 
   return (
     <section className="mx-auto max-w-screen-xl my-10 p-4 lg:p-0">
-      <h1 className="text-2xl font-semibold text-sky-500 lg:text-2xl dark:text-white border-b-2 border-sky-500 dark:border-white/10 w-full mb-5">
+      <h1 className="text-2xl font-semibold text-sky-500 lg:text-2xl border-sky-500 w-full mb-5">
         Alguns clientes que já contam com as soluções NIDOTEC
       </h1>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5 mt-5">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 mt-5">
         {clientes.map(cliente => (
           <div key={cliente.id} className="bg-white border rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <a href={cliente.link} target="_blank" rel="noopener noreferrer">

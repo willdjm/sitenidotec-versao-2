@@ -12,7 +12,7 @@ export default function NoticiaDetalhe() {
   <Navbar/>
   <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg"/>
   <NoticiasDetalhes/>
-    <NoticesList numNotices={3} showPagination={false} title="Demais notícias" />
+    <NoticesList numNotices={6} showPagination={false} title="Demais notícias" />
     <Cards/>
   <Footer/>
 </main>

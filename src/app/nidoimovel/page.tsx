@@ -12,7 +12,7 @@ export default function NIDOImovel() {
     <BannerPages mobileImage="/1.jpg" tabletImage="/2.jpg" desktopImage="/3.jpg"/>
   <Imovel/>
   <CardsPage hideCards={[1]} />
-  <NoticesList numNotices={3} showPagination={false}  />
+  <NoticesList numNotices={6} showPagination={false}  />
   <Footer/>
 </main>
   );

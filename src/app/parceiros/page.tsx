@@ -11,7 +11,7 @@ export default function PageParceiros() {
       <BannerPages mobileImage="/banner-parceiros.png" tabletImage="/banner-parceiros.png" desktopImage="/banner-parceiros.png"/>
   <Parceiros/>
 
-  <NoticesList numNotices={3} showPagination={false}  />
+  <NoticesList numNotices={6} showPagination={false}  />
   <Footer/>
 </main>
   );
