@@ -39,11 +39,11 @@ export function NoticesList({
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <section className="bg-white dark:bg-gray-900 p-6">
+    <section className="bg-white p-6">
       <div className="container mx-auto max-w-screen-xl">
         {/* Exibe o título h1 somente se showTitle for true */}
         {showTitle && (
-          <h1 className="text-2xl font-semibold text-sky-500 capitalize lg:text-2xl dark:text-white border-b-2 border-sky-500 dark:border-white/10">
+          <h1 className="text-2xl font-semibold text-sky-500 capitalize lg:text-2xl border-b-2 border-sky-500">
             {title}
           </h1>
         )}
@@ -63,18 +63,18 @@ export function NoticesList({
 
               <div className="flex flex-col justify-between py-4 px-6">
                 <Link href={`/noticias/${item.id}`}>
-                  <p className="text-xl font-semibold text-gray-800 group-hover:text-sky-500 transition-colors duration-200 dark:text-white">
+                  <p className="text-xl font-semibold text-gray-800 group-hover:text-sky-500 transition-colors duration-200 ">
                     {item.title}
                   </p>
                 </Link>
 
                 {/* Exibe um trecho do texto da notícia (limitando a 100 caracteres) */}
-                <p className="text-base text-gray-600 mt-2 dark:text-gray-200">
+                <p className="text-base text-gray-600 mt-2 ">
                   {item.text.length > 100 ? `${item.text.slice(0, 70)}...` : item.text}
                 </p>
 
                 {/* Exibe a data da notícia */}
-                <p className="text-sm text-gray-500 mt-2 dark:text-gray-300">
+                <p className="text-sm text-gray-500 mt-2 ">
                   {item.date}
                 </p>
               </div>
