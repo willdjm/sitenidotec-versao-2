@@ -1,5 +1,6 @@
-"use client";
+"use client"
 
+import Link from "next/link";
 import { useEffect, useState, useCallback, useMemo } from "react";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"; // Importando os ícones do React Icons (Chevron Left e Chevron Right)
 
@@ -13,18 +14,22 @@ export const Banner = () => {
     {
       desktop: "/video-banner-home-nidoimovel.mp4", // Vídeo para desktop na posição 1
       mobile: "/video-banner-home-nidoimovel-mobile.mp4",   // Vídeo para mobile na posição 1
+      link: "/nidoimovel", // Link associado ao vídeo
     },
     {
       desktop: "/video-banner-home-nidoadm.mp4", // Vídeo para desktop na posição 1
       mobile: "/video-banner-home-nidoadm-mobile.mp4",   // Vídeo para mobile na posição 1
+      link: "/nidoadm", // Link associado ao vídeo
     },
     {
       desktop: "/video-banner-home-sites.mp4", // Vídeo para desktop na posição 1
       mobile: "/video-banner-home-sites-mobile.mp4",   // Vídeo para mobile na posição 1
+      link: "/sites-para-imobiliaria", // Link associado ao vídeo
     },
     {
       desktop: "/video-banner-home-sistema.mp4", // Vídeo para desktop na posição 1
       mobile: "/video-banner-home-sistema-mobile.mp4",   // Vídeo para mobile na posição 1
+      link: "/sistema-para-corretores", // Link associado ao vídeo
     },
   ], []); // Array de vídeos não muda, então o array de dependências é vazio
 
@@ -71,22 +76,22 @@ export const Banner = () => {
     <div className="relative w-full h-80 lg:h-[30rem] overflow-hidden shadow-lg">
       {/* Vídeo com transição Fade-in */}
       <div
-        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${
-          isFading ? "opacity-0" : "opacity-100"
-        }`}
+        className={`absolute top-0 left-0 w-full h-full transition-opacity duration-500 ease-in-out ${isFading ? "opacity-0" : "opacity-100"}`}
       >
         {/* Renderizar o vídeo apenas se randomVideo não estiver vazio */}
         {randomVideo && (
-          <video
-            key={randomVideo} // Garantir que o vídeo seja atualizado quando o src mudar
-            className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-          >
-            <source src={randomVideo} type="video/mp4" />
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
+          <Link href={videos[currentIndex].link} >
+            <video
+              key={randomVideo} // Garantir que o vídeo seja atualizado quando o src mudar
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+            >
+              <source src={randomVideo} type="video/mp4" />
+              Seu navegador não suporta o elemento de vídeo.
+            </video>
+          </Link>
         )}
       </div>
 
