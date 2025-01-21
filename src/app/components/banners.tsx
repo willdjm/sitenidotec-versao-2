@@ -22,6 +22,10 @@ export const Banner = () => {
       desktop: "/video-banner-home-sites.mp4", // Vídeo para desktop na posição 1
       mobile: "/video-banner-home-sites-mobile.mp4",   // Vídeo para mobile na posição 1
     },
+    {
+      desktop: "/video-banner-home-sistema.mp4", // Vídeo para desktop na posição 1
+      mobile: "/video-banner-home-sistema-mobile.mp4",   // Vídeo para mobile na posição 1
+    },
   ], []); // Array de vídeos não muda, então o array de dependências é vazio
 
   // Função para determinar qual vídeo usar dependendo do tamanho da tela (desktop ou mobile)
