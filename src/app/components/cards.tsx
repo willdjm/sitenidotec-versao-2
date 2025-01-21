@@ -7,7 +7,7 @@ export function Cards({ showTitle = true, titleText = "Conheça nossos produtos"
   return (
     <div className="mx-auto max-w-screen-xl mt-10 flex flex-col items-center justify-center gap-5 p-6 lg:p-0">
       {showTitle && (
-        <h1 className="text-2xl font-semibold text-sky-500 capitalize lg:text-2xl dark:text-white border-b-2 border-sky-500 dark:border-white/10 w-full mb-5">
+        <h1 className="text-2xl font-semibold text-sky-500 capitalize lg:text-2xl border-b-2 border-sky-500 w-full mb-5">
           {titleText}
         </h1>
       )}
