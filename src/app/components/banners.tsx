@@ -15,12 +15,12 @@ export const Banner = () => {
       mobile: "/video-banner-home-nidoimovel-mobile.mp4",   // Vídeo para mobile na posição 1
     },
     {
-      desktop: "/video-banner-home-nidoimovel.mp4", // Vídeo para desktop na posição 1
-      mobile: "/video-banner-home-nidoimovel-mobile.mp4",   // Vídeo para mobile na posição 1
+      desktop: "/video-banner-home-nidoadm.mp4", // Vídeo para desktop na posição 1
+      mobile: "/video-banner-home-nidoadm-mobile.mp4",   // Vídeo para mobile na posição 1
     },
     {
-      desktop: "/video-banner-home-nidoimovel.mp4", // Vídeo para desktop na posição 1
-      mobile: "/video-banner-home-nidoimovel-mobile.mp4",   // Vídeo para mobile na posição 1
+      desktop: "/video-banner-home-sites.mp4", // Vídeo para desktop na posição 1
+      mobile: "/video-banner-home-sites-mobile.mp4",   // Vídeo para mobile na posição 1
     },
   ], []); // Array de vídeos não muda, então o array de dependências é vazio
 
