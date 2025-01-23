@@ -22,8 +22,8 @@ export const Parceiros = () => {
   ];
 
   return (
-    <section className="mx-auto max-w-screen-xl lg:my-10 my-5 p-4 lg:p-0">
-      <h1 className="text-xl font-semibold text-sky-500 lg:text-2xl border-b-2 border-sky-500 w-full mb-5">
+    <section className="mx-auto max-w-screen-xl lg:p-10 p-4">
+      <h1 className="text-2xl font-semibold text-sky-500 mb-5 lg:mb-10 lg:text-2xl border-b-2 border-sky-500 w-full">
       Parceria comercial com os principais players do mercado imobiliário.
       </h1>
 

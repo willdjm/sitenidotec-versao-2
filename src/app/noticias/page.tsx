@@ -8,6 +8,7 @@ export default function Noticias() {
 <main>
   <Navbar/>
   <BannerPages mobileImage="/banner-noticias.png" tabletImage="/banner-noticias.png" desktopImage="/banner-noticias.png"/>
+
   <NoticesList/>
   <Footer/>
 </main>

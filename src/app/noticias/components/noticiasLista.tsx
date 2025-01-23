@@ -22,7 +22,7 @@ interface NoticesProps {
 export function NoticesList({
   numNotices = 12,
   showPagination = true,
-  title = 'Últimas Notícias',
+  title = 'Últimas notícias',
   showTitle = true
 }: NoticesProps) {
   // O estado das notícias será baseado nos dados importados
@@ -39,11 +39,11 @@ export function NoticesList({
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <section className="bg-white p-6">
-      <div className="container mx-auto max-w-screen-xl">
+    <section className="mx-auto max-w-screen-xl lg:p-10 p-4">
+      <div className="container ">
         {/* Exibe o título h1 somente se showTitle for true */}
         {showTitle && (
-          <h1 className="text-2xl font-semibold text-sky-500 capitalize lg:text-2xl border-b-2 border-sky-500">
+          <h1 className="text-2xl font-semibold text-sky-500 lg:text-2xl border-b-2 border-sky-500">
             {title}
           </h1>
         )}

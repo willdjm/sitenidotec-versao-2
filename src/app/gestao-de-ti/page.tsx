@@ -1,4 +1,5 @@
 import { BannerPages } from "../components/bannersPages";
+import { Cards } from "../components/cards";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
 import { NoticesList } from "../noticias/components/noticiasLista";
@@ -10,7 +11,7 @@ export default function GestaoDeTI() {
   <Navbar/>
       <BannerPages mobileImage="/banner-gestao.png" tabletImage="/banner-gestao.png" desktopImage="/banner-gestao.png"/>
   <GestaoTI/>
-
+<Cards/>
   <NoticesList numNotices={6} showPagination={false}  />
   <Footer/>
 </main>
