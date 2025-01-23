@@ -70,7 +70,7 @@ export function Navbar() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="lg:hidden bg-slate-50 absolute top-0 left-0 w-full h-screen flex flex-col p-6 space-y-6 shadow-lg z-50">
+          <div className="lg:hidden bg-slate-50 absolute top-0 left-0 w-full h-screen flex flex-col p-6 shadow-lg z-50">
             {/* Close Button and Logo */}
             <div className="flex justify-between items-center mb-6 gap-4">
               {/* Logo on the left */}
@@ -88,43 +88,43 @@ export function Navbar() {
             </div>
 
             {/* Menu Items */}
-            <div className="space-y-1 flex flex-col">
+            <div className="space-y-6">
               <Link href="/">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">Home</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Home</p>
               </Link>
               <Link href="/empresa">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">Empresa</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Empresa</p>
               </Link>
               <Link href="/nidoimovel">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">NIDOImóvel</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">NIDOImóvel</p>
               </Link>
               <Link href="/nidoadm">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">NIDOAdm</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">NIDOAdm</p>
               </Link>
               <Link href="/sites-imobiliarias">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">Sites para Imobiliárias</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Sites para Imobiliárias</p>
               </Link>
               <Link href="/sistemas-corretores">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">Sistemas para Corretores</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Sistemas para Corretores</p>
               </Link>
               <Link href="/suporte-tecnico-e-treinamento">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">Suporte Técnico e Treinamento</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Suporte Técnico e Treinamento</p>
               </Link>
               <Link href="/gestao-de-ti">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">Gestão de TI</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Gestão de TI</p>
               </Link>
               <Link href="/clientes">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">Clientes</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Clientes</p>
               </Link>
               <Link href="/parceiros">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">Parceiros</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Parceiros</p>
               </Link>
               <Link href="/contato">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1">Contato</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Contato</p>
               </Link>
 
               {/* Contact Info and SAC */}
-              <div className="my-6">
+              <div className="mt-6">
               <Link href="tel:+551145083724">
               <p className="text-sky-500 hover:text-sky-500/80 ">
                 <MdPhone className="inline-block mr-2" size={18} />
@@ -137,7 +137,7 @@ export function Navbar() {
       (11) 95305-2059
               </p>
             </Link>
-                <div className="flex space-x-4 mt-4">
+                <div className="flex space-x-6 mt-4">
                   <Link href="https://facebook.com">
                     <FaFacebookF size={20} className="text-sky-500 hover:text-sky-500/80" />
                   </Link>
