@@ -124,7 +124,7 @@ export function Navbar() {
               </Link>
 
               {/* Contact Info and SAC */}
-              <div className="mt-6">
+              <div className="my-6">
               <Link href="tel:+551145083724">
               <p className="text-sky-500 hover:text-sky-500/80 ">
                 <MdPhone className="inline-block mr-2" size={18} />
