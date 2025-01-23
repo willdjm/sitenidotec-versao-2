@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { MdPhone } from "react-icons/md";
-import { FaBars, FaFacebookF, FaInstagram, FaLinkedinIn, FaChevronDown, FaTimes, FaWhatsapp } from "react-icons/fa";
+import { FaBars, FaChevronDown, FaTimes, FaWhatsapp } from "react-icons/fa";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
