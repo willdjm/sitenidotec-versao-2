@@ -173,12 +173,12 @@ export function Navbar() {
               className="text-gray-800 hover:text-sky-500 flex items-center justify-between cursor-pointer"
             >
               <span>Serviços</span>
-              <FaChevronDown size={16} className={`${isDropdownOpen ? "transform rotate-180" : ""}`} />
+              <FaChevronDown size={14} className={`${isDropdownOpen ? "transform rotate-180 ml-1 items-center" : "ml-1 items-center"}`} />
             </p>
             {isDropdownOpen && (
               <div
                 ref={dropdownRef}
-                className="ml-4 space-y-2 mt-2 absolute left-0 bg-white shadow-lg w-48 border border-gray-300 rounded-md z-50"
+                className="space-y-2 mt-2 absolute left-0 bg-white shadow-lg w-48 border border-gray-300 rounded-md z-50"
               >
                 <Link href="/suporte-tecnico-e-treinamento">
                   <p className="text-gray-800 hover:text-sky-500 px-4 py-2">Suporte Técnico e Treinamento</p>
