@@ -24,13 +24,13 @@ export function NoticiasDetalhes() {
   const hasImage = noticia.image.trim() !== ''; // Verifica se a imagem está definida
 
   return (
-    <div className="mx-auto max-w-screen-xl lg:p-6 p-4 lg:mt-10 mt-4 flex flex-col gap-5">
-      <h1 className="text-2xl font-semibold text-sky-500 border-b-2 border-sky-500">
+    <div className="mx-auto max-w-screen-xl lg:p-10 p-4">
+      <h1 className="text-2xl font-semibold text-sky-500 mb-5 lg:mb-10 lg:text-2xl border-b-2 border-sky-500 w-full">
         {noticia.title}
       </h1>
 
       {/* Flex container para a imagem e texto */}
-      <div className={`flex ${hasImage && hasText ? 'gap-4' : ''} flex-col lg:flex-row`}>
+      <div className={`flex ${hasImage && hasText ? 'gap-6' : ''} flex-col lg:flex-row`}>
         {/* Condicional para imagem */}
         {hasImage && (
           <picture className={`flex-shrink-0 ${hasText ? 'w-full lg:w-1/2' : 'w-full'}`}>

@@ -15,13 +15,13 @@ export const SistemaParaCorretores = () => {
           </p>
           <h3 className="w-full text-xl text-sky-500 mt-3">São diversas funcionalidades para profissionalizar e potencializar o trabalho do corretor</h3>
 
-          <ul className="list-disc list-inside pl-2 text-lg flex flex-col gap-2 lg:gap-0">
-            <li className="text-sky-500 font-bold">Painel de controle – <span className="text-black font-normal">Completo, fácil e intuitivo.</span></li>
-            <li className="text-sky-500 font-bold">Banco de Imóveis – <span className="text-black font-normal">Filtros de pesquisa, atualização automática, apresentação dos imóveis, etc…</span></li>
-            <li className="text-sky-500 font-bold">Gerenciamento – <span className="text-black font-normal">Clientes, imóveis, atendimento, etc….</span></li>
-            <li className="text-sky-500 font-bold">Integração com portais – <span className="text-black font-normal">Suas ofertas nos principais canais.</span></li>
-            <li className="text-sky-500 font-bold">Marketing – <span className="text-black font-normal">Campanhas de e-mail marketing, layouts pré-definidos, estatísticas.</span></li>
-            <li className="text-sky-500 font-bold">Pós-venda – <span className="text-black font-normal">Comissão, recibos, etc…</span></li>
+          <ul className="list-disc list-inside pl-2 text-base flex flex-col gap-2 lg:gap-0">
+            <li className="text-sky-500 font-semibold">Painel de controle – <span className="text-black font-normal">Completo, fácil e intuitivo.</span></li>
+            <li className="text-sky-500 font-semibold">Banco de Imóveis – <span className="text-black font-normal">Filtros de pesquisa, atualização automática, apresentação dos imóveis, etc…</span></li>
+            <li className="text-sky-500 font-semibold">Gerenciamento – <span className="text-black font-normal">Clientes, imóveis, atendimento, etc….</span></li>
+            <li className="text-sky-500 font-semibold">Integração com portais – <span className="text-black font-normal">Suas ofertas nos principais canais.</span></li>
+            <li className="text-sky-500 font-semibold">Marketing – <span className="text-black font-normal">Campanhas de e-mail marketing, layouts pré-definidos, estatísticas.</span></li>
+            <li className="text-sky-500 font-semibold">Pós-venda – <span className="text-black font-normal">Comissão, recibos, etc…</span></li>
           </ul>
         </div>
 

@@ -1,35 +1,33 @@
 import Link from 'next/link';
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp, FaYoutube } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaLinkedin, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 import { MdEmail } from "react-icons/md";
 import { MdLocationOn, MdPhone } from 'react-icons/md';
 
 export function Footer() {
-
   return (
-    // Container do Footer
     <footer className="bg-zinc-50 text-center text-surface/75 lg:text-left">
-
-      <div className='mx-auto  max-w-screen-xl'>
+      <div className='mx-auto max-w-screen-xl'>
         {/* Container para ícones de redes sociais */}
         <div className="flex items-center justify-center border-b-2 border-sky-500 p-6 lg:justify-between">
           <div className="me-12 hidden lg:block">
             <span>Conecte-se conosco nas redes sociais:</span>
           </div>
           <div className="flex justify-center">
-            {/* Ícones de redes sociais */}
-            <a href="#!" className="me-6">
-              <FaFacebookF size={18} />
-            </a>
-            <a href="#!" className="me-6">
-              <FaInstagram size={18} />
-            </a>
-            <a href="#!" className="me-6">
-              <FaLinkedinIn size={18} />
-            </a>
-            <a href="#!" className="me-6">
-              <FaYoutube size={18} />
-            </a>
-          </div>
+  {/* Ícones de redes sociais com hover effect */}
+  <a href="#!" className="me-6 hover:text-sky-500 hover:scale-110 transition-all duration-300">
+    <FaFacebook className="size-7 md:size-7 lg:size-6" />
+  </a>
+  <a href="#!" className="me-6 hover:text-sky-500 hover:scale-110 transition-all duration-300">
+    <FaInstagram className="size-7 md:size-7 lg:size-6" />
+  </a>
+  <a href="#!" className="me-6 hover:text-sky-500 hover:scale-110 transition-all duration-300">
+    <FaLinkedin className="size-7 md:size-7 lg:size-6" />
+  </a>
+  <a href="#!" className="me-6 hover:text-sky-500 hover:scale-110 transition-all duration-300">
+    <FaYoutube className="size-7 md:size-7 lg:size-6" />
+  </a>
+</div>
+
         </div>
 
         {/* Container principal do Footer, contendo 4 seções */}
@@ -39,11 +37,10 @@ export function Footer() {
             {/* Seção de TW Elements */}
             <div>
               <Link href='/'>
-                <picture className="flex justify-center md:justify-start" >
+                <picture className="flex justify-center md:justify-start">
                   <img src="/logo.png" alt="" className="w-64 lg:w-full" />
                 </picture>
               </Link>
-
               <p className='mt-6 tracking-wide'>
                 Há mais de 30 anos especializada em soluções tecnológicas para o ramo imobiliário.
               </p>
@@ -99,7 +96,7 @@ export function Footer() {
                   {/* Ícone de Localização */}
                   <MdLocationOn size={20} />
                 </span>
-                <a href="https://maps.app.goo.gl/1GkP8KeiDfqf2pX86" target="_blank" rel="noopener noreferrer" className="">
+                <a href="https://maps.app.goo.gl/1GkP8KeiDfqf2pX86" target="_blank" rel="noopener noreferrer">
                   Vila Clementino - SP
                 </a>
               </p>
@@ -110,7 +107,7 @@ export function Footer() {
                   {/* Ícone de E-mail (Escuro) */}
                   <MdEmail size={20} />
                 </span>
-                <a href="mailto:info@example.com" className="">
+                <a href="mailto:info@example.com">
                   contato@nido.com.br
                 </a>
               </p>
@@ -121,7 +118,7 @@ export function Footer() {
                   {/* Ícone de Telefone */}
                   <MdPhone size={20} />
                 </span>
-                <a href="tel:1145083724" className="">
+                <a href="tel:1145083724">
                   + 55 (11) 4508-3724
                 </a>
               </p>
@@ -132,12 +129,11 @@ export function Footer() {
                   {/* Ícone de WhatsApp */}
                   <FaWhatsapp size={20} />
                 </span>
-                <a href="https://wa.me/5511953052059" target="_blank" rel="noopener noreferrer" className="">
+                <a href="https://wa.me/5511953052059" target="_blank" rel="noopener noreferrer">
                   + 55 (11) 95305-2059
                 </a>
               </p>
             </div>
-
           </div>
         </div>
       </div>
