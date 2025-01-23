@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { MdPhone } from "react-icons/md";
-import { FaBars, FaChevronDown, FaTimes, FaWhatsapp } from "react-icons/fa";
+import { FaBars, FaFacebookF, FaInstagram, FaLinkedinIn, FaChevronDown, FaTimes, FaWhatsapp } from "react-icons/fa";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -123,28 +123,24 @@ export function Navbar() {
                 <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Contato</p>
               </Link>
 
-              {/* Contact Info and SAC */}
-              <div className="mt-6">
-                <Link href="tel:+551145083724">
-                  <p className="text-sky-500 hover:text-sky-500/80 ">
-                    <MdPhone className="inline-block mr-2" size={18} />
-                    (11) 4508-3724
-                  </p>
-                </Link>
-                <Link href="https://wa.me/5511953052059" target="_blank">
-                  <p className="text-sky-500 hover:text-sky-500/80 my-3">
-                    <FaWhatsapp className="inline-block mr-2" size={20} />
-                    (11) 95305-2059
-                  </p>
-                </Link>
+              <Link href="tel:+551145083724">
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">
+                  <MdPhone className="inline-block mr-2" size={18} />
+                  (11) 4508-3724
+                </p>
+              </Link>
+              <Link href="https://wa.me/5511953052059" target="_blank">
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2 mb-6">
+                  <FaWhatsapp className="inline-block mr-2" size={20} />
+                  (11) 95305-2059
+                </p>
+              </Link>
 
-                <div className="mt-6">
-                  <Link href="http://portal.nido.com.br/index.php/site/login" className="bg-sky-500 text-white px-4 py-2 my-6 rounded-md text-sm hover:bg-sky-500/90">
-                    Área do Cliente
-                  </Link>
-                </div>
+              <Link href="http://portal.nido.com.br/index.php/site/login" className="bg-sky-500 text-white px-4 py-2 rounded-md hover:bg-sky-500/90">
+                Área do Cliente
+              </Link>
 
-              </div>
+
             </div>
           </div>
         )}
