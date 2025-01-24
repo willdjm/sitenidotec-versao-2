@@ -29,7 +29,7 @@ export function Cards({ showTitle = true, titleText = "Conheça nossos produtos"
               Gestão Imobiliária O sistema mais completo do mercado imobiliário...
             </p>
             <a
-              href="#"
+              href="/nidoimovel"
               className="text-white hover:text-blue-200 font-semibold text-sm"
             >
               Saiba mais
@@ -53,7 +53,7 @@ export function Cards({ showTitle = true, titleText = "Conheça nossos produtos"
               Sistema de Administração de Locações na palma da mão...
             </p>
             <a
-              href="#"
+              href="/nidoadm"
               className="text-white hover:text-blue-200 font-semibold text-sm"
             >
               Saiba mais
@@ -77,7 +77,7 @@ export function Cards({ showTitle = true, titleText = "Conheça nossos produtos"
               Sites para Imobiliárias, os melhores sites para o mercado imobiliário...
             </p>
             <a
-              href="#"
+              href="/sites-para-imobiliaria"
               className="text-white hover:text-blue-200 font-semibold text-sm"
             >
               Saiba mais
@@ -101,7 +101,7 @@ export function Cards({ showTitle = true, titleText = "Conheça nossos produtos"
               Sistema para Corretores. A força do mercado imobiliário em suas mãos...
             </p>
             <a
-              href="#"
+              href="/sistema-para-corretores"
               className="text-white hover:text-blue-200 font-semibold text-sm"
             >
               Saiba mais
