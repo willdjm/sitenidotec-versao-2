@@ -10,7 +10,7 @@ export default function NoticiaDetalhe() {
   return (
 <main>
   <Navbar/>
-  <BannerPages mobileImage="/banner-noticias.png" tabletImage="/banner-noticias.png" desktopImage="/banner-noticias.png"/>
+  <BannerPages mobileImage="/banner-noticias-mobile.png" tabletImage="/banner-noticias.png" desktopImage="/banner-noticias.png"/>
   <NoticiasDetalhes/>
     <NoticesList numNotices={6} showPagination={false} title="Demais notícias" />
     <Cards/>

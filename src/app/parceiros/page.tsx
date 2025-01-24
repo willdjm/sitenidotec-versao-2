@@ -9,7 +9,7 @@ export default function PageParceiros() {
   return (
 <main>
   <Navbar/>
-      <BannerPages mobileImage="/banner-parceiros.png" tabletImage="/banner-parceiros.png" desktopImage="/banner-parceiros.png"/>
+      <BannerPages mobileImage="/banner-parceiros-mobile.png" tabletImage="/banner-parceiros.png" desktopImage="/banner-parceiros.png"/>
   <Parceiros/>
   <Cards titleText="Faça parte você também"/>
   <NoticesList numNotices={6} showPagination={false}  />

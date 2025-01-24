@@ -10,7 +10,7 @@ export default function Contato() {
   return (
 <main>
   <Navbar/>
-  <BannerPages mobileImage="/banner-contact.png" tabletImage="/banner-contact.png" desktopImage="/banner-contact.png" />
+  <BannerPages mobileImage="/banner-contact-mobile.png" tabletImage="/banner-contact.png" desktopImage="/banner-contact.png" />
   <ContactSection/>
   <ContactForm/>
   <Cards titleText="Nossos Produtos Imobiliários" />

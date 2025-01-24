@@ -101,10 +101,10 @@ export function Navbar() {
               <Link href="/nidoadm">
                 <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">NIDOAdm</p>
               </Link>
-              <Link href="/sites-imobiliarias">
+              <Link href="/sites-para-imobiliaria">
                 <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Sites para Imobiliárias</p>
               </Link>
-              <Link href="/sistemas-corretores">
+              <Link href="/sistema-para-corretores">
                 <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Sistemas para Corretores</p>
               </Link>
               <Link href="/suporte-tecnico-e-treinamento">

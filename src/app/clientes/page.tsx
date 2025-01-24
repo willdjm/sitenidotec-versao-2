@@ -9,7 +9,7 @@ export default function PageClientes() {
   return (
 <main>
   <Navbar/>
-      <BannerPages mobileImage="/banner-clientes.png" tabletImage="/banner-clientes.png" desktopImage="/banner-clientes.png"/>
+      <BannerPages mobileImage="/banner-clientes-mobile.png" tabletImage="/banner-clientes.png" desktopImage="/banner-clientes.png"/>
   <Clientes/>
   <Cards titleText="Faça parte você também"/>
   <NoticesList numNotices={6} showPagination={false}  />

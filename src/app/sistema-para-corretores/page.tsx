@@ -9,7 +9,7 @@ export default function SistemaCorretores() {
   return (
 <main>
   <Navbar/>
-      <BannerPages mobileImage="/banner-sistema.png" tabletImage="/banner-sistema.png" desktopImage="/banner-sistema.png"/>
+      <BannerPages mobileImage="/banner-sistema-mobile.png" tabletImage="/banner-sistema.png" desktopImage="/banner-sistema.png"/>
   <SistemaParaCorretores/>
   <CardsPage hideCards={[4]} />
     <NoticesList numNotices={6} showPagination={false}  />
