@@ -5,8 +5,8 @@ import { NoticesList } from "./components/noticiasLista";
 
 export default function Noticias() {
   return (
-<main>
-  <Navbar/>
+<main className="bg-zinc-50">
+<Navbar/>
   <BannerPages mobileImage="/banner-noticias-mobile.png" tabletImage="/banner-noticias.png" desktopImage="/banner-noticias.png"/>
 
   <NoticesList/>

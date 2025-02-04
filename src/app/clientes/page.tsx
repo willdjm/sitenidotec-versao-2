@@ -7,8 +7,8 @@ import { Clientes } from "./components/clientes";
 
 export default function PageClientes() {
   return (
-<main>
-  <Navbar/>
+<main className="bg-zinc-50">
+<Navbar/>
       <BannerPages mobileImage="/banner-clientes-mobile.png" tabletImage="/banner-clientes.png" desktopImage="/banner-clientes.png"/>
   <Clientes/>
   <Cards titleText="Faça parte você também"/>

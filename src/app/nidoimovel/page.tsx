@@ -7,7 +7,7 @@ import { Imovel } from "./components/nidoimovel";
 
 export default function NIDOImovel() {
   return (
-<main>
+<main className="bg-zinc-50">
   <Navbar/>
     <BannerPages mobileImage="/banner-nidoimovel.png" tabletImage="/banner-nidoimovel.png" desktopImage="/banner-nidoimovel.png"/>
   <Imovel/>

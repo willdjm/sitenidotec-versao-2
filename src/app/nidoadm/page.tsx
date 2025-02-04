@@ -7,7 +7,7 @@ import { Administrativo } from "./components/nidoadm";
 
 export default function NIDOAdm() {
   return (
-<main>
+<main className="bg-zinc-50">
   <Navbar/>
       <BannerPages mobileImage="/banner-nidoadm.png" tabletImage="/banner-nidoadm.png" desktopImage="/banner-nidoadm.png"/>
   <Administrativo/>

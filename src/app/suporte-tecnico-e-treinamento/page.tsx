@@ -7,8 +7,8 @@ import { SuporteTreinamento } from "./components/suporteTecnicoETreinamento";
 
 export default function SuporteTecnicoETreinamento() {
   return (
-<main>
-  <Navbar/>
+<main className="bg-zinc-50">
+<Navbar/>
       <BannerPages mobileImage="/banner-treinamento.png" tabletImage="/banner-treinamento.png" desktopImage="/banner-treinamento.png"/>
   <SuporteTreinamento/>
   <Cards/>

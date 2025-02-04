@@ -7,8 +7,8 @@ import { SistemaParaCorretores } from "./components/sistemaParaCorretores";
 
 export default function SistemaCorretores() {
   return (
-<main>
-  <Navbar/>
+<main className="bg-zinc-50">
+<Navbar/>
       <BannerPages mobileImage="/banner-sistema-mobile.png" tabletImage="/banner-sistema.png" desktopImage="/banner-sistema.png"/>
   <SistemaParaCorretores/>
   <CardsPage hideCards={[4]} />

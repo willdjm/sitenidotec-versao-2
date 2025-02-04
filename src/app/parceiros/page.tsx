@@ -7,8 +7,8 @@ import { Parceiros } from "./components/parceiros";
 
 export default function PageParceiros() {
   return (
-<main>
-  <Navbar/>
+<main className="bg-zinc-50">
+<Navbar/>
       <BannerPages mobileImage="/banner-parceiros-mobile.png" tabletImage="/banner-parceiros.png" desktopImage="/banner-parceiros.png"/>
   <Parceiros/>
   <Cards titleText="Faça parte você também"/>

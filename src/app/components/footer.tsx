@@ -5,25 +5,25 @@ import { MdLocationOn, MdPhone } from 'react-icons/md';
 
 export function Footer() {
   return (
-    <footer className="bg-zinc-50 text-center text-surface/75 lg:text-left">
+    <footer className="bg-sky-500 text-white text-center text-surface/75 lg:text-left">
       <div className='mx-auto max-w-screen-xl'>
         {/* Container para ícones de redes sociais */}
-        <div className="flex items-center justify-center border-b-2 border-sky-500 p-6 lg:justify-between">
+        <div className="flex items-center justify-center border-b-2 border-white p-6 lg:justify-between">
           <div className="me-12 hidden lg:block">
             <span>Conecte-se conosco nas redes sociais:</span>
           </div>
           <div className="flex justify-center">
   {/* Ícones de redes sociais com hover effect */}
-  <a href="#!" className="me-6 hover:text-sky-500 hover:scale-110 transition-all duration-300">
+  <a href="#!" className="me-6 hover:scale-110 transition-all duration-300">
     <FaFacebook className="size-7 md:size-7 lg:size-6" />
   </a>
-  <a href="#!" className="me-6 hover:text-sky-500 hover:scale-110 transition-all duration-300">
+  <a href="#!" className="me-6 hover:scale-110 transition-all duration-300">
     <FaInstagram className="size-7 md:size-7 lg:size-6" />
   </a>
-  <a href="#!" className="me-6 hover:text-sky-500 hover:scale-110 transition-all duration-300">
+  <a href="#!" className="me-6 hover:scale-110 transition-all duration-300">
     <FaLinkedin className="size-7 md:size-7 lg:size-6" />
   </a>
-  <a href="#!" className="me-6 hover:text-sky-500 hover:scale-110 transition-all duration-300">
+  <a href="#!" className="me-6 hover:scale-110 transition-all duration-300">
     <FaYoutube className="size-7 md:size-7 lg:size-6" />
   </a>
 </div>
@@ -38,7 +38,7 @@ export function Footer() {
             <div>
               <Link href='/'>
                 <picture className="flex justify-center md:justify-start">
-                  <img src="/logo.png" alt="" className="w-64 lg:w-full" />
+                  <img src="/logo-footer.png" alt="" className="w-64 lg:w-full" />
                 </picture>
               </Link>
               <p className='mt-6 tracking-wide'>
@@ -48,7 +48,7 @@ export function Footer() {
 
             {/* Seção de Produtos */}
             <div>
-              <h6 className="mb-4 text-sky-500 flex justify-center font-semibold uppercase md:justify-start">
+              <h6 className="mb-4 text-zinc-50 flex justify-center font-semibold uppercase md:justify-start">
                 Produtos
               </h6>
               <p className="mb-4">
@@ -67,7 +67,7 @@ export function Footer() {
 
             {/* Seção de Links Úteis */}
             <div>
-              <h6 className="mb-4 text-sky-500 flex justify-center font-semibold uppercase md:justify-start">
+              <h6 className="mb-4 text-zinc-50 flex justify-center font-semibold uppercase md:justify-start">
                 Links Úteis
               </h6>
               <p className="mb-4">
@@ -86,7 +86,7 @@ export function Footer() {
 
             {/* Seção de Contato */}
             <div>
-              <h6 className="mb-4 text-sky-500 flex justify-center font-semibold uppercase md:justify-start">
+              <h6 className="mb-4 text-zinc-50 flex justify-center font-semibold uppercase md:justify-start">
                 Contato
               </h6>
 
@@ -139,7 +139,7 @@ export function Footer() {
       </div>
 
       {/* Seção de Copyright */}
-      <div className="bg-sky-500/90 text-white p-6 text-center">
+      <div className="bg-sky-500 text-white p-4 text-center">
         <span>© {new Date().getFullYear()}</span>
         <a className="font-semibold ml-2" href="https://www.nido.com.br/">
           NIDOTEC - Hub Imobiliária

@@ -6,7 +6,7 @@ import { NoticesList } from "./noticias/components/noticiasLista";
 
 export default function Home() {
   return (
-<main>
+<main className="bg-zinc-50">
   <Navbar/>
   <Banner/>
       <Cards showTitle={false}/>

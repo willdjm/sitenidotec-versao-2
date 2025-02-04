@@ -42,7 +42,7 @@ export const ContactForm = () => {
       <div className="container px-5 lg:py-10 mx-auto max-w-screen-xl flex flex-wrap">
         
         {/* Lado esquerdo: Formulário de Contato */}
-        <div className="w-full lg:w-1/2 bg-white p-0 lg:p-4">
+        <div className="w-full lg:w-1/2 bg-zinc-50 p-0 lg:p-4">
           <h2 className="text-xl text-sky-500 mb-4">Preencha o formulário, teremos prazer em atender você.</h2>
           <form onSubmit={handleSubmit}>
             {/* Campo Nome */}

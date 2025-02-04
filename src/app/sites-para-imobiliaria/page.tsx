@@ -7,8 +7,8 @@ import { SitesParaImob } from "./components/sites";
 
 export default function Sites() {
   return (
-<main>
-  <Navbar/>
+<main className="bg-zinc-50">
+<Navbar/>
       <BannerPages mobileImage="/banner-site.png" tabletImage="/banner-site.png" desktopImage="/banner-site.png"/>
   <SitesParaImob/>
   <CardsPage hideCards={[3]} />

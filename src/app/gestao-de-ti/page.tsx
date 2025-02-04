@@ -7,8 +7,8 @@ import { GestaoTI } from "./components/gestaoDeTi";
 
 export default function GestaoDeTI() {
   return (
-<main>
-  <Navbar/>
+<main className="bg-zinc-50">
+<Navbar/>
       <BannerPages mobileImage="/banner-gestao-mobile.png" tabletImage="/banner-gestao.png" desktopImage="/banner-gestao.png"/>
   <GestaoTI/>
 <Cards/>

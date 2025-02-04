@@ -8,8 +8,8 @@ import { ContactForm } from "./components/formulario";
 
 export default function Contato() {
   return (
-<main>
-  <Navbar/>
+<main className="bg-zinc-50">
+<Navbar/>
   <BannerPages mobileImage="/banner-contact-mobile.png" tabletImage="/banner-contact.png" desktopImage="/banner-contact.png" />
   <ContactSection/>
   <ContactForm/>

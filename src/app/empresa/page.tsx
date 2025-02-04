@@ -7,8 +7,8 @@ import { About } from "./components/empresa";
 
 export default function Empresa() {
   return (
-<main>
-  <Navbar/>
+<main className="bg-zinc-50">
+<Navbar/>
   <BannerPages mobileImage="/banner-empresa.png" tabletImage="/banner-empresa.png" desktopImage="/banner-empresa.png"/>
   <About/>
   <Cards/>

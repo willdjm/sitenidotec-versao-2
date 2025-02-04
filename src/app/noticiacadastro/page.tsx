@@ -36,7 +36,7 @@ const CadastroNoticia = () => {
   };
 
   return (
-    <div className="mx-auto max-w-screen-md lg:p-10 p-4">
+    <div className="mx-auto max-w-screen-md lg:p-10 p-4 bg-zinc-50">
       <h1 className="text-3xl font-bold mb-6 text-center text-sky-500">Cadastrar Notícia</h1>
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
