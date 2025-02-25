@@ -55,7 +55,7 @@ export function Navbar() {
               </p>
             </Link>
             <a href="http://portal.nido.com.br/index.php/site/login" target="_blank" className="bg-sky-500 text-white px-4 py-2 rounded-md text-sm hover:bg-sky-500/90">
-              Área do Cliente
+              Portal do Cliente
             </a>
           </div>
 
@@ -137,7 +137,7 @@ export function Navbar() {
               </Link>
 
               <Link href="http://portal.nido.com.br/index.php/site/login" className="bg-sky-500 text-white px-4 py-2 rounded-md hover:bg-sky-500/90">
-                Área do Cliente
+                Portal do Cliente
               </Link>
 
 

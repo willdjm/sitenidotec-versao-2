@@ -6,42 +6,47 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export const Testimonial = () => {
-  // Array de dados dos relatos com 5 opções
+  // Array de dados dos relatos com 5 opções, incluindo o cargo
   const testimonials = [
     {
       image: "https://readymadeui.com/team-3.webp",
-      title: "Exceptional Service: Prompt Delivery and Enjoyable Dining Experience.",
-      description: "The service was amazing. I never had to wait that long for my food. The staff was friendly and attentive, and the delivery was impressively prompt.",
-      name: "Mark Adair",
-      email: "markadair23@gmail.com"
+      logo: "/logo-imob-1.png",  // URL do logo
+      title: "Imobiliária Nova Vista",
+      description: "Atendimento excepcional com um portfólio de imóveis de qualidade. A equipe foi muito prestativa e ajudou a encontrar a casa dos meus sonhos.",
+      name: "Carlos Pereira",
+      cargo: "Consultor de Vendas" // Alterado de email para cargo
     },
     {
       image: "https://readymadeui.com/team-4.webp",
-      title: "Delicious Food and Excellent Customer Support",
-      description: "The food was absolutely delicious and the support team was extremely helpful. Definitely worth the visit.",
-      name: "Jane Doe",
-      email: "janedoe45@gmail.com"
+      logo: "/logo-imob-2.jpg",  // URL do logo
+      title: "Imóveis Premium",
+      description: "Ótimo atendimento e uma grande variedade de opções de imóveis. Fiquei muito satisfeito com a negociação e o suporte.",
+      name: "Ana Souza",
+      cargo: "Gerente de Vendas" // Alterado de email para cargo
     },
     {
       image: "https://readymadeui.com/team-5.webp",
-      title: "A Truly Memorable Dining Experience",
-      description: "Everything was perfect from the moment I entered. The ambiance, the food, and the service were just fantastic.",
-      name: "John Smith",
-      email: "johnsmith88@gmail.com"
+      logo: "/logo-imob-3.jpg",  // URL do logo
+      title: "Realty Experts",
+      description: "A melhor experiência na compra de um imóvel! Profissionais qualificados e muita atenção aos detalhes. Recomendados!",
+      name: "José Silva",
+      cargo: "Diretor Comercial" // Alterado de email para cargo
     },
     {
       image: "https://readymadeui.com/team-6.webp",
-      title: "Great Value for Money",
-      description: "The portions were generous, and the food was tasty. The service was fast and friendly. Will definitely return!",
-      name: "Anna Lee",
-      email: "annalee@outlook.com"
+      logo: "/logo-imob-4.png",  // URL do logo
+      title: "Viva Imóveis",
+      description: "Equipe super atenciosa e comprometida com a satisfação do cliente. O processo foi tranquilo e encontrei a casa perfeita.",
+      name: "Maria Oliveira",
+      cargo: "Consultora Imobiliária" // Alterado de email para cargo
     },
     {
       image: "https://readymadeui.com/team-2.webp",
-      title: "Amazing Hospitality and Flavorful Dishes",
-      description: "I was amazed by the hospitality and the quality of the food. Definitely an experience worth repeating.",
-      name: "Carlos Gomez",
-      email: "carlosgomez79@yahoo.com"
+      logo: "/logo-imob-5.png",  // URL do logo
+      title: "Casa Certa Imobiliária",
+      description: "Serviço ágil e eficiente. Encontrei exatamente o que eu procurava, e o atendimento foi excelente do início ao fim.",
+      name: "Felipe Santos",
+      cargo: "Atendente" // Alterado de email para cargo
     }
   ];
 
@@ -60,27 +65,38 @@ export const Testimonial = () => {
   return (
     <section className="mx-auto max-w-screen-xl lg:p-10 p-4">
       <h1 className="text-2xl font-semibold text-sky-500 mb-5 lg:mb-10 lg:text-2xl border-b-2 border-sky-500 w-full">
-        Relatos dos nossos clientes
+        Relatos das nossas imobiliárias parceiras
       </h1>
 
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
           <div key={index}>
-            <div className="grid md:grid-cols-2 items-center gap-12 font-[sans-serif] max-w-5xl max-md:max-w-md mx-auto p-4">
-              <div className="bg-gray-50">
+            <div className="grid md:grid-cols-2 items-center lg:gap-12 gap-4 font-[sans-serif] max-w-5xl max-md:max-w-md mx-auto p-4">
+              <div className="relative bg-gray-50">
+                {/* Quadrado maior, atrás da imagem */}
+                <div className="absolute top-0 left-0 w-72 h-72 bg-sky-500/80 -translate-x-4 -translate-y-4 z-0 rounded-lg"></div>
+                
                 <img
                   src={testimonial.image}
                   alt={`Imagem de ${testimonial.name}`}
-                  className="w-full aspect-[7/7] object-contain"
+                  className="w-full aspect-[7/7] object-contain relative z-10"
                 />
               </div>
 
               <div>
-                <h3 className="text-xl md:text-2xl font-bold text-gray-800">{testimonial.title}</h3>
-                <p className="mt-4 text-sm text-gray-800 leading-relaxed">{testimonial.description}</p>
+                {/* Exibir o logo da imobiliária alinhado à esquerda */}
+                <div className="mb-4">
+                  <img
+                    src={testimonial.logo}
+                    alt={`Logo de ${testimonial.title}`}
+                    className="lg:w-56 w-full h-full object-contain ml-0"
+                  />
+                </div>
+
+                <p className="mt-4 text-base text-sky-500 leading-relaxed">{testimonial.description}</p>
                 <div className="mt-8 text-left">
-                  <h4 className="text-base font-bold">{testimonial.name}</h4>
-                  <p className="text-xs text-gray-500 mt-0.5">{testimonial.email}</p>
+                  <h4 className="text-lg font-bold text-sky-500">{testimonial.name}</h4>
+                  <p className="text-sm text-sky-500 mt-0.5">{testimonial.cargo}</p> {/* Exibir cargo aqui */}
                 </div>
               </div>
             </div>

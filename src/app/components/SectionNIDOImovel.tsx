@@ -108,7 +108,7 @@ export const SectionNIDOImovel = () => {
         {/* Div de Vídeo */}
         <div className="flex items-center lg:col-span-6 mt-5 lg:mt-0">
           <div className="w-full h-full">
-            <video className="w-full h-full rounded" controls>
+            <video className="w-full h-full rounded" controls poster="/capa-video-imovel.jpg">
               <source src="/video-nidoimovel.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
