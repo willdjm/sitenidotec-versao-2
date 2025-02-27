@@ -139,7 +139,7 @@ export function Footer() {
       </div>
 
       {/* Seção de Copyright */}
-      <div className="bg-sky-500 text-white p-4 text-center">
+      <div className="bg-sky-500 border-t border-gray-500 text-white p-4 text-center">
         <span>© {new Date().getFullYear()}</span>
         <a className="font-semibold ml-2" href="https://www.nido.com.br/">
           NIDOTEC - Hub Imobiliária

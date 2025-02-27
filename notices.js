@@ -29,23 +29,23 @@ export const news = [
   },
   {
     id: '4',
-    title: 'Sticky notes for effective brainstorming',
+    title: 'Você sabia que a NIDO é parceira da Clicksign?',
     date: '23 October 2019',
-    image: 'https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    image: '/img-noticias-4.png',
     text: 'The power of sticky notes in team brainstorming sessions. Sticky notes are great for organizing your thoughts and problems. Sticky notes are great for organizing your thoughts and problems.'
   },
   {
     id: '5',
-    title: 'How to use sticky notes for project management',
+    title: 'Você sabia que a NIDO é parceira da Lais?',
     date: '24 October 2019',
-    image: 'https://images.unsplash.com/photo-1497032628192-86f99bcd76bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    image: '/img-noticias-5.png',
     text: 'Organize tasks and deadlines efficiently with sticky notes. Sticky notes are great for organizing your thoughts and problems. Sticky notes are great for organizing your thoughts and problems.'
   },
   {
     id: '6',
-    title: 'Creative uses for sticky notes in the workplace',
+    title: 'Indique & Ganhe',
     date: '25 October 2019',
-    image: 'https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    image: '/img-noticias-6.png',
     text: 'Make your workspace more efficient with simple sticky note techniques. Sticky notes are great for organizing your thoughts and problems. Sticky notes are great for organizing your thoughts and problems.'
   },
   {

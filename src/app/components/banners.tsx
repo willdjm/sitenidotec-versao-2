@@ -98,13 +98,13 @@ export const Banner = () => {
       {/* Setas de navegação (visíveis apenas em telas grandes) */}
       <button
         onClick={goToPrevVideo}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-sky-500 bg-opacity-75 text-white p-3 rounded-full shadow-lg hover:bg-opacity-75 focus:outline-none hidden md:block transition-all duration-300 ease-in-out hover:scale-110"
+        className="absolute left-10 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-40 text-sky-500 p-3 rounded-full shadow-lg hover:bg-opacity-75 focus:outline-none hidden md:block transition-all duration-300 ease-in-out hover:scale-110"
       >
         <MdChevronLeft className="h-6 w-6" />
       </button>
       <button
         onClick={goToNextVideo}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-sky-500 bg-opacity-75 text-white p-3 rounded-full shadow-lg hover:bg-opacity-75 focus:outline-none hidden md:block transition-all duration-300 ease-in-out hover:scale-110"
+        className="absolute right-10 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-40 text-sky-500 p-3 rounded-full shadow-lg hover:bg-opacity-75 focus:outline-none hidden md:block transition-all duration-300 ease-in-out hover:scale-110"
       >
         <MdChevronRight className="h-6 w-6" />
       </button>

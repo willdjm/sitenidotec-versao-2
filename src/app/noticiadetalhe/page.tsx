@@ -2,6 +2,7 @@ import { BannerPages } from "../components/bannersPages";
 import { Cards } from "../components/cards";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
+import { Testimonial } from "../components/testimonial";
 import { NoticesList } from "../noticias/components/noticiasLista";
 import { NoticiasDetalhes } from "./components/detalhe";
 
@@ -14,6 +15,7 @@ export default function NoticiaDetalhe() {
   <NoticiasDetalhes/>
     <NoticesList numNotices={6} showPagination={false} title="Demais notícias" />
     <Cards/>
+    <Testimonial/>
   <Footer/>
 </main>
   );
