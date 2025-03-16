@@ -5,7 +5,7 @@ import { MdLocationOn, MdPhone } from 'react-icons/md';
 
 export function Footer() {
   return (
-    <footer className="bg-sky-500 text-white text-center text-surface/75 lg:text-left">
+    <footer className="bg-sky-500 text-white text-center lg:text-left">
       <div className='mx-auto max-w-screen-xl'>
         {/* Container para ícones de redes sociais */}
         <div className="flex items-center justify-center border-b-2 border-white p-6 lg:justify-between">

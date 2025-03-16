@@ -6,7 +6,7 @@ import { FaCheck } from 'react-icons/fa'; // Importando o ícone de check (marca
 
 export const Plans = () => {
   return (
-    <section className="mx-auto max-w-screen-xl lg:p-10 p-4">
+    <section id='planos' className="mx-auto max-w-screen-xl lg:p-10 p-4">
       <h1 className="text-2xl font-semibold text-sky-500 mb-5 lg:mb-10 lg:text-2xl border-b-2 border-sky-500 w-full">
         Nossos Planos
       </h1>

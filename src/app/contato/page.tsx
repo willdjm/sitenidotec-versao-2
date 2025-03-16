@@ -2,6 +2,7 @@ import { BannerPages } from "../components/bannersPages";
 import { Cards } from "../components/cards";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
+import { Plans } from "../components/Plans";
 import { Testimonial } from "../components/testimonial";
 import { NoticesList } from "../noticias/components/noticiasLista";
 import { ContactSection } from "./components/contato";
@@ -15,6 +16,7 @@ export default function Contato() {
   <ContactSection/>
   <ContactForm/>
   <Cards titleText="Nossos Produtos Imobiliários" />
+  <Plans/>
     <Testimonial/>
   <NoticesList numNotices={6} showPagination={false}  />
   <Footer/>

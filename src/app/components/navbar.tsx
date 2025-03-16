@@ -90,6 +90,9 @@ export function Navbar() {
               <Link href="/sistema-para-corretores">
                 <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Sistemas para Corretores</p>
               </Link>
+              <Link href="/#planos">
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Nossos Planos</p>
+              </Link>
               <Link href="/clientes">
                 <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Clientes</p>
               </Link>
@@ -140,6 +143,9 @@ export function Navbar() {
           <Link href="/sistema-para-corretores">
             <p className="text-gray-800 hover:text-sky-500">Sistemas para Corretores</p>
           </Link>
+          <Link href="/#planos">
+                <p className="text-gray-800 hover:text-sky-500">Nossos Planos</p>
+              </Link>
           <Link href="/clientes">
             <p className="text-gray-800 hover:text-sky-500">Clientes</p>
           </Link>
