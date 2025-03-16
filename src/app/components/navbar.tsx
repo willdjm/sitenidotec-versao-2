@@ -1,29 +1,12 @@
 "use client"
 
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { MdPhone } from "react-icons/md";
-import { FaBars, FaChevronDown, FaTimes, FaWhatsapp } from "react-icons/fa";
+import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
 
 export function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Para controlar o dropdown do "Serviços"
-  const dropdownRef = useRef<HTMLDivElement | null>(null); // Corrigido para HTMLDivElement
-
-  // Função para fechar o dropdown se clicar fora
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setIsDropdownOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
 
   return (
     <div className="w-full">
@@ -90,10 +73,10 @@ export function Navbar() {
             {/* Menu Items */}
             <div className="space-y-6">
               <Link href="/">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Home</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Início</p>
               </Link>
               <Link href="/empresa">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Empresa</p>
+                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Sobre nós</p>
               </Link>
               <Link href="/nidoimovel">
                 <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">NIDOImóvel</p>
@@ -106,12 +89,6 @@ export function Navbar() {
               </Link>
               <Link href="/sistema-para-corretores">
                 <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Sistemas para Corretores</p>
-              </Link>
-              <Link href="/suporte-tecnico-e-treinamento">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Suporte Técnico e Treinamento</p>
-              </Link>
-              <Link href="/gestao-de-ti">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Gestão de TI</p>
               </Link>
               <Link href="/clientes">
                 <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Clientes</p>
@@ -139,8 +116,6 @@ export function Navbar() {
               <Link href="http://portal.nido.com.br/index.php/site/login" className="bg-sky-500 text-white px-4 py-2 rounded-md hover:bg-sky-500/90">
                 Portal do Cliente
               </Link>
-
-
             </div>
           </div>
         )}
@@ -148,10 +123,10 @@ export function Navbar() {
         {/* Desktop Menu */}
         <div className="hidden lg:flex justify-center space-x-8 py-4 border-t  border-gray-200 text-center w-full">
           <Link href="/">
-            <p className="text-gray-800 hover:text-sky-500">Home</p>
+            <p className="text-gray-800 hover:text-sky-500">Início</p>
           </Link>
           <Link href="/empresa">
-            <p className="text-gray-800 hover:text-sky-500">Empresa</p>
+            <p className="text-gray-800 hover:text-sky-500">Sobre nós</p>
           </Link>
           <Link href="/nidoimovel">
             <p className="text-gray-800 hover:text-sky-500">NIDOImóvel</p>
@@ -165,31 +140,6 @@ export function Navbar() {
           <Link href="/sistema-para-corretores">
             <p className="text-gray-800 hover:text-sky-500">Sistemas para Corretores</p>
           </Link>
-
-          {/* Services Section with Dropdown */}
-          <div className="relative">
-            <p
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="text-gray-800 hover:text-sky-500 flex items-center justify-between cursor-pointer"
-            >
-              <span>Serviços</span>
-              <FaChevronDown size={14} className={`${isDropdownOpen ? "transform rotate-180 ml-1 items-center" : "ml-1 items-center"}`} />
-            </p>
-            {isDropdownOpen && (
-              <div
-                ref={dropdownRef}
-                className="space-y-2 mt-2 absolute left-0 bg-white shadow-lg w-48 border border-gray-300 rounded-md z-50"
-              >
-                <Link href="/suporte-tecnico-e-treinamento">
-                  <p className="text-gray-800 hover:text-sky-500 px-4 py-2">Suporte Técnico e Treinamento</p>
-                </Link>
-                <Link href="/gestao-de-ti">
-                  <p className="text-gray-800 hover:text-sky-500 px-4 py-2">Gestão de TI</p>
-                </Link>
-              </div>
-            )}
-          </div>
-
           <Link href="/clientes">
             <p className="text-gray-800 hover:text-sky-500">Clientes</p>
           </Link>
