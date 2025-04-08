@@ -1,148 +1,124 @@
 'use client';
 
-import Link from 'next/link';
 import React from 'react';
-import { FaCheck } from 'react-icons/fa'; // Importando o ícone de check (marca de verificação)
+import { FaCheckCircle } from 'react-icons/fa';
 
 export const Plans = () => {
   return (
-    <section id='planos' className="mx-auto max-w-screen-xl lg:p-10 p-4">
-      <h1 className="text-2xl font-semibold text-sky-500 mb-5 lg:mb-10 lg:text-2xl border-b-2 border-sky-500 w-full">
-        Nossos Planos
-      </h1>
-
-      {/* Seção de Preços */}
-      <div className="max-w-sm mx-auto grid gap-6 lg:grid-cols-3 items-start lg:max-w-none">
-        
-        {/* Plano 1 */}
-        <div className="h-full transform transition-all duration-300 hover:scale-102 hover:shadow-xl">
-          <div className="relative flex flex-col h-full p-6 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900 shadow-md overflow-hidden">
-            <div className="mb-5">
-              <div className="text-sky-500 dark:text-slate-200 font-semibold mb-1">NIDOAdm</div>
-              <div className="inline-flex items-baseline mb-2">
-                <span className="text-slate-900 dark:text-slate-200 font-bold text-3xl">R$</span>
-                <span className="text-slate-900 dark:text-slate-200 font-bold text-4xl">35</span>
-                <span className="text-slate-500 font-medium">/mês</span>
-              </div>
-              <div className="text-sm text-slate-500 mb-5">Existem várias variações disponíveis, mas a maioria sofreu.</div>
-              <a
-                className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-sky-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-sky-950/10 hover:bg-sky-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-sky-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
-                href="#0"
-              >
-                Comprar Plano
-              </a>
-            </div>
-            <div className="text-slate-900 dark:text-slate-200 font-medium mb-3">Inclui:</div>
-            <ul className="text-slate-600 dark:text-slate-400 text-sm space-y-3 grow">
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Textos de espaço reservado ilimitados</span>
-              </li>
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Consectetur adipiscing elit</span>
-              </li>
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Excepteur sint occaecat cupidatat</span>
-              </li>
-            </ul>
+    <section className="bg-gray-100 dark:bg-gray-800">
+      <div className="container px-6 py-16 mx-auto max-w-7xl">
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <div>
+            <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-100">Preços simples e transparentes</h2>
+            <p className="mt-4 text-gray-500 dark:text-gray-400">Sem contratos. Sem taxas surpresa.</p>
           </div>
         </div>
 
-        {/* Plano 2 */}
-        <div className="h-full transform transition-all duration-300 hover:scale-102 hover:shadow-xl">
-          <div className="relative flex flex-col h-full p-6 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900 shadow-md overflow-hidden">
-            <div className="mb-5">
-              <div className="text-sky-500 dark:text-slate-200 font-semibold mb-1">NIDOImóvel</div>
-              <div className="inline-flex items-baseline mb-2">
-                <span className="text-slate-900 dark:text-slate-200 font-bold text-3xl">R$</span>
-                <span className="text-slate-900 dark:text-slate-200 font-bold text-4xl">55</span>
-                <span className="text-slate-500 font-medium">/mês</span>
-              </div>
-              <div className="text-sm text-slate-500 mb-5">Existem várias variações disponíveis, mas a maioria sofreu.</div>
-              <a
-                className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-sky-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-sky-950/10 hover:bg-sky-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-sky-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
-                href="#0"
-              >
-                Comprar Plano
-              </a>
+        <div className="grid gap-6 mt-16 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {/* Plano Intro */}
+          <div className="px-6 py-4 transition-colors duration-200 transform rounded-lg border hover:bg-gray-200 dark:hover:bg-gray-700">
+            <p className="text-lg font-medium text-gray-800 dark:text-gray-100">Intro</p>
+            <h4 className="mt-2 text-4xl font-semibold text-gray-800 dark:text-gray-100">R$19 <span className="text-base font-normal text-gray-600 dark:text-gray-400">/ Mês</span></h4>
+            <p className="mt-4 text-gray-500 dark:text-gray-300">Para empresas que querem otimizar consultas na web.</p>
+
+            <div className="mt-8 space-y-8">
+              {[
+                'Todos os links limitados',
+                'Plataforma própria',
+                'Suporte via chat',
+                'Otimização de hashtags',
+                'Usuários ilimitados'
+              ].map((feature) => (
+                <div key={feature} className="flex items-center">
+                  <FaCheckCircle className="w-5 h-5 text-sky-500" />
+                  <span className="mx-4 text-gray-700 dark:text-gray-300">{feature}</span>
+                </div>
+              ))}
             </div>
-            <div className="text-slate-900 dark:text-slate-200 font-medium mb-3">Inclui:</div>
-            <ul className="text-slate-600 dark:text-slate-400 text-sm space-y-3 grow">
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Textos de espaço reservado ilimitados</span>
-              </li>
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Consectetur adipiscing elit</span>
-              </li>
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Excepteur sint occaecat cupidatat</span>
-              </li>
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Blocos pré-definidos conforme necessário</span>
-              </li>
-            </ul>
+
+            <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-sky-500 rounded-md hover:bg-sky-600 focus:outline-none focus:bg-sky-600">
+              Escolher plano
+            </button>
+          </div>
+
+          {/* Plano Base */}
+          <div className="px-6 py-4 transition-colors duration-200 transform rounded-lg border hover:bg-gray-200 dark:hover:bg-gray-700">
+            <p className="text-lg font-medium text-gray-800 dark:text-gray-100">Base</p>
+            <h4 className="mt-2 text-4xl font-semibold text-gray-800 dark:text-gray-100">R$39 <span className="text-base font-normal text-gray-600 dark:text-gray-400">/ Mês</span></h4>
+            <p className="mt-4 text-gray-500 dark:text-gray-300">Para empresas que querem otimizar consultas na web.</p>
+
+            <div className="mt-8 space-y-8">
+              {[
+                'Todos os links limitados',
+                'Plataforma própria',
+                'Suporte via chat',
+                'Otimização de hashtags',
+                'Usuários ilimitados'
+              ].map((feature) => (
+                <div key={feature} className="flex items-center">
+                  <FaCheckCircle className="w-5 h-5 text-sky-500" />
+                  <span className="mx-4 text-gray-700 dark:text-gray-300">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-sky-500 rounded-md hover:bg-sky-600 focus:outline-none focus:bg-sky-600">
+              Escolher plano
+            </button>
+          </div>
+
+          {/* Plano Popular */}
+          <div className="px-6 py-4 transition-colors duration-200 transform bg-sky-500 rounded-lg dark:bg-gray-600">
+            <p className="text-lg font-medium text-white">Popular</p>
+            <h4 className="mt-2 text-4xl font-semibold text-white">R$99 <span className="text-base font-normal text-gray-400">/ Mês</span></h4>
+            <p className="mt-4 text-white">Para empresas que querem otimizar consultas na web.</p>
+
+            <div className="mt-8 space-y-8">
+              {[
+                'Todos os links limitados',
+                'Plataforma própria',
+                'Suporte via chat',
+                'Otimização de hashtags',
+                'Usuários ilimitados'
+              ].map((feature) => (
+                <div key={feature} className="flex items-center">
+                  <FaCheckCircle className="w-5 h-5 text-white" />
+                  <span className="mx-4 text-white">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-sky-500 capitalize transition-colors duration-200 transform bg-white rounded-md hover:bg-gray-200 focus:outline-none focus:bg-sky-600">
+              Escolher plano
+            </button>
+          </div>
+
+          {/* Plano Enterprise */}
+          <div className="px-6 py-4 transition-colors duration-200 transform rounded-lg border hover:bg-gray-200 dark:hover:bg-gray-700 ">
+            <p className="text-lg font-medium text-gray-800 dark:text-gray-100">Enterprise</p>
+            <h4 className="mt-2 text-4xl font-semibold text-gray-800 dark:text-gray-100">R$199 <span className="text-base font-normal text-gray-600 dark:text-gray-400">/ Mês</span></h4>
+            <p className="mt-4 text-gray-500 dark:text-gray-300">Para empresas que querem otimizar consultas na web.</p>
+
+            <div className="mt-8 space-y-8">
+              {[
+                'Todos os links limitados',
+                'Plataforma própria',
+                'Suporte via chat',
+                'Otimização de hashtags',
+                'Usuários ilimitados'
+              ].map((feature) => (
+                <div key={feature} className="flex items-center">
+                  <FaCheckCircle className="w-5 h-5 text-sky-500" />
+                  <span className="mx-4 text-gray-700 dark:text-gray-300">{feature}</span>
+                </div>
+              ))}
+            </div>
+
+            <button className="w-full px-4 py-2 mt-10 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-sky-500 rounded-md hover:bg-sky-600 focus:outline-none focus:bg-sky-600">
+              Escolher plano
+            </button>
           </div>
         </div>
-
-        {/* Plano 3 */}
-        <div className="h-full transform transition-all duration-300 hover:scale-102 hover:shadow-xl">
-          <div className="relative flex flex-col h-full p-6 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-900 shadow-md overflow-hidden">
-            <div className="mb-5">
-              <div className="text-sky-500 dark:text-slate-200 font-semibold mb-1">Site NIDO</div>
-              <div className="inline-flex items-baseline mb-2">
-                <span className="text-slate-900 dark:text-slate-200 font-bold text-3xl">R$</span>
-                <span className="text-slate-900 dark:text-slate-200 font-bold text-4xl">85</span>
-                <span className="text-slate-500 font-medium">/mês</span>
-              </div>
-              <div className="text-sm text-slate-500 mb-5">Existem várias variações disponíveis, mas a maioria sofreu.</div>
-              <a
-                className="w-full inline-flex justify-center whitespace-nowrap rounded-lg bg-sky-500 px-3.5 py-2.5 text-sm font-medium text-white shadow-sm shadow-sky-950/10 hover:bg-sky-600 focus-visible:outline-none focus-visible:ring focus-visible:ring-sky-300 dark:focus-visible:ring-slate-600 transition-colors duration-150"
-                href="#0"
-              >
-                Comprar Plano
-              </a>
-            </div>
-            <div className="text-slate-900 dark:text-slate-200 font-medium mb-3">Inclui:</div>
-            <ul className="text-slate-600 dark:text-slate-400 text-sm space-y-3 grow">
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Textos de espaço reservado ilimitados</span>
-              </li>
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Consectetur adipiscing elit</span>
-              </li>
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Excepteur sint occaecat cupidatat</span>
-              </li>
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Blocos pré-definidos conforme necessário</span>
-              </li>
-              <li className="flex items-center">
-                <FaCheck className="w-3 h-3 fill-sky-500 mr-3 shrink-0" />
-                <span>Sem repetições</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-
-      {/* Botão Fale com um especialista */}
-      <div className="flex justify-center mt-8">
-            <Link href="https://wa.me/5511953052059" target="_blank">
-              <button className="px-6 py-2 text-white bg-sky-500 rounded-md hover:bg-sky-600 hover:scale-102 transform transition-all duration-300">
-                Fale com um especialista
-              </button>
-            </Link>
       </div>
     </section>
   );

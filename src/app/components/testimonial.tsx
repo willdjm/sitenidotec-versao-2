@@ -71,10 +71,24 @@ export const Testimonial = () => {
   };
 
   return (
-    <section className="mx-auto max-w-screen-xl lg:p-10 p-4">
-      <h1 className="text-2xl font-semibold text-sky-500 mb-5 lg:mb-10 lg:text-2xl border-b-2 border-sky-500 w-full">
-        Relatos das nossas imobiliárias parceiras
-      </h1>
+    <section className="lg:mx-auto mx-4 max-w-screen-xl my-20">
+
+
+      {/* Header Section */}
+      <div className="mx-auto w-full items-center justify-center lg:max-w-3xl">
+        <div className="text-center">
+          <p className="text-lg font-medium leading-8 text-indigo-600/95">
+            O que dizem nossos clientes
+          </p>
+          <h1 className="mb-10 lg:text-5xl text-3xl font-bold tracking-tight text-black">
+            Milhares de usuários confiam na Jetimob diariamente
+          </h1>
+
+        </div>
+
+
+      </div>
+
 
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
@@ -84,11 +98,11 @@ export const Testimonial = () => {
                 {/* Quadrado maior, atrás da imagem */}
                 <div className="absolute top-0 left-0 w-72 h-72 bg-sky-500/80 -translate-x-4 -translate-y-4 z-0 rounded-lg"></div>
                 <picture>
-                <img
-                  src={testimonial.image}
-                  alt={`Imagem de ${testimonial.name}`}
-                  className="w-full aspect-[7/7] object-contain relative z-10"
-                />
+                  <img
+                    src={testimonial.image}
+                    alt={`Imagem de ${testimonial.name}`}
+                    className="w-full aspect-[7/7] object-contain relative z-10"
+                  />
                 </picture>
               </div>
 
@@ -96,11 +110,11 @@ export const Testimonial = () => {
                 {/* Exibir o logo da imobiliária alinhado à esquerda */}
                 <div className="mb-4">
                   <picture>
-                  <img
-                    src={testimonial.logo}
-                    alt={`Logo de ${testimonial.title}`}
-                    className="lg:w-56 w-full h-full object-contain ml-0"
-                  />
+                    <img
+                      src={testimonial.logo}
+                      alt={`Logo de ${testimonial.title}`}
+                      className="lg:w-56 w-full h-full object-contain ml-0"
+                    />
                   </picture>
                 </div>
 
