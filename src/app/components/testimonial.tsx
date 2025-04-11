@@ -71,28 +71,38 @@ export const Testimonial = () => {
   };
 
   return (
-    <section className="lg:mx-auto mx-4 max-w-screen-xl my-20">
+    <section className="lg:mx-auto mx-4 max-w-screen-xl lg:my-20 my-10">
+
+
 
 
       {/* Header Section */}
       <div className="mx-auto w-full items-center justify-center lg:max-w-3xl">
         <div className="text-center">
-          <p className="text-lg font-medium leading-8 text-indigo-600/95">
-            O que dizem nossos clientes
+          <p className="text-lg font-medium leading-8 text-gray-500">
+            Nossos Clientes
           </p>
-          <h1 className="mb-10 lg:text-5xl text-3xl font-bold tracking-tight text-black">
-            Milhares de usuários confiam na Jetimob diariamente
+          <h1 className="mb-10 lg:text-5xl text-3xl font-bold tracking-tight text-sky-500">
+          Usuários de todo o Brasil confiam na NIDOTEC diariamente
           </h1>
 
         </div>
+
 
 
       </div>
 
 
       <Slider {...settings}>
+
+        
+
+
         {testimonials.map((testimonial, index) => (
           <div key={index}>
+
+
+
             <div className="grid md:grid-cols-2 items-center lg:gap-12 gap-4 font-[sans-serif] max-w-5xl max-md:max-w-md mx-auto p-4">
               <div className="relative bg-gray-50">
                 {/* Quadrado maior, atrás da imagem */}

@@ -5,15 +5,15 @@ import { FaXTwitter } from 'react-icons/fa6';
 
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-gray-100 via-[#bce1ff] to-gray-100">
+    <footer className="bg-sky-500">
       <div className="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:py-20 py-10 gap-16 lg:grid-cols-3">
           <div>
             <picture>
-              <img src="/logo-nido-porto.png" className="mr-5 sm:h-20" alt="logo" />
+              <img src="/logonovo.png" className="" alt="logo" />
             </picture>
             {/* Informações de contato */}
-            <div className="lg:mt-6 mt-3 text-base text-gray-600">
+            <div className="lg:mt-6 mt-3 text-base text-white">
             <p>
               <a href="https://maps.app.goo.gl/1GkP8KeiDfqf2pX86" target="_blank" rel="noopener noreferrer">
               Rua Machado Bitencourt, 205 - Conjunto 96
@@ -44,8 +44,8 @@ export const Footer = () => {
 
           <div className="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-3">
             <div>
-              <p className="text-lg text-sky-500 font-semibold">Produtos</p>
-              <nav className="flex flex-col mt-4 space-y-2 text-base text-gray-500">
+              <p className="text-lg text-white font-semibold">Produtos</p>
+              <nav className="flex flex-col mt-4 space-y-2 text-base text-white">
               <Link href="/#Inicio">Sistema NIDOImóvel</Link>
                 <Link href="/#Inicio">Sistema NIDOAdm</Link>
                 <Link href="/#Inicio">Site Para Imobiliárias</Link>
@@ -53,8 +53,8 @@ export const Footer = () => {
               </nav>
             </div>
             <div>
-              <p className="text-lg text-sky-500 font-semibold">Institucional</p>
-              <nav className="flex flex-col mt-4 space-y-2 text-base text-gray-500">
+              <p className="text-lg text-white font-semibold">Institucional</p>
+              <nav className="flex flex-col mt-4 space-y-2 text-base text-white">
 
 
               <Link href="/#Inicio">Início</Link>
@@ -66,8 +66,8 @@ export const Footer = () => {
               </nav>
             </div>
             <div>
-              <p className="text-lg text-sky-500 font-semibold">Descubra mais</p>
-              <nav className="flex flex-col mt-4 space-y-2 text-base text-gray-500">
+              <p className="text-lg text-white font-semibold">Descubra mais</p>
+              <nav className="flex flex-col mt-4 space-y-2 text-base text-white">
               <Link href="/#Inicio">Nossos Clientes</Link>
                 <Link href="/#Inicio">Parceiros NIDOTec</Link>
                 <Link href="/#Inicio">Nossos Planos</Link>
@@ -83,7 +83,7 @@ export const Footer = () => {
 
         <div className="sm:flex lg:py-8 py-2 sm:items-center sm:justify-between">
           {/* Ajuste de Layout Responsivo */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 text-gray-500">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4 text-white">
             <span className="text-center sm:text-left">© {new Date().getFullYear()}</span>
             <a className="font-semibold ml-1 text-center sm:text-left" href="https://www.nido.com.br/">
               NIDOTEC - Hub Imobiliária,  inc.

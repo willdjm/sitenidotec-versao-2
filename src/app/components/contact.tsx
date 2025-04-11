@@ -4,9 +4,9 @@ import { FaCheckCircle } from "react-icons/fa";
 export const Contact = () => {
   return (
     <div className="min-h-full bg-gray-200 pb-12">
-      <div className="w-full bg-sky-500 pt-20 pb-24 text-center">
-        <h4 className="text-4xl font-bold text-gray-100">Fale com nossa equipe comercial</h4>
-        <p className="text-base font-medium text-gray-100 mt-2">Podemos ajudar você a revolucionar sua imobiliária.</p>
+      <div className="w-full bg-sky-500 lg:pt-20 pt-10 pb-24 text-center px-4 lg:px-0">
+        <h4 className="text-4xl font-bold text-gray-100">Entre em contato com nosso time comercial</h4>
+        <p className="text-base font-medium text-gray-100 mt-2">Estamos prontos para transformar o futuro da sua imobiliária</p>
 
         {/* Botão Fale com um especialista */}
         <div className="flex justify-center mt-8">
@@ -17,25 +17,25 @@ export const Contact = () => {
           </Link>
         </div>
 
-        <ul className="text-white text-sm flex flex-col lg:flex-row gap-5 lg:items-center justify-center mt-10">
-          <li className="flex items-center">
-            <FaCheckCircle className="w-4 h-4 fill-white ml-3 mr-1" />
-            <span>Atendimento Humanizado</span>
-          </li>
-          <li className="flex items-center">
-            <FaCheckCircle className="w-4 h-4 fill-white ml-3 mr-1" />
-            <span>Treinamentos Completos</span>
-          </li>
-          <li className="flex items-center">
-            <FaCheckCircle className="w-4 h-4 fill-white ml-3 mr-1" />
-            <span>Excepteur sint occaecat cupidatat</span>
-          </li>
-          <li className="flex items-center">
-            <FaCheckCircle className="w-4 h-4 fill-white ml-3 mr-1" />
-            <span>Blocos pré-definidos conforme necessário</span>
-          </li>
+        <ul className="text-white text-sm flex flex-col lg:flex-row gap-5 justify-center items-start mt-10 mx-auto w-max">
+  <li className="flex items-center">
+    <FaCheckCircle className="w-4 h-4 fill-white ml-3 mr-1" />
+    <span>Atendimento Humanizado</span>
+  </li>
+  <li className="flex items-center">
+    <FaCheckCircle className="w-4 h-4 fill-white ml-3 mr-1" />
+    <span>Suporte via Telefone</span>
+  </li>
+  <li className="flex items-center">
+    <FaCheckCircle className="w-4 h-4 fill-white ml-3 mr-1" />
+    <span>Treinamentos Completos</span>
+  </li>
+  <li className="flex items-center">
+    <FaCheckCircle className="w-4 h-4 fill-white ml-3 mr-1" />
+    <span>Base de Conhecimento</span>
+  </li>
+</ul>
 
-        </ul>
       </div>
 
       <div className="w-full 2xl:w-3/4 flex flex-col lg:flex-row bg-white rounded-md items-center justify-center px-4 lg:px-8 2xl:px-0 mx-auto -mt-10 relative">
@@ -43,7 +43,7 @@ export const Contact = () => {
         <div className="w-full bg-cover relative max-w-md lg:max-w-2xl lg:w-7/12">
           <div className="flex flex-col items-center justify-center w-full h-full relative lg:pr-10">
             <picture>
-            <img src="/img-contato.png" className="lg:m-20"/>
+            <img src="/img-contato.png" className="lg:m-20" />
             </picture>
           </div>
         </div>
@@ -74,17 +74,11 @@ export const Contact = () => {
       </div>
 
       <div className="lg:flex lg:flex-row gap-4 w-full">
-        <div className="w-full flex flex-col">
-          <input
-            type="text"
-            placeholder="Nome"
-            className="leading-none text-gray-900 p-3 focus:outline-none focus:border-sky-500 mt-4 bg-sky-500/5 border rounded border-zinc-200"
-          />
-        </div>
+
         <div className="w-full flex flex-col">
           <input
             type="email"
-            placeholder="Telefone"
+            placeholder="E-mail"
             className="leading-none text-gray-900 p-3 focus:outline-none focus:border-sky-500 mt-4 bg-sky-500/5 border rounded border-zinc-200"
           />
         </div>

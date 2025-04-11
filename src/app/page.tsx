@@ -10,14 +10,15 @@ import { Testimonial } from "./components/testimonial";
 
 export default function Home() {
   return (
-<main className="bg-zinc-50">
-<Notices/>
+<main>
+
 <Negocios/>
 <Parceiros/>
 <IntegracaoPortais/>
-<Testimonial/>
-<Plans/>
 
+<Plans/>
+<Notices/>
+<Testimonial/>
 <Contact/>
   <Footer/>
 

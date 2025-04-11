@@ -8,21 +8,21 @@ import React from 'react';
 const cardData = [
   {
     id: 1,
-    title: "UI/UX Review Check",
+    title: "Você sabia que a NIDO faz parte do Grupo Porto Seguro?",
     description: "Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others.",
     imgSrc: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80", 
     link: "https://www.nido.com.br"
   },
   {
     id: 2,
-    title: "Designing for the Future",
-    description: "UI/UX design is all about making the experience seamless and intuitive for users.",
+    title: "A NIDO está fazendo aniversário, mas quem ganha o presente é você!",
+    description: "UI/UX design is all about making the experience seamless.",
     imgSrc: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
     link: "https://www.nido.com.br"
   },
   {
     id: 3,
-    title: "Creative Process in UI/UX",
+    title: "Você conhe o Aluguel Garantido Porto?",
     description: "Mastering the creative process is key to producing designs that stand out and perform well.",
     imgSrc: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80", 
     link: "https://www.nido.com.br"
@@ -31,20 +31,20 @@ const cardData = [
 
 export const Notices = () => {
   return (
-    <section className="py-24 flex flex-col items-center justify-center bg-gray-100">
+    <section className="lg:py-24 py-10 flex flex-col items-center justify-center bg-gray-100">
       <div className="container px-4 mx-auto max-w-7xl">
 
         {/* Header Section */}
         <div className="mx-auto w-full items-center justify-center lg:max-w-3xl">
           <div className="text-center flex flex-col ">
-            <p className="text-lg font-medium leading-8 text-gray-700">
+            <p className="text-lg font-medium leading-8 text-gray-500">
               Notícias
             </p>
             <h1 className="mb-5 lg:text-5xl text-3xl font-bold tracking-tight text-sky-500">
-            Conteúdos para sua imobiliária ir cada vez mais longe
+            Impulsione sua imobiliária com conteúdos que fazem a diferença
             </h1>
-            <p className="mb-10 text-base text-gray-700 text-center">
-            Em nosso blog, contamos com centenas de conteúdos para auxiliar você na sua rotina imobiliária e a entender um pouco mais sobre nossos principais produtos, impulsionando o seu conhecimento sobre gestão de vendas.
+            <p className="mb-10 text-base text-gray-500 text-center">
+            Nosso blog está repleto de materiais para ajudar no seu dia a dia e proporcionar uma visão mais profunda sobre nossos produtos, aprimorando sua gestão de vendas e conhecimento do mercado
             </p>
           </div>
         </div>
@@ -53,15 +53,15 @@ export const Notices = () => {
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
           {cardData.map((card) => (
             <Link key={card.id} href={card.link} target="_blank" passHref>
-              <div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg hover:shadow-xl cursor-pointer transition-all duration-300 ease-in-out">
+              <div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg shadow-sky-500/10 hover:shadow-xl cursor-pointer transition-all duration-300 ease-in-out">
                 <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
                   <img src={card.imgSrc} alt={card.title} className="object-cover w-full h-48" />
                 </div>
                 <div className="p-6">
-                  <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                  <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 text-sky-500">
                     {card.title}
                   </h4>
-                  <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-700">
+                  <p className="block mt-3 font-sans text-xl antialiased font-normal leading-relaxed text-gray-500">
                     {card.description}
                   </p>
                   {/* Link de "Acessar conteúdo" com ícone */}
