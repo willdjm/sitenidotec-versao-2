@@ -80,7 +80,7 @@ export const Testimonial = () => {
       <div className="mx-auto w-full items-center justify-center lg:max-w-3xl">
         <div className="text-center">
           <p className="text-lg font-medium leading-8 text-gray-500">
-            Nossos Clientes
+            Depoimentos
           </p>
           <h1 className="mb-10 lg:text-5xl text-3xl font-bold tracking-tight text-sky-500">
           Usuários de todo o Brasil confiam na NIDOTEC diariamente

@@ -5,7 +5,7 @@ import React from 'react';
 export const IntegracaoPortais = () => {
   return (
     <>
-      <section className="bg-white dark:bg-gray-800">
+      <section className="bg-gray-200 dark:bg-gray-800">
         <div className="container max-w-7xl flex flex-col-reverse px-4 py-10 mx-auto lg:py-16 lg:flex-row lg:items-start">
           <div className="w-full lg:w-1/2">
             <div className="lg:max-w-lg">

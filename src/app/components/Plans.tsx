@@ -70,9 +70,9 @@ export const Plans = () => {
       {/* Header */}
       <div className="relative z-10 mx-auto w-full items-center justify-center lg:max-w-3xl">
         <div className="text-center">
-        <p className="text-lg font-medium leading-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500">
-  Nossos planos
-</p>
+          <p className="text-lg font-medium leading-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500">
+            Planos
+          </p>
 
           <h1 className="mb-16 lg:text-4xl text-3xl font-bold tracking-tight text-white">
             Preços simples e transparentes para as necessidades do seu negócio imobiliário
@@ -83,24 +83,24 @@ export const Plans = () => {
       {/* Cards */}
       <div className="relative z-10 grid gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 max-w-screen-xl">
 
-{/* Top Right Circle */}
-<div className="absolute top-[-80px] right-[-80px] w-[200px] h-[200px] bg-white rounded-full opacity-10 z-0"></div>
+        {/* Top Right Circle */}
+        <div className="absolute top-[-80px] right-[-80px] w-[200px] h-[200px] bg-white rounded-full opacity-10 z-0"></div>
 
-{/* Bottom Left Circle */}
-<div className="absolute bottom-[-80px] left-[-80px] w-[200px] h-[200px] bg-white rounded-full opacity-10 z-0"></div>
-        
+        {/* Bottom Left Circle */}
+        <div className="absolute bottom-[-80px] left-[-80px] w-[200px] h-[200px] bg-white rounded-full opacity-10 z-0"></div>
+
         {plans.map(({ title, price, features, image }) => (
           <div
             key={title}
             className="bg-white px-6 py-4 rounded-lg transition-all duration-300 transform hover:shadow-xl hover:scale-[1.02]"
           >
             <div className="mb-7 pb-7 flex items-center border-b border-sky-500/50">
-            <picture>
-              <img
-                src={image}
-                alt={title}
-                className="w-20"
-              />
+              <picture>
+                <img
+                  src={image}
+                  alt={title}
+                  className="w-20"
+                />
               </picture>
               <div className="ml-5">
                 <span className="block text-2xl font-semibold text-sky-500">{title}</span>
@@ -109,7 +109,7 @@ export const Plans = () => {
               </div>
             </div>
 
-            <div className="mt-8 space-y-6">
+            <div className="mt-8 space-y-3 lg:space-y-5">
               {features.map((feature) => (
                 <div key={feature} className="flex items-center">
                   <FaCheckCircle className="w-5 h-5 text-sky-500" />
@@ -140,7 +140,7 @@ export const Plans = () => {
             Personalizar do seu jeito
           </a>
 
-          
+
         </div>
       </div>
     </section>

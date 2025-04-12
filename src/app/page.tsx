@@ -13,9 +13,9 @@ export default function Home() {
 <main>
 
 <Negocios/>
-<Parceiros/>
-<IntegracaoPortais/>
 
+<IntegracaoPortais/>
+<Parceiros/>
 <Plans/>
 <Notices/>
 <Testimonial/>
