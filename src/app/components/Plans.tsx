@@ -64,7 +64,7 @@ export const Plans = () => {
   ];
 
   return (
-    <section className="relative lg:py-24 py-10 flex flex-col items-center justify-center bg-sky-500 px-4 lg:px-0 overflow-hidden">
+    <section className="relative lg:py-24 py-14 flex flex-col items-center justify-center bg-sky-500 px-4 lg:px-0 overflow-hidden">
 
 
       {/* Header */}

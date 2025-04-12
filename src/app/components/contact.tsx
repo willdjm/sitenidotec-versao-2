@@ -4,7 +4,7 @@ import { FaCheckCircle } from "react-icons/fa";
 export const Contact = () => {
   return (
     <div className="min-h-full bg-gray-200 pb-12">
-      <div className="w-full bg-sky-500 lg:pt-20 pt-10 pb-24 text-center px-4 lg:px-0">
+      <div className="w-full bg-sky-500 lg:pt-20 pt-14 pb-24 text-center px-4 lg:px-0">
         <h4 className="text-4xl font-bold text-gray-100">Entre em contato com nosso time comercial</h4>
         <p className="text-base font-medium text-gray-100 mt-2">Estamos prontos para transformar o futuro da sua imobiliária</p>
 
