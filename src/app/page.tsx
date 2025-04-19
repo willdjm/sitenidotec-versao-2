@@ -5,7 +5,6 @@ import { Clientes } from "./components/Clientes";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
 import { IntegracaoPortais } from "./components/IntegracaoPortais";
-import { IntegracaoPortais2 } from "./components/IntegracaoPortais2";
 import { Navbar } from "./components/navbar";
 import { Negocios } from "./components/Negocios";
 import { Nidoadm } from "./components/Nidoadm";
@@ -24,7 +23,6 @@ export default function Home() {
   <Banner/>
   <Produtos/>
   <About/>
-  <IntegracaoPortais2/>
   <Nidoadm/>
   <Nidoadm2/>
 <Nidoimovel/>
