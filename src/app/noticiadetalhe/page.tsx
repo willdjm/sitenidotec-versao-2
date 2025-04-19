@@ -1,5 +1,4 @@
 import { BannerPages } from "../components/bannersPages";
-import { Cards } from "../components/cards";
 import { FloatingButtons } from "../components/FloatingButtons";
 import { Footer } from "../components/footer";
 import { Navbar } from "../components/navbar";
@@ -16,7 +15,7 @@ export default function NoticiaDetalhe() {
       <BannerPages mobileImage="/banner-noticias-mobile.png" tabletImage="/banner-noticias.png" desktopImage="/banner-noticias.png" />
       <NoticiasDetalhes />
       <NoticesList numNotices={6} showPagination={false} title="Demais notícias" />
-      <Cards />
+      
       <Plans />
       <Testimonial />
       <Footer />
