@@ -1,162 +1,192 @@
 "use client"
 
-import Link from "next/link";
-import { useState } from "react";
-import { MdPhone } from "react-icons/md";
-import { FaBars, FaTimes, FaWhatsapp } from "react-icons/fa";
+import { useState, useEffect } from 'react';
+import { FiMenu, FiX, FiHome, FiSettings, FiUser } from 'react-icons/fi';
+import { FaWhatsapp } from 'react-icons/fa';  // Importando o ícone do WhatsApp
+import Link from 'next/link';
 
-export function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+export const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Tipando o estado dropdownOpen para garantir que ele tenha apenas as chaves específicas
+  const [dropdownOpen, setDropdownOpen] = useState<{
+    option1: boolean;
+    option2: boolean;
+    option3: boolean;
+  }>({
+    option1: false,
+    option2: false,
+    option3: false,
+  });
+
+  const [scrolling, setScrolling] = useState(false);
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  // Tipando 'dropdown' explicitamente
+  const toggleDropdown = (dropdown: keyof typeof dropdownOpen) => {
+    setDropdownOpen((prev) => ({
+      ...prev,
+      [dropdown]: !prev[dropdown], // Aqui, a chave será validada
+    }));
+  };
+
+  // Hook para detectar o scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="w-full">
-      {/* Navbar */}
-      <nav className="bg-whreite lg:shadow-none shadow-md border-b border-sky-500/10 lg:border-none mx-auto max-w-screen-xl">
-        {/* Top Section - Logo, Contact and SAC */}
-        <div className="flex items-center justify-between p-4 gap-4">
-          {/* Logo */}
-          <div className="flex items-center space-x-4">
-            <Link href='/'>
-              <picture>
-                <img src="/logo-nido-porto.png" alt="Logo" className="h-full sm:h-24" />
-              </picture>
-            </Link>
-          </div>
-
-          {/* Desktop Phone and SAC */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link href="tel:+551145083724">
-              <p className="text-gray-800 hover:text-sky-500 ">
-                <MdPhone className="inline-block mr-2" size={18} />
-                (11) 4508-3724
-              </p>
-            </Link>
-            <Link href="https://wa.me/5511953052059" target="_blank">
-              <p className="text-gray-800 hover:text-sky-500">
-                <FaWhatsapp className="inline-block mr-2" size={20} />
-                (11) 95305-2059
-              </p>
-            </Link>
-            <a href="http://portal.nido.com.br/index.php/site/login" target="_blank" className="bg-sky-500 text-white px-4 py-2 rounded-md text-sm hover:bg-sky-500/90">
-              Portal do Cliente
-            </a>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden text-sky-500/90 hover:bg-zinc-300/60 border border-zinc-300 hover:border-sky-500/50 rounded-md p-1 text-2xl md:text-3xl"
-          >
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
-          </button>
+    <nav className={`bg-white border-b border-sky-500/5 px-4 w-full max-w-full mx-auto transition-all duration-700 ease-in-out ${scrolling ? 'fixed top-0 left-0 right-0 shadow-lg z-20' : 'shadow-none'}`}>
+      <div className="container mx-auto flex items-center justify-between py-6 max-w-7xl">
+        {/* Logo */}
+        <div className="text-sky-500 font-bold text-lg">
+          <Link href="/">
+            <picture>
+              <img
+                src='/logo-novo2.png'
+                alt='Logo'
+                className="h-14 lg:h-20 object-cover"
+              />
+            </picture>
+          </Link>
         </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-slate-50 absolute top-0 left-0 w-full h-screen flex flex-col p-6 space-y-6 shadow-lg z-50">
-            {/* Close Button and Logo */}
-            <div className="flex justify-between items-center mb-6 gap-4">
-              {/* Logo on the left */}
-              <picture>
-                <img src="/logo-nido-porto.png" alt="Logo" className="h-full sm:h-24" />
-              </picture>
-
-              {/* Close Button on the right */}
-              <button
-                onClick={() => setIsMenuOpen(false)}
-                className="lg:hidden text-sky-500/90 hover:bg-zinc-300/60 border border-zinc-300 hover:border-sky-500/50 rounded-md p-1 text-2xl md:text-3xl"
-              >
-                <FaTimes />
-              </button>
-            </div>
-
-            {/* Menu Items */}
-            <div className="space-y-6">
-              <Link href="/">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Início</p>
-              </Link>
-              <Link href="/empresa">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Sobre nós</p>
-              </Link>
-              <Link href="/nidoimovel">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">NIDOImóvel</p>
-              </Link>
-              <Link href="/nidoadm">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">NIDOAdm</p>
-              </Link>
-              <Link href="/sites-para-imobiliaria">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Sites para Imobiliárias</p>
-              </Link>
-              <Link href="/sistema-para-corretores">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Sistemas para Corretores</p>
-              </Link>
-              <Link href="/#planos">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Nossos Planos</p>
-              </Link>
-              <Link href="/clientes">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Clientes</p>
-              </Link>
-              <Link href="/parceiros">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Parceiros</p>
-              </Link>
-              <Link href="/contato">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">Contato</p>
-              </Link>
-
-              <Link href="tel:+551145083724">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2">
-                  <MdPhone className="inline-block mr-2" size={18} />
-                  (11) 4508-3724
-                </p>
-              </Link>
-              <Link href="https://wa.me/5511953052059" target="_blank">
-                <p className="text-sky-500 hover:text-sky-500/80 hover:bg-zinc-300 rounded-md p-1 mt-2 mb-6">
-                  <FaWhatsapp className="inline-block mr-2" size={20} />
-                  (11) 95305-2059
-                </p>
-              </Link>
-
-              <Link href="http://portal.nido.com.br/index.php/site/login" className="bg-sky-500 text-white px-4 py-2 rounded-md hover:bg-sky-500/90">
-                Portal do Cliente
-              </Link>
-            </div>
-          </div>
-        )}
+        {/* Menu Mobile Button */}
+        <button
+          onClick={toggleMenu}
+          className="lg:hidden text-sky-500 focus:outline-none"
+        >
+          {menuOpen ? (
+            <FiX className="w-6 h-6" />
+          ) : (
+            <FiMenu className="w-6 h-6" />
+          )}
+        </button>
 
         {/* Desktop Menu */}
-        <div className="hidden lg:flex justify-center space-x-8 py-4 border-t  border-gray-200 text-center w-full">
-          <Link href="/">
-            <p className="text-gray-800 hover:text-sky-500">Início</p>
+        <div className="hidden lg:flex items-center space-x-6">
+          {/* Opção 1 */}
+          <Link
+            href="/#"
+            className="font-medium text-sky-500 relative group"
+          >
+            Início
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500 transition-all duration-500 group-hover:w-full"></span>
           </Link>
-          <Link href="/empresa">
-            <p className="text-gray-800 hover:text-sky-500">Sobre nós</p>
+
+          {/* Opção 2 */}
+          <Link
+            href="/#"
+            className="font-medium text-sky-500 relative group"
+          >
+            Sobre nós
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500 transition-all duration-500 group-hover:w-full"></span>
           </Link>
-          <Link href="/nidoimovel">
-            <p className="text-gray-800 hover:text-sky-500">NIDOImóvel</p>
+
+          {/* Opção 3 */}
+          <div
+            className="relative group"
+            onMouseEnter={() => toggleDropdown('option2')}
+            onMouseLeave={() => toggleDropdown('option2')}
+          >
+            <button className="text-sky-500 hover:text-sky-700 transition duration-300 font-medium">
+              Produtos
+            </button>
+            {dropdownOpen.option2 && (
+              <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-10 transition-all duration-300">
+                <ul>
+                  <li className="flex items-center p-2 hover:bg-sky-500 hover:text-white">
+                    <FiUser className="mr-2" /> <Link href="/#">Sub-opção 1</Link>
+                  </li>
+                  <li className="flex items-center p-2 hover:bg-sky-500 hover:text-white">
+                    <FiHome className="mr-2" /> <Link href="/#">Sub-opção 2</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500 transition-all duration-500 group-hover:w-full"></span>
+          </div>
+
+          {/* Opção 4 */}
+          <div
+            className="relative group"
+            onMouseEnter={() => toggleDropdown('option1')}
+            onMouseLeave={() => toggleDropdown('option1')}
+          >
+            <button className="text-sky-500 hover:text-sky-700 transition duration-300 font-medium">
+              Diferenciais
+            </button>
+            {dropdownOpen.option1 && (
+              <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-10 transition-all duration-300">
+                <ul>
+                  <li className="flex items-center p-2 hover:bg-sky-500 hover:text-white">
+                    <FiHome className="mr-2" /> <Link href="/#">Sub-opção 1</Link>
+                  </li>
+                  <li className="flex items-center p-2 hover:bg-sky-500 hover:text-white">
+                    <FiSettings className="mr-2" /> <Link href="/#">Sub-opção 2</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500 transition-all duration-500 group-hover:w-full"></span>
+          </div>
+        </div>
+
+        {/* Buttons */}
+        <div className="hidden lg:flex space-x-4">
+          {/* Ícone do WhatsApp ao lado do número */}
+          <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
+            <FaWhatsapp className="w-5 h-5 mr-1" />
+            (11) 4508-3724
           </Link>
-          <Link href="/nidoadm">
-            <p className="text-gray-800 hover:text-sky-500">NIDOAdm</p>
-          </Link>
-          <Link href="/sites-para-imobiliaria">
-            <p className="text-gray-800 hover:text-sky-500">Sites para Imobiliárias</p>
-          </Link>
-          <Link href="/sistema-para-corretores">
-            <p className="text-gray-800 hover:text-sky-500">Sistemas para Corretores</p>
-          </Link>
-          <Link href="/#planos">
-                <p className="text-gray-800 hover:text-sky-500">Nossos Planos</p>
-              </Link>
-          <Link href="/clientes">
-            <p className="text-gray-800 hover:text-sky-500">Clientes</p>
-          </Link>
-          <Link href="/parceiros">
-            <p className="text-gray-800 hover:text-sky-500">Parceiros</p>
-          </Link>
-          <Link href="/contato">
-            <p className="text-gray-800 hover:text-sky-500">Contato</p>
+
+          <Link href="https://portal.nido.com.br" target="_blank" className="bg-sky-500 text-white py-3 px-6 rounded-md hover:bg-sky-600 transition duration-300">
+            Portal do Cliente
           </Link>
         </div>
-      </nav>
-    </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="lg:hidden bg-white p-6 space-y-6">
+          <Link href="/#" className="font-medium text-sky-500">Início</Link>
+          <Link href="/#" className="font-medium text-sky-500">Sobre nós</Link>
+          <div>
+            <button className="font-medium text-sky-500">Produtos</button>
+            <div className="space-y-2">
+              <Link href="/#" className="block font-medium text-sky-500">Sub-opção 1</Link>
+              <Link href="/#" className="block font-medium text-sky-500">Sub-opção 2</Link>
+            </div>
+          </div>
+          <div>
+            <button className="font-medium text-sky-500">Diferenciais</button>
+            <div className="space-y-2">
+              <Link href="/#" className="block font-medium text-sky-500">Sub-opção 1</Link>
+              <Link href="/#" className="block font-medium text-sky-500">Sub-opção 2</Link>
+            </div>
+          </div>
+
+          <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
+            <FaWhatsapp className="w-5 h-5 mr-1" />
+            (11) 4508-3724
+          </Link>
+          <Link href="https://portal.nido.com.br" target="_blank" className="bg-sky-500 text-white py-3 px-6 rounded-md hover:bg-sky-600 transition duration-300">
+            Portal do Cliente
+          </Link>
+        </div>
+      )}
+    </nav>
   );
-}
+};

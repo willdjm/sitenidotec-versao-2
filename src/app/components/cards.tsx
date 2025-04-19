@@ -6,13 +6,9 @@ interface CardsProps {
 export function Cards({ showTitle = true, titleText = "Conheça nossos produtos" }: CardsProps) {
   return (
     <div className="mx-auto max-w-screen-xl lg:p-10 p-4 flex flex-col items-center justify-center gap-5">
-      {showTitle && (
-        <h1 className="text-2xl font-semibold text-sky-500 lg:text-2xl border-b-2 border-sky-500 w-full mb-5">
-          {titleText}
-        </h1>
-      )}
+     
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
         {/* Card 1 */}
         <div className="bg-white border rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
           <div className="w-full h-40 overflow-hidden p-8 flex items-center justify-center">
@@ -85,29 +81,6 @@ export function Cards({ showTitle = true, titleText = "Conheça nossos produtos"
           </div>
         </div>
 
-        {/* Card 4 */}
-        <div className="bg-white border rounded-lg shadow-md overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
-          <div className="w-full h-40 overflow-hidden p-8 flex items-center justify-center">
-            <picture>
-              <img
-                src="/logo-sistema-corretor.png"
-                alt="Imagem do Card"
-                className="w-full h-full object-cover"
-              />
-            </picture>
-          </div>
-          <div className="p-4 bg-sky-500 text-center text-white">
-            <p className="text-sm mb-4">
-              Sistema para Corretores. A força do mercado imobiliário em suas mãos...
-            </p>
-            <a
-              href="/sistema-para-corretores"
-              className="text-white hover:text-blue-200 font-semibold text-sm"
-            >
-              Saiba mais
-            </a>
-          </div>
-        </div>
       </div>
     </div>
   );
