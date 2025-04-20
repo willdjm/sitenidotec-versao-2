@@ -1,51 +1,153 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
 
 export const IntegracaoPortais = () => {
+  const logosLinha1 = [
+    { src: "/imovelweb.png", alt: "Logo 1" },
+    { src: "/grupozap.png", alt: "Logo 2" }
+  ];
+
+  const logosLinha2 = [
+    { src: "/vivareal.png", alt: "Logo 5" },
+    { src: "/casamineira.png", alt: "Logo 1" },
+    { src: "/dfimoveis.png", alt: "Logo 2" }
+  ];
+
+  const logosLinha4 = [
+    { src: "/loft.png", alt: "Logo 3" },
+    { src: "/spimovel.png", alt: "Logo 4" }
+  ];
+
+  const logosLinha5 = [
+    { src: "/iconatus.png", alt: "Logo 6" }
+  ];
+
   return (
-    <>
-      <section className="bg-gray-200 dark:bg-gray-800">
-        <div className="container max-w-7xl flex flex-col-reverse px-4 py-10 mx-auto lg:py-16 lg:flex-row lg:items-start">
-          <div className="w-full lg:w-1/2">
-            <div className="lg:max-w-lg">
-              {/* Título com cor sky-500 */}
-              <p className="text-3xl group relative w-max lg:max-w-md font-semibold">
-                <span className="text-2xl lg:text-3xl relative z-10">Integre automaticamente</span>
-                <span className="absolute left-0 bottom-0 w-full h-2 transition-all bg-sky-500 z-0 group-hover:h-4 "></span>
-              </p>
+<section
+  className="w-full lg:py-24 py-14 flex flex-col items-center justify-center bg-sky-500"
+>
+  {/* Container Centralizado */}
+  <div className="flex flex-col w-full max-w-screen-xl mx-auto px-4 relative">
+    <div className="lg:flex flex flex-col gap-8 lg:flex-row w-full">
+      {/* Lista à esquerda (Desktop) */}
+      <div className="lg:w-1/2 w-full">
+        <h1 className="text-4xl text-center lg:text-left lg:max-w-lg lg:text-5xl font-bold text-white">
+          Integração com os principais portais do mercado imobiliário
+        </h1>
+        <p className="mt-6 text-xl max-w-lg lg:text-justify text-center leading-8 text-white">
+          Ajudamos seu negócio imobiliário a se conectar com os portais de maior destaque no mercado.
+          Com nossas integrações, sua visibilidade e alcance se ampliam, proporcionando novas oportunidades de negócios e crescimento
+        </p>
 
-              {/* Descrição principal */}
-              <div className="lg:w-max lg:max-w-md font-semibold">
-                <p className="text-2xl lg:text-3xl flex items-center text-gray-700 dark:text-gray-200">
-                  todos os leads gerados nos canais de divulgação de imóveis com o seu CRM.
-                </p>
+        <p className="mt-2 text-center lg:text-left text-sm w-full max-w-lg leading-8 text-white">
+          *Entre em contato para saber as condições
+        </p>
 
-                <p className="text-xl lg:text-2xl flex items-center text-gray-700 dark:text-gray-200 mt-5">
-                  Receba os leads dos portais imobiliários, do site próprio da sua Imobiliária e dos anúncios no Meta Ads diretamente no seu CRM, distribuindo para seus corretores em tempo real para agilizar seu atendimento.
-                </p>
-
-                <p className="flex font-bold text-5xl flex-col text-sky-500 dark:text-gray-200 mt-5">
-                  867.514+
-                  <span className="text-base text-gray-500 font-normal">leads conectados diretamente nos CRMs.</span>
-                </p>
-
-                {/* Botão */}
-                <div className="flex">
-                  <button className="mt-4 font-semibold leading-none text-white py-4 px-6 bg-sky-500 rounded hover:bg-sky-600 focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 focus:outline-none">
-                    Saiba mais
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Imagem responsiva */}
-          <div className="flex items-center justify-center w-full lg:w-1/2">
-            <img className="w-[32rem] mx-auto rounded-md lg:max-w-2xl" src="/img-integracao-portais.webp" alt="Imagem ilustrativa" />
-          </div>
+        {/* Botão Fale com um especialista */}
+        <div className="lg:flex justify-center lg:justify-start mt-5 hidden">
+          <Link href="https://wa.me/5511953052059" target="_blank">
+            <button className="px-6 py-2 text-sky-500 bg-white rounded-md hover:scale-105 transform transition-all duration-300">
+              Fale com um especialista
+            </button>
+          </Link>
         </div>
-      </section>
-    </>
+      </div>
+
+      {/* Imagem à direita (Desktop) */}
+      <div className="lg:w-1/2 w-full flex flex-col items-center gap-4 justify-center">
+
+        {/* Círculo superior direito */}
+        <div className="absolute lg:top-[-0px] lg:right-[-20px] lg:w-[200px] lg:h-[200px] h-28 w-28 -top-10 right-2 bg-white rounded-full opacity-10 z-10"></div>
+
+        {/* Linha 1 - 2 Logos */}
+        <div className="flex flex-col lg:flex lg:flex-row gap-4 w-full items-center justify-center relative z-20">
+          {logosLinha1.map((logo, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center border rounded-lg shadow-sm p-4 bg-white hover:shadow-md transition-shadow duration-200 lg:w-52 w-64 h-20 overflow-hidden"
+            >
+              <picture>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="object-cover"
+                />
+              </picture>
+            </div>
+          ))}
+        </div>
+
+        {/* Linha 2 - 3 Logos */}
+        <div className="flex flex-col lg:flex lg:flex-row gap-4 w-full items-center justify-center relative z-20">
+          {logosLinha2.map((logo, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center border rounded-lg shadow-sm p-4 bg-white hover:shadow-md transition-shadow duration-200 lg:w-52 w-64 h-20 overflow-hidden"
+            >
+              <picture>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="object-cover"
+                />
+              </picture>
+            </div>
+          ))}
+        </div>
+
+        {/* Linha 4 - 2 Logos */}
+        <div className="hidden lg:flex gap-4 w-full justify-center relative z-20">
+          {logosLinha4.map((logo, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center border rounded-lg shadow-sm p-4 bg-white hover:shadow-md transition-shadow duration-200 lg:w-52 w-64 h-20 overflow-hidden"
+            >
+              <picture>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="object-cover"
+                />
+              </picture>
+            </div>
+          ))}
+        </div>
+
+        {/* Linha 5 - 1 Logo */}
+        <div className="hidden lg:flex gap-4 w-full justify-center relative z-20">
+          {logosLinha5.map((logo, index) => (
+            <div
+              key={index}
+              className="flex items-center justify-center border rounded-lg shadow-sm p-4 bg-white hover:shadow-md transition-shadow duration-200 lg:w-52 w-64 h-20 overflow-hidden"
+            >
+              <picture>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="object-cover"
+                />
+              </picture>
+            </div>
+          ))}
+        </div>
+
+        {/* Botão Fale com um especialista */}
+        <div className="lg:hidden justify-center lg:justify-start mt-5 flex">
+          <Link href="https://wa.me/5511953052059" target="_blank">
+            <button className="px-6 py-2 text-sky-500 bg-white rounded-md hover:scale-105 transform transition-all duration-300">
+              Fale com um especialista
+            </button>
+          </Link>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
   );
 };
