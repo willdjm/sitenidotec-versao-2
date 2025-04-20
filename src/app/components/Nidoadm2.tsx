@@ -5,7 +5,7 @@ export const Nidoadm2 = () => {
 
 
   return (
-    <section className="pt-24 bg-white">
+    <section className="pt-24 bg-gray-200">
         <div className="px-12 mx-auto max-w-7xl">
 
 

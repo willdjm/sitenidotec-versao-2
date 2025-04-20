@@ -29,9 +29,7 @@ export const About = () => {
         {/* Conteúdo com Flex para os ícones */}
         <div className="lg:flex lg:flex-row lg:items-center flex flex-col-reverse lg:gap-4 gap-8">
           <div className="w-full lg:w-1/2 ">
-            <p className="text-lg text-left font-medium bg-clip-text text-transparent bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500">
-              Sobre nós
-            </p>
+
             <h1 className="text-3xl text-left lg:text-5xl font-bold text-white">
               Há mais de 30 anos especializada em soluções tecnológicas para o ramo imobiliário
             </h1>
@@ -42,10 +40,10 @@ export const About = () => {
             </div>
             <p className="text-xl text-white text-justify">
               Sua experiência no setor imobiliário, torna a{" "}
-              <span className="font-semibold">NIDOTEC HUB IMOBILIÁRIA</span> uma das principais fornecedoras de software de gestão imobiliária do país. Com um suporte de alto nível, a empresa investe na capacitação de sua equipe técnica e administrativa, utilizando metodologias modernas de gestão e engenharia de software, garantindo as melhores soluções para seus clientes.
+              <span className="font-semibold text-base">NIDOTEC HUB IMOBILIÁRIA</span> uma das principais fornecedoras de software de gestão imobiliária do país. Com um suporte de alto nível, a empresa investe na capacitação de sua equipe técnica e administrativa, utilizando metodologias modernas de gestão e engenharia de software, garantindo as melhores soluções para seus clientes.
             </p>
 
-            <div className="mt-8 lg:mt-4 flex flex-col lg:flex lg:flex-row items-center gap-8 lg:gap-4 w-full ">
+            <div className="mt-8 flex flex-col lg:flex lg:flex-row items-center gap-8 lg:gap-4 w-full ">
               <a
                 onClick={openModal}
                 className="flex items-center justify-center text-sm font-medium leading-6 text-white cursor-pointer"
@@ -74,24 +72,30 @@ export const About = () => {
 
             <div className="flex items-center justify-center w-full relative z-10">
               <div className="flex flex-col items-end px-3">
-                <img
-                  className="object-cover mb-6 rounded shadow-lg h-32 sm:h-48 xl:h-64 w-32 sm:w-48 xl:w-64 z-10"
-                  src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg"
-                  alt=""
-                />
-                <img
-                  className="object-cover w-28 h-28 rounded shadow-lg sm:h-32 xl:h-48 sm:w-32 xl:w-48 z-10"
-                  src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
-                  alt=""
-                />
+                <picture>
+                  <img
+                    className="object-cover mb-6 rounded shadow-lg h-32 sm:h-48 xl:h-64 w-32 sm:w-48 xl:w-64 z-10"
+                    src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg"
+                    alt=""
+                  />
+                </picture>
+                <picture>
+                  <img
+                    className="object-cover w-28 h-28 rounded shadow-lg sm:h-32 xl:h-48 sm:w-32 xl:w-48 z-10"
+                    src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg"
+                    alt=""
+                  />
+                </picture>
               </div>
 
               <div className="px-3">
-                <img
-                  className="object-cover w-48 h-48 rounded shadow-lg sm:hbg-green-500ray-50-64 xl:h-96 sm:w-full xl:w-96 z-10"
-                  src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg"
-                  alt=""
-                />
+                <picture>
+                  <img
+                    className="object-cover w-48 h-48 rounded shadow-lg sm:hbg-green-500ray-50-64 xl:h-96 sm:w-full xl:w-96 z-10"
+                    src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg"
+                    alt=""
+                  />
+                </picture>
               </div>
             </div>
           </div>
@@ -100,36 +104,30 @@ export const About = () => {
 
       {/* Modal de Vídeo */}
       {isModalOpen && (
-        <div
-          className="fixed inset-0 lg:bg-sky-500/50 bg-black bg-opacity-50 flex items-center justify-center z-50"
-          onClick={closeModal} // Fecha o modal clicando fora do vídeo
-        >
-          <div
-            className="relative lg:bg-white lg:p-5 p-1 rounded-lg w-full max-w-4xl"
-            onClick={(e) => e.stopPropagation()} // Impede que o modal feche quando clicar no conteúdo
-          >
-            <div className="relative w-full pt-[56.25%]"> {/* Proporção 16:9 */}
-              <iframe
-                className="absolute top-0 left-0 w-full h-full"
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                frameBorder="0"
-                allowFullScreen
-                title="Vídeo de apresentação"
-              />
-            </div>
+  <div
+    className="fixed inset-0 lg:bg-sky-500/50 bg-black bg-opacity-50 flex items-center justify-center z-50"
+    onClick={closeModal}
+  >
+    <div
+      className="relative lg:bg-white lg:p-5 p-1 rounded-lg w-full max-w-4xl"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className="relative w-full pt-[56.25%]">
+        {isModalOpen && (
+          <iframe
+            className="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+            frameBorder="0"
+            allowFullScreen
+            title="Vídeo de apresentação"
+          />
+        )}
+      </div>
+      {/* Botão Fale Conosco */}
+    </div>
+  </div>
+)}
 
-            {/* Botão Fale Conosco */}
-            <div className="my-4 lg:my-0 lg:mt-4 text-center">
-              <a
-                href="#fale-conosco"
-                className="rounded-md bg-sky-500 px-8 py-3 text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
-              >
-                Fale com um especialista
-              </a>
-            </div>
-          </div>
-        </div>
-      )}
     </section>
   );
 };

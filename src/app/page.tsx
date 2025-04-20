@@ -4,12 +4,9 @@ import { Banner } from "./components/Banner";
 import { Clientes } from "./components/Clientes";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
-import { IntegracaoPortais } from "./components/IntegracaoPortais";
 import { Navbar } from "./components/navbar";
-import { Negocios } from "./components/Negocios";
 import { Nidoadm } from "./components/Nidoadm";
-import { Nidoadm2 } from "./components/Nidoadm2";
-import { Nidoimovel } from "./components/Nidoimovel";
+
 import { Notices } from "./components/Notices";
 import { Parceiros } from "./components/Parceiros";
 import { Plans } from "./components/Plans";
@@ -21,14 +18,11 @@ export default function Home() {
 <main>
   <Navbar/>
   <Banner/>
-  <Produtos/>
-  <About/>
-  <Nidoadm/>
-  <Nidoadm2/>
-<Nidoimovel/>
-<Negocios/>
 
-<IntegracaoPortais/>
+  <About/>
+  <Produtos/>
+  <Nidoadm/>
+
 <Clientes/>
 <Parceiros/>
 <Plans/>

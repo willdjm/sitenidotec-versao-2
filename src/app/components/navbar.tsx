@@ -88,7 +88,7 @@ export const Navbar = () => {
 
           {/* Opção 2 */}
           <Link
-            href="/#"
+            href="#about"
             className="font-medium text-sky-500 relative group"
           >
             Sobre nós
