@@ -1,22 +1,41 @@
-"use client"
+"use client";
 
 import { FaRegCirclePlay } from "react-icons/fa6";
+import { useState } from "react";
 
 export const About = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Função para abrir o modal
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  // Função para fechar o modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
-    <section className="lg:py-24 py-14 flex flex-col items-center justify-center bg-sky-500">
-      <div className="container lg:px-0 px-4 mx-auto max-w-7xl">
+    <section className="lg:py-16 py-14 flex flex-col items-center justify-center bg-sky-500">
+      <div className="container lg:mb-20 lg:px-0 px-4 mx-auto max-w-7xl">
+        {/* Header */}
+        <div className="mx-auto mb-8 w-full flex items-center justify-center lg:max-w-3xl">
+          <picture>
+            <img src='/logonovo.png' alt='' className="" />
+          </picture>
+        </div>
 
         {/* Conteúdo com Flex para os ícones */}
         <div className="lg:flex lg:flex-row lg:items-center flex flex-col-reverse lg:gap-4 gap-8">
           <div className="w-full lg:w-1/2 ">
-            <p className="text-lg text-center lg:text-left font-medium bg-clip-text text-transparent bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500">
+            <p className="text-lg text-left font-medium bg-clip-text text-transparent bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500">
               Sobre nós
             </p>
-            <h1 className="text-3xl text-center lg:text-left lg:text-5xl font-bold text-white">
+            <h1 className="text-3xl text-left lg:text-5xl font-bold text-white">
               Há mais de 30 anos especializada em soluções tecnológicas para o ramo imobiliário
             </h1>
-            <div className="my-5 flex items-center justify-center lg:justify-start">
+            <div className="my-5 flex items-center justify-start">
               <span className="inline-block w-40 h-1 bg-white rounded-full"></span>
               <span className="inline-block w-3 h-1 mx-1 bg-white rounded-full"></span>
               <span className="inline-block w-1 h-1 bg-white rounded-full"></span>
@@ -27,7 +46,10 @@ export const About = () => {
             </p>
 
             <div className="mt-8 lg:mt-4 flex flex-col lg:flex lg:flex-row items-center gap-8 lg:gap-4 w-full ">
-              <a href="#" className="flex items-center justify-center text-sm font-medium leading-6 text-white">
+              <a
+                onClick={openModal}
+                className="flex items-center justify-center text-sm font-medium leading-6 text-white cursor-pointer"
+              >
                 <FaRegCirclePlay className="text-4xl mr-2 font-normal" />
                 Veja nossa apresentação
               </a>
@@ -36,23 +58,22 @@ export const About = () => {
 
               <a
                 href="#"
-                className="rounded-md bg-white px-4 py-3 text-sm font-semibold text-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                className="rounded-md bg-white lg:px-8 px-16 py-3 text-sm font-semibold text-sky-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
               >
                 Conheça mais...
               </a>
             </div>
           </div>
 
-          <div className="lg:w-1/2 relative"> {/* Classe "relative" para a posição dos círculos */}
+          <div className="lg:w-1/2 relative">
             {/* Círculo superior direito */}
-            <div className="absolute lg:top-[-50px] lg:right-[-80px] lg:w-[200px] lg:h-[200px] h-28 w-28 -top-12 -right-2 bg-white rounded-full opacity-10 z-0"></div>
+            <div className="absolute lg:top-[-50px] lg:right-[-80px] lg:w-[200px] lg:h-[200px] h-28 w-28 -top-0 -right-2 bg-white rounded-full opacity-10 z-0"></div>
 
             {/* Círculo inferior esquerdo */}
-            <div className="absolute lg:bottom-[-95px] lg:left-[-50px] lg:w-[200px] lg:h-[200px] h-28 w-28 bottom-10 -left-4 bg-white rounded-full opacity-10 z-0"></div>
+            <div className="absolute lg:bottom-[-95px] lg:left-[-50px] lg:w-[200px] lg:h-[200px] h-28 w-28 -bottom-6 -left-4 bg-white rounded-full opacity-10 z-0"></div>
 
             <div className="flex items-center justify-center w-full relative z-10">
               <div className="flex flex-col items-end px-3">
-                {/* Imagens com z-index maior */}
                 <img
                   className="object-cover mb-6 rounded shadow-lg h-32 sm:h-48 xl:h-64 w-32 sm:w-48 xl:w-64 z-10"
                   src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg"
@@ -74,10 +95,41 @@ export const About = () => {
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
+
+      {/* Modal de Vídeo */}
+      {isModalOpen && (
+        <div
+          className="fixed inset-0 lg:bg-sky-500/50 bg-black bg-opacity-50 flex items-center justify-center z-50"
+          onClick={closeModal} // Fecha o modal clicando fora do vídeo
+        >
+          <div
+            className="relative lg:bg-white lg:p-5 p-1 rounded-lg w-full max-w-4xl"
+            onClick={(e) => e.stopPropagation()} // Impede que o modal feche quando clicar no conteúdo
+          >
+            <div className="relative w-full pt-[56.25%]"> {/* Proporção 16:9 */}
+              <iframe
+                className="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                frameBorder="0"
+                allowFullScreen
+                title="Vídeo de apresentação"
+              />
+            </div>
+
+            {/* Botão Fale Conosco */}
+            <div className="my-4 lg:my-0 lg:mt-4 text-center">
+              <a
+                href="#fale-conosco"
+                className="rounded-md bg-sky-500 px-8 py-3 text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+              >
+                Fale com um especialista
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

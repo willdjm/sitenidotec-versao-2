@@ -43,13 +43,13 @@ export const Banner = () => {
 
         {/* Versão para dispositivos móveis */}
         <div className="lg:hidden w-full p-4">
-          <h1 className="text-5xl font-semibold tracking-tight text-sky-500 text-center">
+          <h1 className="text-3xl font-bold tracking-tight text-sky-500 text-center">
             Solução inovadora para gestão de imóveis e imobiliárias
           </h1>
 
 
           {/* Imagem à direita (Desktop) */}
-          <div className="">
+          <div className="mt-5">
             <picture>
               <img
                 src="https://www.jetimob.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsistema_imobiliario.f78935cb.webp&w=1920&q=75"
@@ -62,16 +62,16 @@ export const Banner = () => {
           <p className="mt-10 text-lg text-center leading-8 text-gray-700">
             Um CRM exclusivo que oferece integração completa, com gerenciamento de imóveis, administração de locações e Sites para imobiliárias
           </p>
-          <div className="mt-10 flex items-center justify-center gap-x-4">
-            <a
-              href="#"
-              className="rounded-md bg-sky-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
-            >
-              Get started
-            </a>
-            <a href="#" className="text-sm font-semibold leading-6 text-sky-500">
-              Learn more <span aria-hidden="true">→</span>
-            </a>
+          <div className="mt-10 flex flex-col items-center justify-center gap-5">
+          <a
+                href="#"
+                className="rounded-md bg-sky-500 px-3.5 py-3 text-sm font-semibold text-white shadow-sm hover:bg-sky-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-600"
+              >
+                Fale com um especialista
+              </a>
+              <a href="#" className="text-base font-semibold leading-6 text-sky-500 hover:text-sky-600">
+                Saiba mais <span aria-hidden="true">→</span>
+              </a>
           </div>
         </div>
       </div>
