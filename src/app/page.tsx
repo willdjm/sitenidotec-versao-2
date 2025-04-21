@@ -7,7 +7,7 @@ import { Footer } from "./components/footer";
 import { IntegracaoPortais } from "./components/IntegracaoPortais";
 import { Navbar } from "./components/navbar";
 import { Nidoadm } from "./components/Nidoadm";
-import { Nidoimovel2 } from "./components/Nidoimovel2";
+import { Nidoimovel } from "./components/Nidoimovel";
 
 
 import { Notices } from "./components/Notices";
@@ -26,7 +26,7 @@ export default function Home() {
   <About/>
  
   <Nidoadm/>
-  <Nidoimovel2/>
+  <Nidoimovel/>
   <IntegracaoPortais/>
 
   <SitesParaImobiliarias/>
