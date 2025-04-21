@@ -261,26 +261,22 @@ export const Nidoadm = () => {
           </ul>
         </div>
 
-        {/* Botão */}
-        <Link href='https://wa.me/551145083724?text=Olá%2C%20estou%20visitando%20site%20e%20gostaria%20de%20mais%20informações%20sobre%20o%20nidoadm' target='_blank'
-          className='relative flex justify-center lg:my-16 my-10'>
-          <button className="btn relative inline-flex items-center justify-start overflow-hidden font-medium transition-all bg-white border border-sky-500 rounded hover:bg-white group py-2 px-4">
-            {/* A imagem deve ter um z-index maior para ficar visível */}
+        {/* Botão */}        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 w-full lg:mt-14 mt-10 lg:mb-10 mb-5">
+
+          <Link href='https://api.whatsapp.com/send/?phone=551145083724&text=Ol%C3%A1%2C+estou+visitando+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+o+nidoimovel&type=phone_number&app_absent=0' target="_blank"
+            className="relative flex items-center justify-center border border-sky-500 text-sky-500 px-6 py-2 rounded-md cursor-pointer before:bg-sky-500 hover:rounded-b-md before:absolute before:-bottom-0 before:-left-0  before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100">
+                          {/* A imagem deve ter um z-index maior para ficar visível */}
             <picture className='relative z-10'>
               <img
                 src="/logo-icone-nidoadm.png"
                 alt="App screenshot"
-                className="w-8 relative"
+                className="w-8 relative mr-1.5"
               />
             </picture>
 
-            {/* Efeito de fundo animado */}
-            <span className="w-56 h-48 rounded bg-sky-500 absolute bottom-0 left-0 translate-x-full ease-out duration-500 transition-all translate-y-full mb-9 ml-9 group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0 z-0"></span>
-
-            {/* Texto que aparece sobre o botão */}
-            <span className="relative w-full ml-2 text-left text-sky-500 transition-colors duration-300 ease-in-out group-hover:text-white z-10">Mais informações</span>
-          </button>
-        </Link>   
+            Mais informações
+          </Link>
+        </div>
 
       </div>
     </section>

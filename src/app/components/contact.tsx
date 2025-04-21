@@ -11,10 +11,12 @@ export const Contact = () => {
         {/* Botão Fale com um especialista */}
         <div className="flex justify-center mt-8">
           <Link href="https://api.whatsapp.com/send/?phone=551145083724&text=Ol%C3%A1%2C+estou+visitando+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+o+produto&type=phone_number&app_absent=0" target="_blank">
-            <button className="px-6 py-2 text-sky-500 bg-white rounded-md hover:scale-105 transform transition-all duration-300">
+            <button className="px-6 py-2 text-sky-500 hover:text-white hover:border-white hover:bg-sky-500 border bg-white rounded-md  transform transition-all duration-300">
               Fale com um especialista
             </button>
           </Link>
+
+
         </div>
 
         <ul className="text-white text-sm flex flex-col lg:flex-row gap-5 justify-center items-start mt-10 mx-auto w-max">

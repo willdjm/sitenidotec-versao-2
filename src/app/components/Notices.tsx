@@ -83,7 +83,7 @@ export const Notices = () => {
         {/* Botão */}
         <div className="flex justify-center mt-12">
         <Link href='#' target="_blank"
-            className="relative border border-sky-500 text-sky-500 px-5 py-3 rounded-md inline cursor-pointer before:bg-sky-500 hover:rounded-b-md before:absolute before:-bottom-0 before:-left-0  before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100">
+            className="relative border border-sky-500 text-sky-500 px-6 py-2 rounded-md inline cursor-pointer before:bg-sky-500 hover:rounded-b-md before:absolute before:-bottom-0 before:-left-0  before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100">
             Ver notícias
           </Link>
         </div>

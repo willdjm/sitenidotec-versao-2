@@ -79,14 +79,14 @@ export const About = () => {
                 <picture>
                   <img
                     className="object-cover mb-6 rounded shadow-lg h-32 sm:h-48 xl:h-64 w-32 sm:w-48 xl:w-64 z-10"
-                    src="/banner-parceiros-mobile.png"
+                    src="/banner-clientes-mobile.png"
                     alt=""
                   />
                 </picture>
                 <picture>
                   <img
                     className="object-cover w-28 h-28 rounded shadow-lg sm:h-32 xl:h-48 sm:w-32 xl:w-48 z-10"
-                    src="/banner-parceiros-mobile.png"
+                    src="/banner-gestao-mobile.png"
                     alt=""
                   />
                 </picture>

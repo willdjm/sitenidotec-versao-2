@@ -79,6 +79,8 @@ export const Footer = () => {
         </div>
       </div>
 
+
+            
       {/* Separador */}
       <hr className="border-gray-200 my-8 w-full" />
 
