@@ -10,7 +10,7 @@ export const Contact = () => {
 
         {/* Botão Fale com um especialista */}
         <div className="flex justify-center mt-8">
-          <Link href="https://wa.me/5511953052059" target="_blank">
+          <Link href="https://api.whatsapp.com/send/?phone=551145083724&text=Ol%C3%A1%2C+estou+visitando+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+o+produto&type=phone_number&app_absent=0" target="_blank">
             <button className="px-6 py-2 text-sky-500 bg-white rounded-md hover:scale-105 transform transition-all duration-300">
               Fale com um especialista
             </button>
@@ -43,7 +43,7 @@ export const Contact = () => {
         <div className="w-full bg-cover relative max-w-md lg:max-w-2xl lg:w-7/12">
           <div className="flex flex-col items-center justify-center w-full h-full relative lg:pr-10">
             <picture>
-            <img src="/img-contato.png" className="lg:m-20" />
+            <img src="/img-contato.png" alt="a" className="lg:m-20" />
             </picture>
           </div>
         </div>
@@ -93,9 +93,9 @@ export const Contact = () => {
         </div>
       </div>
       <div className="flex items-center justify-center w-full">
-        <button className="mt-4 font-semibold leading-none text-white py-4 px-10 bg-sky-500 rounded hover:bg-sky-400 focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 focus:outline-none">
+        <Link href='#' className="mt-4 rounded-md font-semibold leading-none text-white py-4 px-10 bg-sky-500 hover:bg-sky-600 focus:ring-2 focus:ring-offset-2 focus:ring-sky-500 focus:outline-none">
           Enviar mensagem
-        </button>
+        </Link>
       </div>
     </form>
   </div>

@@ -1,11 +1,14 @@
 "use client"
 
+import Link from "next/link";
+import { IoArrowForward } from "react-icons/io5";
+
 
 export const SitesParaImobiliarias = () => {
 
 
   return (
-    <section className="lg:py-16 py-12 bg-gray-100">
+    <section className="lg:py-16 py-12 bg-gradient-to-r from-gray-50 to-gray-100">
       <div className="px-4 mx-auto max-w-7xl">
 
 
@@ -17,7 +20,7 @@ export const SitesParaImobiliarias = () => {
               <img
                 src="/logo_sites.png"
                 alt="App screenshot"
-                className=" w-72 mb-5"
+                className=" w-64 mb-5"
               />
             </picture>
 
@@ -41,29 +44,23 @@ export const SitesParaImobiliarias = () => {
               className=""
             />
           </picture>
-
-
+          
         </div>
-
 
 
         {/* Call to Action Buttons */}
         <div className="flex flex-col lg:flex-row items-center justify-center gap-4 w-full lg:mt-14 mt-10 lg:mb-14 mb-5">
 
-
-
-          <a
-            href="https://sitepadrao.nido.com.br/"
-            className="w-full lg:w-auto text-center transform rounded-md bg-sky-500 px-5 py-3 font-medium text-white transition-colors hover:bg-sky-600"
-          >
-            Ver modelos disponiveis
-          </a>
-          <a
-            href="#"
-            className="w-full lg:w-auto text-center transform rounded-md border border-slate-200 px-5 py-3 font-medium text-slate-900 transition-colors bg-white hover:bg-slate-50"
-          >
+          <Link href='https://api.whatsapp.com/send/?phone=551145083724&text=Ol%C3%A1%2C+estou+visitando+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+o+nidoimovel&type=phone_number&app_absent=0' target="_blank"
+            className="relative border border-sky-500 text-sky-500 px-5 py-3 rounded-md inline cursor-pointer before:bg-sky-500 hover:rounded-b-md before:absolute before:-bottom-0 before:-left-0  before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100">
             Fale com um especialista
-          </a>
+          </Link>
+
+          <Link href='https://sitepadrao.nido.com.br/' target="_blank" className="items-center font-medium inline-flex justify-center group relative w-max text-sky-500">
+            <span>Ver modelos disponíveis</span>
+            <IoArrowForward className="text-base ml-2 transition-transform duration-300 group-hover:translate-x-2" />
+          </Link>
+
         </div>
 
       </div>

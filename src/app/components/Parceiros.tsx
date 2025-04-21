@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import React from 'react';
 
 export const Parceiros = () => {
@@ -20,7 +21,7 @@ export const Parceiros = () => {
 
   return (
     <section
-      className="w-full bg-[url('/fundo-parceiros.png')] bg-center lg:bg-repeat-x lg:bg-contain lg:py-24 py-14 flex flex-col items-center justify-center"
+      className="w-full bg-gradient-to-r from-gray-50 to-gray-100 lg:py-24 py-14 flex flex-col items-center justify-center"
     >
       {/* Container Centralizado */}
       <div className="flex flex-col w-full max-w-screen-xl mx-auto px-4">
@@ -76,21 +77,14 @@ export const Parceiros = () => {
           ))}
         </div>
 
-        {/* Call to Action Buttons */}
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-4 w-full mt-12">
-          <a
-            href="#"
-            className="w-full lg:w-auto text-center transform rounded-md bg-sky-500 px-5 py-3 font-medium text-white transition-colors hover:bg-sky-600"
-          >
-            Quero ser parceiro
-          </a>
-          <a
-            href="#"
-            className="w-full lg:w-auto text-center transform rounded-md border border-slate-200 px-5 py-3 font-medium text-slate-900 transition-colors bg-white hover:bg-slate-50"
-          >
-            Quero saber mais
-          </a>
-        </div>
+          {/* Botões */}
+          <div className="mt-10 flex flex-col items-center justify-center gap-5">
+            {/* Botão para falar com um especialista */}
+            <Link href='https://api.whatsapp.com/send/?phone=551145083724&text=Ol%C3%A1%2C+estou+visitando+site+e+gostaria+de+mais+informa%C3%A7%C3%B5es+sobre+parcerias&type=phone_number&app_absent=0' target="_blank"
+            className="relative border border-sky-500 text-sky-500 px-5 py-3 rounded-md inline cursor-pointer before:bg-sky-500 hover:rounded-b-md before:absolute before:-bottom-0 before:-left-0  before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100">
+            Quero ser paceiro
+          </Link>
+          </div>
 
       </div>
     </section>

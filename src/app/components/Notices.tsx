@@ -31,7 +31,7 @@ const cardData = [
 
 export const Notices = () => {
   return (
-    <section className="lg:py-24 py-14 flex flex-col items-center justify-center bg-gray-100">
+    <section className="lg:py-24 py-14 flex flex-col items-center justify-center bg-gradient-to-bl from-gray-50 to-gray-100">
       <div className="container px-4 mx-auto max-w-7xl">
 
         {/* Header Section */}
@@ -55,7 +55,9 @@ export const Notices = () => {
             <Link key={card.id} href={card.link} target="_blank" passHref>
               <div className="relative flex max-w-[24rem] flex-col overflow-hidden rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg shadow-sky-500/10 hover:shadow-xl cursor-pointer transition-all duration-300 ease-in-out">
                 <div className="relative m-0 overflow-hidden text-gray-700 bg-transparent rounded-none shadow-none bg-clip-border">
+                <picture>
                   <img src={card.imgSrc} alt={card.title} className="object-cover w-full h-48" />
+                  </picture>
                 </div>
                 <div className="p-6">
                   <h4 className="block font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 text-sky-500">
@@ -78,12 +80,11 @@ export const Notices = () => {
           ))}
         </div>
 
-        {/* Botão Fale com um especialista */}
+        {/* Botão */}
         <div className="flex justify-center mt-12">
-          <Link href="https://wa.me/5511953052059" target="_blank">
-            <button className="px-6 py-3 text-white bg-sky-500 rounded-lg shadow-lg hover:bg-sky-600 transform transition-all duration-300 ease-in-out">
-              Ver Notícias
-            </button>
+        <Link href='#' target="_blank"
+            className="relative border border-sky-500 text-sky-500 px-5 py-3 rounded-md inline cursor-pointer before:bg-sky-500 hover:rounded-b-md before:absolute before:-bottom-0 before:-left-0  before:block before:h-[2px] before:w-full before:origin-bottom-right before:scale-x-0 before:transition before:duration-500 before:ease-in-out hover:before:origin-bottom-left hover:before:scale-x-100">
+            Ver notícias
           </Link>
         </div>
       </div>

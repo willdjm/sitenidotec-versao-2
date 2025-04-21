@@ -1,153 +1,128 @@
 'use client';
 
-import Link from 'next/link';
 import React from 'react';
 
 export const IntegracaoPortais = () => {
-  const logosLinha1 = [
-    { src: "/imovelweb.png", alt: "Logo 1" },
-    { src: "/grupozap.png", alt: "Logo 2" }
-  ];
 
-  const logosLinha2 = [
+  const PortaisDesktop = [
     { src: "/vivareal.png", alt: "Logo 5" },
     { src: "/casamineira.png", alt: "Logo 1" },
-    { src: "/dfimoveis.png", alt: "Logo 2" }
-  ];
-
-  const logosLinha4 = [
+    { src: "/dfimoveis.png", alt: "Logo 2" },
+    { src: "/imovelweb.png", alt: "Logo 1" },
+    { src: "/grupozap.png", alt: "Logo 2" },
     { src: "/loft.png", alt: "Logo 3" },
-    { src: "/spimovel.png", alt: "Logo 4" }
+    { src: "/spimovel.png", alt: "Logo 4" },
+    { src: "/iconatus.png", alt: "Logo 6" },
+    { src: "/vivareal.png", alt: "Logo 5" },
+    { src: "/casamineira.png", alt: "Logo 1" },
+    { src: "/dfimoveis.png", alt: "Logo 2" },
+    { src: "/imovelweb.png", alt: "Logo 1" },
+    { src: "/grupozap.png", alt: "Logo 2" },
+    { src: "/loft.png", alt: "Logo 3" },
+    { src: "/spimovel.png", alt: "Logo 4" },
   ];
 
-  const logosLinha5 = [
-    { src: "/iconatus.png", alt: "Logo 6" }
+
+  const PortaisMobile = [
+    { src: "/vivareal.png", alt: "Logo 5" },
+    { src: "/casamineira.png", alt: "Logo 1" },
+    { src: "/dfimoveis.png", alt: "Logo 2" },
+    { src: "/imovelweb.png", alt: "Logo 1" },
+    { src: "/grupozap.png", alt: "Logo 2" },
   ];
+
 
   return (
-<section
-  className="w-full lg:py-24 py-14 flex flex-col items-center justify-center bg-sky-500"
->
-  {/* Container Centralizado */}
-  <div className="flex flex-col w-full max-w-screen-xl mx-auto px-4 relative">
-    <div className="lg:flex flex flex-col gap-8 lg:flex-row w-full">
-      {/* Lista à esquerda (Desktop) */}
-      <div className="lg:w-1/2 w-full">
-        <h1 className="text-4xl text-center lg:text-left lg:max-w-lg lg:text-5xl font-bold text-white">
-          Integração com os principais portais do mercado imobiliário
-        </h1>
-        <p className="mt-6 text-xl max-w-lg lg:text-justify text-center leading-8 text-white">
-          Ajudamos seu negócio imobiliário a se conectar com os portais de maior destaque no mercado.
-          Com nossas integrações, sua visibilidade e alcance se ampliam, proporcionando novas oportunidades de negócios e crescimento
+    <section className="bg-gradient-to-bl from-sky-500 to-sky-600 lg:py-16 py-5 flex flex-col items-center justify-center bg-gr overflow-hidden">
+
+      <div className="container px-2 sm:px-4 mx-auto max-w-7xl relative">
+
+        {/* Header */}
+        <div className="mx-auto w-full items-center justify-center z-10 relative">
+          <div className="text-center flex flex-col">
+
+            <picture>
+              <img
+                src="/logo-icone-nidoimovel.png"
+                alt="App screenshot"
+                className="w-10 mx-auto"
+              />
+            </picture>
+
+            <p className="text-lg font-medium leading-8 bg-clip-text text-transparent bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500">
+              Integrações
+            </p>
+            <h1 className="lg:text-4xl text-3xl font-bold tracking-tight lg:max-w-3xl mx-auto text-white">
+              Integração com os principais portais do mercado imobiliário
+            </h1>
+            <div className="my-5 mx-auto flex items-center justify-start">
+              <span className="inline-block w-40 h-1 bg-white rounded-full"></span>
+              <span className="inline-block w-3 h-1 mx-1 bg-white rounded-full"></span>
+              <span className="inline-block w-1 h-1 bg-white rounded-full"></span>
+            </div>
+
+            <p className="text-base text-white text-center lg:max-w-4xl mx-auto">
+              Ajudamos seu negócio imobiliário a se conectar com os portais de maior destaque no mercado.
+              Com nossas integrações, sua visibilidade e alcance se ampliam, proporcionando novas oportunidades de negócios e crescimento
+            </p>
+          </div>
+        </div>
+
+        {/* Portais DESKTOP */}
+        <div className="relative mt-10 mb-16 hidden lg:flex flex-wrap justify-center gap-5 w-full z-10">
+
+          {/* Top Right Circle */}
+          <div className="absolute top-[-90px] right-[-30px] w-[200px] h-[200px] bg-white rounded-full opacity-10 z-0"></div>
+
+          {/* Bottom Left Circle */}
+          <div className="absolute bottom-[-90px] left-[-30px] w-[200px] h-[200px] bg-white rounded-full opacity-10 z-0"></div>
+
+          {PortaisDesktop.map((logo, index) => (
+            <div
+              key={index}
+              className="lg:w-52 w-64 h-20 p-4 flex items-center justify-center border rounded-lg shadow-sm bg-white transition-transform duration-300 hover:scale-105 shadow-sky-500/10 hover:shadow-md z-50"
+            >
+              <picture>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className=""
+                />
+              </picture>
+            </div>
+          ))}
+        </div>
+
+        {/* Portais Mobile */}
+        <div className="relative mt-10 mb-16 flex lg:hidden flex-wrap justify-center gap-5 w-full z-10">
+
+          {/* Top Right Circle */}
+          <div className="absolute top-[-90px] right-[-30px] w-[200px] h-[200px] bg-white rounded-full opacity-10 z-0"></div>
+
+          {/* Bottom Left Circle */}
+          <div className="absolute bottom-[-90px] left-[-30px] w-[200px] h-[200px] bg-white rounded-full opacity-10 z-0"></div>
+
+          {PortaisMobile.map((logo, index) => (
+            <div
+              key={index}
+              className="lg:w-52 w-64 h-20 p-4 flex items-center justify-center border rounded-lg shadow-sm bg-white transition-transform duration-300 hover:scale-105 shadow-sky-500/10 hover:shadow-md z-50"
+            >
+              <picture>
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className=""
+                />
+              </picture>
+            </div>
+          ))}
+        </div>
+
+        <p className="text-sm text-white text-center">
+          *Entre em contato para saber condições
         </p>
 
-        <p className="mt-2 text-center lg:text-left text-sm w-full max-w-lg leading-8 text-white">
-          *Entre em contato para saber as condições
-        </p>
-
-        {/* Botão Fale com um especialista */}
-        <div className="lg:flex justify-center lg:justify-start mt-5 hidden">
-          <Link href="https://wa.me/5511953052059" target="_blank">
-            <button className="px-6 py-2 text-sky-500 bg-white rounded-md hover:scale-105 transform transition-all duration-300">
-              Fale com um especialista
-            </button>
-          </Link>
-        </div>
       </div>
-
-      {/* Imagem à direita (Desktop) */}
-      <div className="lg:w-1/2 w-full flex flex-col items-center gap-4 justify-center">
-
-        {/* Círculo superior direito */}
-        <div className="absolute lg:top-[-0px] lg:right-[-20px] lg:w-[200px] lg:h-[200px] h-28 w-28 -top-10 right-2 bg-white rounded-full opacity-10 z-10"></div>
-
-        {/* Linha 1 - 2 Logos */}
-        <div className="flex flex-col lg:flex lg:flex-row gap-4 w-full items-center justify-center relative z-20">
-          {logosLinha1.map((logo, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center border rounded-lg shadow-sm p-4 bg-white hover:shadow-md transition-shadow duration-200 lg:w-52 w-64 h-20 overflow-hidden"
-            >
-              <picture>
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="object-cover"
-                />
-              </picture>
-            </div>
-          ))}
-        </div>
-
-        {/* Linha 2 - 3 Logos */}
-        <div className="flex flex-col lg:flex lg:flex-row gap-4 w-full items-center justify-center relative z-20">
-          {logosLinha2.map((logo, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center border rounded-lg shadow-sm p-4 bg-white hover:shadow-md transition-shadow duration-200 lg:w-52 w-64 h-20 overflow-hidden"
-            >
-              <picture>
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="object-cover"
-                />
-              </picture>
-            </div>
-          ))}
-        </div>
-
-        {/* Linha 4 - 2 Logos */}
-        <div className="hidden lg:flex gap-4 w-full justify-center relative z-20">
-          {logosLinha4.map((logo, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center border rounded-lg shadow-sm p-4 bg-white hover:shadow-md transition-shadow duration-200 lg:w-52 w-64 h-20 overflow-hidden"
-            >
-              <picture>
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="object-cover"
-                />
-              </picture>
-            </div>
-          ))}
-        </div>
-
-        {/* Linha 5 - 1 Logo */}
-        <div className="hidden lg:flex gap-4 w-full justify-center relative z-20">
-          {logosLinha5.map((logo, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center border rounded-lg shadow-sm p-4 bg-white hover:shadow-md transition-shadow duration-200 lg:w-52 w-64 h-20 overflow-hidden"
-            >
-              <picture>
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="object-cover"
-                />
-              </picture>
-            </div>
-          ))}
-        </div>
-
-        {/* Botão Fale com um especialista */}
-        <div className="lg:hidden justify-center lg:justify-start mt-5 flex">
-          <Link href="https://wa.me/5511953052059" target="_blank">
-            <button className="px-6 py-2 text-sky-500 bg-white rounded-md hover:scale-105 transform transition-all duration-300">
-              Fale com um especialista
-            </button>
-          </Link>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
+    </section>
   );
 };
