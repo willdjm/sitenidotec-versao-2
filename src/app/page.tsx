@@ -24,13 +24,10 @@ export default function Home() {
   <Banner/>
   <Produtos/>
   <About/>
- 
   <Nidoadm/>
   <Nidoimovel/>
   <IntegracaoPortais/>
-
   <SitesParaImobiliarias/>
-
 <Clientes/>
 <Parceiros/>
 <Plans/>

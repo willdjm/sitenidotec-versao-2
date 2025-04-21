@@ -53,7 +53,7 @@ export const Nidoadm = () => {
               Sistema de Administração de Locações
             </h1>
 
-            <p className="text-lg text-center text-gray-600 dark:text-gray-300">
+            <p className="text-lg text-center text-gray-600">
               Com o NIDOAdm, imobiliárias e proprietários têm total controle e facilidade na administração de locações, com um sistema e gestão eficientes
             </p>
           </div>
