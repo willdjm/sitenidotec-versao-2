@@ -9,10 +9,12 @@ import { IoCaretDown } from 'react-icons/io5';
 
 export const Navbar2 = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
-  const toggleMobileDropdown = () => setIsMobileDropdownOpen(!isMobileDropdownOpen);
+
+  const closeMobileMenuAndNavigate = () => {
+    setIsMobileMenuOpen(false); // Fecha o menu
+  }
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -33,7 +35,7 @@ export const Navbar2 = () => {
 
           {/* Menu centralizado */}
           <div className="flex-1 lg:flex justify-center space-x-2 hidden">
-            <Link href="#">
+            <Link href="#" onClick={closeMobileMenuAndNavigate}>
               <p className="text-sky-500 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Início</p>
             </Link>
 
@@ -57,7 +59,7 @@ export const Navbar2 = () => {
                             className="w-6 mr-1.5"
                           />
                         </picture>
-                        <Link href="#nidoimovel" className="text-gray-500 hover:text-sky-500">Sistema NIDOImóvel</Link>
+                        <Link href="#nidoimovel" className="text-gray-500 hover:text-sky-500" onClick={closeMobileMenuAndNavigate}>Sistema NIDOImóvel</Link>
                       </li>
                       <li className='flex items-center'>
                         <picture className='relative z-10'>
@@ -67,7 +69,7 @@ export const Navbar2 = () => {
                             className="w-6 mr-1.5"
                           />
                         </picture>
-                        <Link href="#nidoadm" className="text-gray-500 hover:text-sky-500">Sistema NIDOAdm</Link>
+                        <Link href="#nidoadm" className="text-gray-500 hover:text-sky-500" onClick={closeMobileMenuAndNavigate}>Sistema NIDOAdm</Link>
                       </li>
                       <li className='flex items-center'>
                         <picture className='relative z-10'>
@@ -77,7 +79,7 @@ export const Navbar2 = () => {
                             className="w-6 mr-1.5"
                           />
                         </picture>
-                        <Link href="#sites" className="text-gray-500 hover:text-sky-500">Sites para Imobiliárias</Link>
+                        <Link href="#sites" className="text-gray-500 hover:text-sky-500" onClick={closeMobileMenuAndNavigate}>Sites para Imobiliárias</Link>
                       </li>
                     </ul>
                   </div>
@@ -107,11 +109,10 @@ export const Navbar2 = () => {
               </div>
             </div>
 
-            <Link href="/#planos">
+            <Link href="/#planos" onClick={closeMobileMenuAndNavigate}>
               <p className="text-sky-500 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Planos</p>
             </Link>
 
-            {/* Dropdown para Produtos */}
             <div className="relative group">
               <button className="text-sky-500 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium flex items-center">
                 Sobre Nós
@@ -131,40 +132,14 @@ export const Navbar2 = () => {
                         </button>
                         <a href="#" className="text-gray-500 hover:text-sky-500">Sobre nós</a>
                       </li>
-
                       <li className='flex items-center gap-1'>
                         <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
                           <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
                         </button>
-
                         <a href="#" className="text-gray-500 hover:text-sky-500">Integrações</a>
                       </li>
-                      <li className='flex items-center gap-1'>
-                        <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
-                          <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
-                        </button>
-
-                        <a href="#" className="text-gray-500 hover:text-sky-500">Nossos Clientes</a>
-                      </li>
-                      <li className='flex items-center gap-1'>
-                        <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
-                          <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
-                        </button>
-                        <a href="#" className="text-gray-500 hover:text-sky-500">Parceiros NIDOTec</a>
-                      </li>
-
-                      <li className='flex items-center gap-1'>
-                        <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
-                          <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
-                        </button>
-
-                        <a href="#" className="text-gray-500 hover:text-sky-500">Depoimentos</a>
-                      </li>
-
                     </ul>
                   </div>
-
-
 
                   <div>
                     <h3 className="text-lg font-semibold text-sky-500 mb-4">Notícias</h3>
@@ -184,7 +159,6 @@ export const Navbar2 = () => {
 
           {/* Login à direita */}
           <div className="lg:flex items-center space-x-4 hidden">
-            {/* Ícone do WhatsApp ao lado do número */}
             <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
               <FaWhatsapp className="w-5 h-5 mr-1" />
               (11) 4508-3724
@@ -195,6 +169,7 @@ export const Navbar2 = () => {
             </Link>
           </div>
 
+          {/* Mobile Menu Toggle */}
           <div className="sm:hidden">
             <button
               type="button"
@@ -214,62 +189,77 @@ export const Navbar2 = () => {
       {isMobileMenuOpen && (
         <div className="sm:hidden">
           <div className="px-4 pt-2 pb-3 space-y-1">
-            <Link href="#">
-              <p className="bg-gray-100 text-sky-500 block px-3 py-2 rounded-md text-base font-medium">Home</p>
+            <Link href="/home" onClick={closeMobileMenuAndNavigate}>
+              <p className="flex items-center bg-gray-100 text-sky-500 px-3 py-2 rounded-md text-base font-medium">
+                <HiOutlineOfficeBuilding className="text-xl text-sky-500 mr-2" />
+                Início
+              </p>
             </Link>
-            {/* Mobile Dropdown */}
-            <div className="relative">
-  <button
-    className="w-full text-left text-sky-500 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium flex items-center justify-between"
-    onClick={toggleMobileDropdown}
-  >
-    Produtos
-    <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-    </svg>
-  </button>
 
-  {/* Atualize a classe para alternar entre 'block' e 'hidden' corretamente */}
-  <div className={`px-4 py-2 ${isMobileDropdownOpen ? 'block' : 'hidden'}`}>
-    <div className="border-l-2 border-indigo-500 pl-2 mb-4">
-      <h4 className="font-medium text-sky-500 mb-2">Software</h4>
-      <ul className="space-y-2">
-        <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Web Development</a></li>
-        <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Mobile Apps</a></li>
-        <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Desktop Software</a></li>
-      </ul>
-    </div>
-    <div className="border-l-2 border-indigo-500 pl-2">
-      <h4 className="font-medium text-sky-500 mb-2">Hardware</h4>
-      <ul className="space-y-2">
-        <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Laptops</a></li>
-        <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Desktops</a></li>
-        <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Accessories</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+            <Link href="#" onClick={closeMobileMenuAndNavigate}>
+              <p className="flex items-center hover:bg-gray-100 text-sky-500 px-3 py-2 rounded-md text-base font-medium">
+                <HiOutlineOfficeBuilding className="text-xl text-sky-500 mr-2" />
+                Sobre nós
+              </p>
+            </Link>
 
-            <Link href="#">
-              <p className="text-sky-500 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Services</p>
+            <Link href="/#nidoimovel" onClick={closeMobileMenuAndNavigate}>
+              <p className="text-sky-500 hover:bg-gray-100 flex items-center px-3 py-2 rounded-md text-base font-medium">
+                <picture className='relative z-10'>
+                  <img
+                    src="/logo-icone-nidoimovel.png"
+                    alt="App screenshot"
+                    className="w-6 mr-2"
+                  />
+                </picture>
+                Sistema NIDOImóvel
+              </p>
             </Link>
-            <Link href="#">
-              <p className="text-sky-500 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">About</p>
+
+            <Link href="/#nidoadm" onClick={closeMobileMenuAndNavigate}>
+              <p className="text-sky-500 hover:bg-gray-100 flex items-center px-3 py-2 rounded-md text-base font-medium">
+                <picture className='relative z-10'>
+                  <img
+                    src="/logo-icone-nidoadm.png"
+                    alt="App screenshot"
+                    className="w-6 mr-2"
+                  />
+                </picture>
+                Sistema NIDOAdm
+              </p>
             </Link>
-            <Link href="#">
-              <p className="text-sky-500 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Contact</p>
+
+            <Link href="/#sites" onClick={closeMobileMenuAndNavigate}>
+              <p className="text-sky-500 hover:bg-gray-100 flex items-center px-3 py-2 rounded-md text-base font-medium">
+                <picture className='relative z-10'>
+                  <img
+                    src="/logo_sites2.png"
+                    alt="App screenshot"
+                    className="w-6 mr-2"
+                  />
+                </picture>
+                Sites para Imobiliárias
+              </p>
             </Link>
-            <div className="pt-4 pb-3 border-t border-gray-200">
-              <div className="flex items-center px-3 space-y-2 flex-col">
-                <Link href="#">
-                  <p className="block w-full text-center text-sky-500 bg-gray-100 px-3 py-2 rounded-md text-base font-medium">
-                    Login
-                  </p>
+
+            <Link href="/#planos" onClick={closeMobileMenuAndNavigate}>
+              <p className="flex items-center hover:bg-gray-100 text-sky-500 px-3 py-2 rounded-md text-base font-medium">
+                <HiOutlineOfficeBuilding className="text-xl text-sky-500 mr-2" />
+                Nossos Planos
+              </p>
+            </Link>
+            
+            {/* Add other menu links here */}
+            
+            <div className="pt-4 pb-4 border-t border-sky-500/20">
+              <div className="flex gap-4 items-center px-3 space-y-2 flex-col">
+                <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
+                  <FaWhatsapp className="w-5 h-5 mr-1" />
+                  (11) 4508-3724
                 </Link>
-                <Link href="#">
-                  <p className="block w-full text-center text-sky-500 bg-gray-100 px-3 py-2 rounded-md text-base font-medium">
-                    Sign up
-                  </p>
+
+                <Link href="https://portal.nido.com.br" target="_blank" className="bg-gradient-to-r from-sky-600 to-sky-500 text-white py-3 px-6 rounded-md hover:bg-sky-600 transition duration-300">
+                  Portal do Cliente
                 </Link>
               </div>
             </div>
