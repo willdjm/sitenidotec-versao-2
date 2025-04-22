@@ -70,7 +70,7 @@ export const Plans = () => {
   ];
 
   return (
-    <section id='planos' className="scroll-pt-10 relative lg:py-24 py-14 flex flex-col items-center justify-center bg-gradient-to-r from-sky-600 to-sky-500 px-4 lg:px-0 overflow-hidden">
+    <section className="relative lg:py-24 py-14 flex flex-col items-center justify-center bg-gradient-to-r from-sky-600 to-sky-500 px-4 lg:px-0 overflow-hidden">
       
       {/* Header - Título e descrição do section */}
       <div className="relative z-10 mx-auto w-full items-center justify-center lg:max-w-3xl">
