@@ -26,7 +26,7 @@ export const IntegracaoPortais = () => {
 
 
   return (
-    <section className="bg-gradient-to-bl from-sky-500 to-sky-600 lg:py-16 py-5 flex flex-col items-center justify-center bg-gr overflow-hidden">
+    <section id='integracoes' className="bg-gradient-to-bl from-sky-500 to-sky-600 lg:py-16 py-5 flex flex-col items-center justify-center bg-gr overflow-hidden">
 
       <div className="container px-2 sm:px-4 mx-auto max-w-7xl relative">
 

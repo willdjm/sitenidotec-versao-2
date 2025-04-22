@@ -3,9 +3,11 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { BiLogoPlayStore } from 'react-icons/bi';
-import { FaApple, FaWhatsapp } from 'react-icons/fa';
-import { HiOutlineOfficeBuilding } from 'react-icons/hi';
-import { IoCaretDown } from 'react-icons/io5';
+import { FaApple, FaRegComments, FaWhatsapp } from 'react-icons/fa';
+import { IoCaretDown, IoFingerPrint } from 'react-icons/io5';
+import { LuNewspaper } from 'react-icons/lu';
+import { PiHandshake, PiNetwork } from 'react-icons/pi';
+import { TbBrandGoogleHome, TbPackages, TbUserHeart } from 'react-icons/tb';
 
 export const Navbar2 = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -116,29 +118,45 @@ export const Navbar2 = () => {
             <div className="relative group">
               <button className="text-sky-500 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium flex items-center">
                 Sobre Nós
-                <svg className="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                </svg>
+                <IoCaretDown className='text-xs ml-0.5' />
               </button>
               {/* Mega Menu */}
               <div className="absolute left-0 mt-2 w-screen max-w-xl bg-white border border-sky-500/10 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform -translate-x-1/4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
                   <div>
                     <h3 className="text-lg font-semibold text-sky-500 mb-4">NIDOTEC HUB Imobiliária</h3>
-                    <ul className="space-y-3">
-                      <li className='flex items-center gap-1'>
-                        <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
-                          <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
-                        </button>
-                        <a href="#" className="text-gray-500 hover:text-sky-500">Sobre nós</a>
-                      </li>
-                      <li className='flex items-center gap-1'>
-                        <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
-                          <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
-                        </button>
-                        <a href="#" className="text-gray-500 hover:text-sky-500">Integrações</a>
-                      </li>
-                    </ul>
+                    <div className="space-y-3">
+                      <Link href='/#about' className='flex items-center gap-1 text-gray-500 hover:text-sky-500'>
+                        <p className="p-2 bg-sky-500/10 rounded-lg cursor-default">
+                          <IoFingerPrint className="text-xl text-sky-500" />
+                        </p>
+                        Sobre nós
+                      </Link>
+                      <Link href='/#clientes' className='flex items-center gap-1 text-gray-500 hover:text-sky-500'>
+                        <p className="p-2 bg-sky-500/10 rounded-lg cursor-default">
+                          <TbUserHeart className="text-xl text-sky-500" />
+                        </p>
+                        Clientes
+                      </Link>
+                      <Link href='/#parceiros' className='flex items-center gap-1 text-gray-500 hover:text-sky-500'>
+                        <p className="p-2 bg-sky-500/10 rounded-lg cursor-default">
+                          <PiHandshake className="text-xl text-sky-500" />
+                        </p>
+                        Parceiros
+                      </Link>
+                      <Link href='/#depoimentos' className='flex items-center gap-1 text-gray-500 hover:text-sky-500'>
+                        <p className="p-2 bg-sky-500/10 rounded-lg cursor-default">
+                          <FaRegComments className="text-xl text-sky-500" />
+                        </p>
+                        Depoimentos
+                      </Link>
+                      <Link href='/#integracoes' className='flex items-center gap-1 text-gray-500 hover:text-sky-500'>
+                        <p className="p-2 bg-sky-500/10 rounded-lg cursor-default">
+                          <PiNetwork className="text-xl text-sky-500" />
+                        </p>
+                        Integrações
+                      </Link>
+                    </div>
                   </div>
 
                   <div>
@@ -191,14 +209,14 @@ export const Navbar2 = () => {
           <div className="px-4 pt-2 pb-3 space-y-1">
             <Link href="/home" onClick={closeMobileMenuAndNavigate}>
               <p className="flex items-center bg-gray-100 text-sky-500 px-3 py-2 rounded-md text-base font-medium">
-                <HiOutlineOfficeBuilding className="text-xl text-sky-500 mr-2" />
+                <TbBrandGoogleHome className="text-xl text-gray-500 mr-2" />
                 Início
               </p>
             </Link>
 
             <Link href="#" onClick={closeMobileMenuAndNavigate}>
               <p className="flex items-center hover:bg-gray-100 text-sky-500 px-3 py-2 rounded-md text-base font-medium">
-                <HiOutlineOfficeBuilding className="text-xl text-sky-500 mr-2" />
+                <IoFingerPrint className="text-xl text-gray-500 mr-2" />
                 Sobre nós
               </p>
             </Link>
@@ -244,13 +262,39 @@ export const Navbar2 = () => {
 
             <Link href="/#planos" onClick={closeMobileMenuAndNavigate}>
               <p className="flex items-center hover:bg-gray-100 text-sky-500 px-3 py-2 rounded-md text-base font-medium">
-                <HiOutlineOfficeBuilding className="text-xl text-sky-500 mr-2" />
+                <TbPackages className="text-xl text-gray-500 mr-2" />
                 Nossos Planos
               </p>
             </Link>
             
-            {/* Add other menu links here */}
-            
+            <Link href="/#clientes" onClick={closeMobileMenuAndNavigate}>
+              <p className="flex items-center hover:bg-gray-100 text-sky-500 px-3 py-2 rounded-md text-base font-medium">
+                <TbUserHeart className="text-xl text-gray-500 mr-2" />
+                Nossos Clientes
+              </p>
+            </Link>
+
+                        <Link href="/#parceiros" onClick={closeMobileMenuAndNavigate}>
+              <p className="flex items-center hover:bg-gray-100 text-sky-500 px-3 py-2 rounded-md text-base font-medium">
+                <PiHandshake className="text-xl text-gray-500 mr-2" />
+                Parceiros NIDOTec
+              </p>
+            </Link>
+
+                        <Link href="/#depoimentos" onClick={closeMobileMenuAndNavigate}>
+              <p className="flex items-center hover:bg-gray-100 text-sky-500 px-3 py-2 rounded-md text-base font-medium">
+                <FaRegComments className="text-xl text-gray-500 mr-2" />
+                Depoimentos
+              </p>
+            </Link>
+
+            <Link href="/#blog" onClick={closeMobileMenuAndNavigate}>
+              <p className="flex items-center hover:bg-gray-100 text-sky-500 px-3 py-2 rounded-md text-base font-medium">
+                <LuNewspaper className="text-xl text-gray-500 mr-2" />
+                Notícias
+              </p>
+            </Link>
+
             <div className="pt-4 pb-4 border-t border-sky-500/20">
               <div className="flex gap-4 items-center px-3 space-y-2 flex-col">
                 <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
