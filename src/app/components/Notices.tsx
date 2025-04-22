@@ -31,7 +31,7 @@ const cardData = [
 
 export const Notices = () => {
   return (
-    <section className="lg:py-24 py-14 flex flex-col items-center justify-center bg-gradient-to-bl from-gray-50 to-gray-100">
+    <section id='blog' className="scroll-mt-20 lg:py-24 py-14 flex flex-col items-center justify-center bg-gradient-to-bl from-gray-50 to-gray-100">
       <div className="container px-4 mx-auto max-w-7xl">
 
         {/* Header Section */}

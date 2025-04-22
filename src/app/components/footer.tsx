@@ -23,10 +23,9 @@ export const Footer = () => {
             <div>
               <p className="text-lg text-white font-semibold uppercase">Institucional</p>
               <nav className="flex flex-col mt-4 space-y-4 text-base text-gray-300 items-center lg:items-start">
-                <Link href="/#Inicio">Início</Link>
-                <Link href="/#Inicio">Sobre nós</Link>
-                <Link href="/#Inicio">Depoimentos</Link>
-                <Link href="/#Inicio">Blog</Link>
+                <Link href="/#about">Sobre nós</Link>
+                <Link href="/#depoimentos">Depoimentos</Link>
+                <Link href="/#blog">Blog</Link>
               </nav>
             </div>
 
@@ -34,22 +33,19 @@ export const Footer = () => {
             <div>
               <p className="text-lg text-white font-semibold uppercase">Produtos</p>
               <nav className="flex flex-col mt-4 space-y-4 text-base text-gray-300 items-center lg:items-start">
-                <Link href="/#Inicio">Sistema NIDOImóvel</Link>
-                <Link href="/#Inicio">Sistema NIDOAdm</Link>
-                <Link href="/#Inicio">Site Para Imobiliárias</Link>
-                <Link href="/#Inicio">Sistema para Corretores</Link>
+                <Link href="/#nidoimovel">Sistema NIDOImóvel</Link>
+                <Link href="/#nidoadm">Sistema NIDOAdm</Link>
+                <Link href="/#sites">Site Para Imobiliárias</Link>
               </nav>
             </div>
 
             {/* Descubra mais */}
             <div>
-              <p className="text-lg text-white font-semibold uppercase">Descubra mais</p>
+              <p className="text-lg text-white font-semibold uppercase">Diferenciais</p>
               <nav className="flex flex-col mt-4 space-y-4 text-base text-gray-300 items-center lg:items-start">
-                <Link href="/#Inicio">Nossos Planos</Link>
-
-                <Link href="/#Inicio">Nossos Clientes</Link>
-                <Link href="/#Inicio">Parceiros NIDOTec</Link>
-                <Link href="/#Inicio">Ofertas Especiais</Link>
+                <Link href="/#planos">Nossos Planos</Link>
+                <Link href="#clientes">Nossos Clientes</Link>
+                <Link href="#parceiros">Parceiros NIDOTec</Link>
 
               </nav>
             </div>

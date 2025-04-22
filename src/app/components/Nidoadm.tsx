@@ -19,9 +19,9 @@ interface ImageData {
 const images: ImageData[] = [
   { id: 1, src: 'https://www.appfacilita.com/wp-content/themes/site-2023/dist/imgs/melhoria-home/10-imagem.png', alt: 'Imagem 1' },
   { id: 2, src: 'https://www.appfacilita.com/wp-content/themes/site-2023/dist/imgs/melhoria-home/11-imagem.png', alt: 'Imagem 2' },
-  { id: 3, src: 'https://www.appfacilita.com/wp-content/themes/site-2023/dist/imgs/melhoria-home/9-imagem.png', alt: 'Imagem 3' },
-  { id: 4, src: 'https://www.appfacilita.com/wp-content/themes/site-2023/dist/imgs/melhoria-home/2-imagem.png', alt: 'Imagem 4' },
-  { id: 5, src: 'https://www.appfacilita.com/wp-content/themes/site-2023/dist/imgs/melhoria-home/12-imagem.webp', alt: 'Imagem 5' },
+  { id: 3, src: 'https://www.appfacilita.com/wp-content/themes/site-2023/dist/imgs/melhoria-home/10-imagem.png', alt: 'Imagem 3' },
+  { id: 4, src: 'https://www.appfacilita.com/wp-content/themes/site-2023/dist/imgs/melhoria-home/11-imagem.png', alt: 'Imagem 4' },
+  { id: 5, src: 'https://www.appfacilita.com/wp-content/themes/site-2023/dist/imgs/melhoria-home/10-imagem.png', alt: 'Imagem 5' },
 ];
 
 export const Nidoadm = () => {

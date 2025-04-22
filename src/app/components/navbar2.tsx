@@ -1,190 +1,276 @@
 "use client"
 
-import { useState, useEffect } from 'react';
-import { FiMenu, FiX, FiHome, FiSettings, FiUser } from 'react-icons/fi';
-import { FaWhatsapp } from 'react-icons/fa';  // Importando o ícone do WhatsApp
 import Link from 'next/link';
+import { useState } from 'react';
+import { BiLogoPlayStore } from 'react-icons/bi';
+import { FaApple, FaWhatsapp } from 'react-icons/fa';
+import { HiOutlineOfficeBuilding } from 'react-icons/hi';
+import { IoCaretDown } from 'react-icons/io5';
 
 export const Navbar2 = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
 
-  // Tipando o estado dropdownOpen para garantir que ele tenha apenas as chaves específicas
-  const [dropdownOpen, setDropdownOpen] = useState<{
-    option1: boolean;
-    option2: boolean;
-    option3: boolean;
-  }>({
-    option1: false,
-    option2: false,
-    option3: false,
-  });
-
-  const [scrolling, setScrolling] = useState(false);
-
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-
-  // Tipando 'dropdown' explicitamente
-  const toggleDropdown = (dropdown: keyof typeof dropdownOpen) => {
-    setDropdownOpen((prev) => ({
-      ...prev,
-      [dropdown]: !prev[dropdown], // Aqui, a chave será validada
-    }));
-  };
-
-  // Hook para detectar o scroll
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolling(true);
-      } else {
-        setScrolling(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMobileDropdown = () => setIsMobileDropdownOpen(!isMobileDropdownOpen);
 
   return (
-    <nav className={`bg-white border-b border-sky-500/5 px-4 w-full max-w-full mx-auto transition-all duration-700 ease-in-out ${scrolling ? 'fixed top-0 left-0 right-0 shadow-lg z-30' : 'shadow-none'}`}>
-      <div className="container mx-auto flex items-center justify-between py-6 max-w-7xl">
-        {/* Logo */}
-        <div className="text-sky-500 font-bold text-lg">
-          <Link href="/">
-            <picture>
-              <img
-                src='/logo-novo2.png'
-                alt='Logo'
-                className="h-14 lg:h-20 object-cover"
-              />
-            </picture>
-          </Link>
-        </div>
-
-        {/* Menu Mobile Button */}
-        <button
-          onClick={toggleMenu}
-          className="lg:hidden text-sky-500 focus:outline-none"
-        >
-          {menuOpen ? (
-            <FiX className="w-6 h-6" />
-          ) : (
-            <FiMenu className="w-6 h-6" />
-          )}
-        </button>
-
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex items-center space-x-6">
-          {/* Opção 1 */}
-          <Link
-            href="/#"
-            className="font-medium text-sky-500 relative group"
-          >
-            Início
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500 transition-all duration-500 group-hover:w-full"></span>
-          </Link>
-
-          {/* Opção 2 */}
-          <Link
-            href="#about"
-            className="font-medium text-sky-500 relative group"
-          >
-            Sobre nós
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500 transition-all duration-500 group-hover:w-full"></span>
-          </Link>
-
-          {/* Opção 3 */}
-          <div
-            className="relative group"
-            onMouseEnter={() => toggleDropdown('option2')}
-            onMouseLeave={() => toggleDropdown('option2')}
-          >
-            <button className="text-sky-500 hover:text-sky-700 transition duration-300 font-medium">
-              Produtos
-            </button>
-            {dropdownOpen.option2 && (
-              <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-10 transition-all duration-300">
-                <ul>
-                  <li className="flex items-center p-2 hover:bg-sky-500 hover:text-white">
-                    <FiUser className="mr-2" /> <Link href="/#">Sub-opção 1</Link>
-                  </li>
-                  <li className="flex items-center p-2 hover:bg-sky-500 hover:text-white">
-                    <FiHome className="mr-2" /> <Link href="/#">Sub-opção 2</Link>
-                  </li>
-                </ul>
-              </div>
-            )}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500 transition-all duration-500 group-hover:w-full"></span>
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto py-6">
+        <div className="relative flex items-center justify-between h-16">
+          {/* Logo à esquerda */}
+          <div className="flex text-sky-500 font-bold text-lg items-center flex-shrink-0">
+            <Link href="/">
+              <picture>
+                <img
+                  src='/logo-novo2.png'
+                  alt='Logo'
+                  className="h-14 lg:h-20 object-cover"
+                />
+              </picture>
+            </Link>
           </div>
 
-          {/* Opção 4 */}
-          <div
-            className="relative group"
-            onMouseEnter={() => toggleDropdown('option1')}
-            onMouseLeave={() => toggleDropdown('option1')}
-          >
-            <button className="text-sky-500 hover:text-sky-700 transition duration-300 font-medium">
-              Diferenciais
-            </button>
-            {dropdownOpen.option1 && (
-              <div className="absolute left-0 mt-2 w-48 bg-white text-black rounded-lg shadow-lg z-10 transition-all duration-300">
-                <ul>
-                  <li className="flex items-center p-2 hover:bg-sky-500 hover:text-white">
-                    <FiHome className="mr-2" /> <Link href="/#">Sub-opção 1</Link>
-                  </li>
-                  <li className="flex items-center p-2 hover:bg-sky-500 hover:text-white">
-                    <FiSettings className="mr-2" /> <Link href="/#">Sub-opção 2</Link>
-                  </li>
-                </ul>
+          {/* Menu centralizado */}
+          <div className="flex-1 flex justify-center space-x-2">
+            <Link href="#">
+              <p className="text-sky-500 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Início</p>
+            </Link>
+
+            {/* Dropdown para Produtos */}
+            <div className="relative group">
+              <button className="text-sky-500 justify-center hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium flex items-center">
+                Produtos
+                <IoCaretDown className='text-xs ml-0.5' />
+              </button>
+              {/* Mega Menu */}
+              <div className="absolute left-0 mt-2 w-screen max-w-xl bg-white border border-sky-500/10 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform -translate-x-1/4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-sky-500 mb-4">Serviços NIDOTec</h3>
+                    <ul className="space-y-3">
+                      <li className='flex items-center'>
+                        <picture className='relative z-10'>
+                          <img
+                            src="/logo-icone-nidoimovel.png"
+                            alt="App screenshot"
+                            className="w-6 mr-1.5"
+                          />
+                        </picture>
+                        <Link href="#nidoimovel" className="text-gray-500 hover:text-sky-500">Sistema NIDOImóvel</Link>
+                      </li>
+                      <li className='flex items-center'>
+                        <picture className='relative z-10'>
+                          <img
+                            src="/logo-icone-nidoadm.png"
+                            alt="App screenshot"
+                            className="w-6 mr-1.5"
+                          />
+                        </picture>
+                        <Link href="#nidoadm" className="text-gray-500 hover:text-sky-500">Sistema NIDOAdm</Link>
+                      </li>
+                      <li className='flex items-center'>
+                        <picture className='relative z-10'>
+                          <img
+                            src="/logo_sites2.png"
+                            alt="App screenshot"
+                            className="w-6 mr-1.5"
+                          />
+                        </picture>
+                        <Link href="#sites" className="text-gray-500 hover:text-sky-500">Sites para Imobiliárias</Link>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-sky-500 mb-4">APP NIDOImóvel</h3>
+                    <p className='mb-2 text-gray-500'>É corretor? Baixe o APP:</p>
+
+                    <div className="flex flex-col gap-4 justify-center">
+                      <Link href='https://play.google.com/store/apps/details?id=br.com.nido.nidoimovel&pcampaignid=web_share' target='_blank' className="bg-sky-500 hover:bg-sky-600 text-white inline-flex py-3 px-4 w-52 rounded-lg items-center focus:outline-none">
+                        <BiLogoPlayStore className='text-4xl' />
+                        <span className="ml-4 flex items-start flex-col leading-none">
+                          <span className="text-xs text-white">Download na loja</span>
+                          <span className="title-font font-medium text-white text-base">Google Play</span>
+                        </span>
+                      </Link>
+
+                      <Link href='https://apps.apple.com/br/app/nidoimovel/id1490021868' target='_blank' className="bg-sky-500 hover:bg-sky-600 text-white inline-flex py-3 px-4 w-52 rounded-lg items-center focus:outline-none">
+                        <FaApple className='text-4xl' />
+                        <span className="ml-4 flex items-start flex-col leading-none">
+                          <span className="text-xs text-white">Download na loja</span>
+                          <span className="title-font font-medium text-white text-base">App Store</span>
+                        </span>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
-            )}
-            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-500 transition-all duration-500 group-hover:w-full"></span>
+            </div>
+
+            <Link href="#planos">
+              <p className="text-sky-500 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium">Planos</p>
+            </Link>
+
+            {/* Dropdown para Produtos */}
+            <div className="relative group">
+              <button className="text-sky-500 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium flex items-center">
+                Sobre Nós
+                <svg className="ml-1 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+              {/* Mega Menu */}
+              <div className="absolute left-0 mt-2 w-screen max-w-xl bg-white border border-sky-500/10 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 transform -translate-x-1/4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-6">
+                  <div>
+                    <h3 className="text-lg font-semibold text-sky-500 mb-4">NIDOTEC HUB Imobiliária</h3>
+                    <ul className="space-y-3">
+                      <li className='flex items-center gap-1'>
+                        <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
+                          <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
+                        </button>
+                        <a href="#" className="text-gray-500 hover:text-sky-500">Sobre nós</a>
+                      </li>
+
+                      <li className='flex items-center gap-1'>
+                        <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
+                          <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
+                        </button>
+
+                        <a href="#" className="text-gray-500 hover:text-sky-500">Integrações</a>
+                      </li>
+                      <li className='flex items-center gap-1'>
+                        <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
+                          <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
+                        </button>
+
+                        <a href="#" className="text-gray-500 hover:text-sky-500">Nossos Clientes</a>
+                      </li>
+                      <li className='flex items-center gap-1'>
+                        <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
+                          <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
+                        </button>
+                        <a href="#" className="text-gray-500 hover:text-sky-500">Parceiros NIDOTec</a>
+                      </li>
+
+                      <li className='flex items-center gap-1'>
+                        <button className="p-2 bg-sky-500/10 rounded-lg cursor-default">
+                          <HiOutlineOfficeBuilding className="text-xl text-sky-500" />
+                        </button>
+
+                        <a href="#" className="text-gray-500 hover:text-sky-500">Depoimentos</a>
+                      </li>
+
+                    </ul>
+                  </div>
+
+
+
+                  <div>
+                    <h3 className="text-lg font-semibold text-sky-500 mb-4">Notícias</h3>
+                    <div className="bg-gray-100 p-4 rounded-lg">
+                      <picture>
+                        <img src="https://images.unsplash.com/photo-1546435770-a3e426bf472b?q=80&w=2065&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Featured Product" className="rounded-lg mb-3" />
+                      </picture>
+                      <h4 className="font-medium text-sky-500">Conhece a NIDOTec?</h4>
+                      <p className="text-sm text-gray-500 mb-2">Check out our latest product offering with advanced features.</p>
+                      <a href="#" className="text-sky-500 hover:text-sky-600 text-sm font-medium">Saiba mais →</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Buttons */}
-        <div className="hidden lg:flex space-x-4">
-          {/* Ícone do WhatsApp ao lado do número */}
-          <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
-            <FaWhatsapp className="w-5 h-5 mr-1" />
-            (11) 4508-3724
-          </Link>
+          {/* Login à direita */}
+          <div className="flex items-center space-x-4">
+            {/* Ícone do WhatsApp ao lado do número */}
+            <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
+              <FaWhatsapp className="w-5 h-5 mr-1" />
+              (11) 4508-3724
+            </Link>
 
-          <Link href="https://portal.nido.com.br" target="_blank" className="bg-sky-500 text-white py-3 px-6 rounded-md hover:bg-sky-600 transition duration-300">
-            Portal do Cliente
-          </Link>
+            <Link href="https://portal.nido.com.br" target="_blank" className="bg-gradient-to-r from-sky-600 to-sky-500 text-white py-3 px-6 rounded-md hover:bg-sky-600 transition duration-300">
+              Portal do Cliente
+            </Link>
+          </div>
+
+          <div className="sm:hidden">
+            <button
+              type="button"
+              onClick={toggleMobileMenu}
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
+            >
+              <span className="sr-only">Open main menu</span>
+              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="lg:hidden bg-white p-6 space-y-6">
-          <Link href="/#" className="font-medium text-sky-500">Início</Link>
-          <Link href="/#" className="font-medium text-sky-500">Sobre nós</Link>
-          <div>
-            <button className="font-medium text-sky-500">Produtos</button>
-            <div className="space-y-2">
-              <Link href="/#" className="block font-medium text-sky-500">Sub-opção 1</Link>
-              <Link href="/#" className="block font-medium text-sky-500">Sub-opção 2</Link>
+      {isMobileMenuOpen && (
+        <div className="sm:hidden">
+          <div className="px-2 pt-2 pb-3 space-y-1">
+            <Link href="#">
+              <p className="bg-gray-100 text-sky-500 block px-3 py-2 rounded-md text-base font-medium">Home</p>
+            </Link>
+            {/* Mobile Dropdown */}
+            <div className="relative">
+              <button
+                className="w-full text-left text-sky-500 hover:bg-gray-100 px-3 py-2 rounded-md text-base font-medium flex items-center justify-between"
+                onClick={toggleMobileDropdown}
+              >
+                Products
+                <svg className="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+              <div className={`hidden px-4 py-2 ${isMobileDropdownOpen ? 'block' : 'hidden'}`}>
+                <div className="border-l-2 border-indigo-500 pl-2 mb-4">
+                  <h4 className="font-medium text-sky-500 mb-2">Software</h4>
+                  <ul className="space-y-2">
+                    <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Web Development</a></li>
+                    <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Mobile Apps</a></li>
+                    <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Desktop Software</a></li>
+                  </ul>
+                </div>
+                <div className="border-l-2 border-indigo-500 pl-2">
+                  <h4 className="font-medium text-sky-500 mb-2">Hardware</h4>
+                  <ul className="space-y-2">
+                    <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Laptops</a></li>
+                    <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Desktops</a></li>
+                    <li><a href="#" className="text-gray-500 hover:text-sky-500 block">Accessories</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <Link href="#">
+              <p className="text-sky-500 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Services</p>
+            </Link>
+            <Link href="#">
+              <p className="text-sky-500 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">About</p>
+            </Link>
+            <Link href="#">
+              <p className="text-sky-500 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">Contact</p>
+            </Link>
+            <div className="pt-4 pb-3 border-t border-gray-200">
+              <div className="flex items-center px-3 space-y-2 flex-col">
+                <Link href="#">
+                  <p className="block w-full text-center text-sky-500 bg-gray-100 px-3 py-2 rounded-md text-base font-medium">
+                    Login
+                  </p>
+                </Link>
+                <Link href="#">
+                  <p className="block w-full text-center text-sky-500 bg-gray-100 px-3 py-2 rounded-md text-base font-medium">
+                    Sign up
+                  </p>
+                </Link>
+              </div>
             </div>
           </div>
-          <div>
-            <button className="font-medium text-sky-500">Diferenciais</button>
-            <div className="space-y-2">
-              <Link href="/#" className="block font-medium text-sky-500">Sub-opção 1</Link>
-              <Link href="/#" className="block font-medium text-sky-500">Sub-opção 2</Link>
-            </div>
-          </div>
-
-          <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
-            <FaWhatsapp className="w-5 h-5 mr-1" />
-            (11) 4508-3724
-          </Link>
-          <Link href="https://portal.nido.com.br" target="_blank" className="bg-sky-500 text-white py-3 px-6 rounded-md hover:bg-sky-600 transition duration-300">
-            Portal do Cliente
-          </Link>
         </div>
       )}
     </nav>

@@ -20,8 +20,8 @@ export const Parceiros = () => {
   ];
 
   return (
-    <section
-      className="w-full bg-gradient-to-r from-gray-50 to-gray-100 lg:py-24 py-14 flex flex-col items-center justify-center"
+    <section id='parceiros'
+      className="scroll-mt-28 w-full bg-gradient-to-r from-gray-50 to-gray-100 lg:py-24 py-14 flex flex-col items-center justify-center"
     >
       {/* Container Centralizado */}
       <div className="flex flex-col w-full max-w-screen-xl mx-auto px-4">

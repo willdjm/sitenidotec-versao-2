@@ -19,7 +19,7 @@ export const About = () => {
   };
 
   return (
-    <section className="lg:py-16 py-14 flex flex-col items-center justify-center bg-gradient-to-r from-sky-600 to-sky-500">
+    <section id="about" className="scroll-mt-28 lg:py-16 py-14 flex flex-col items-center justify-center bg-gradient-to-r from-sky-600 to-sky-500">
       <div className="container lg:mb-20 lg:px-0 px-4 mx-auto max-w-7xl">
         {/* Header */}
         <div className="mx-auto mb-8 w-full flex items-center justify-center lg:max-w-3xl">

@@ -6,7 +6,7 @@ import { Contact } from "./components/contact";
 import { FloatingButtons } from "./components/FloatingButtons";
 import { Footer } from "./components/footer";
 import { IntegracaoPortais } from "./components/IntegracaoPortais";
-import { Navbar } from "./components/navbar";
+import { Navbar2 } from "./components/navbar2";
 import { Nidoadm } from "./components/Nidoadm";
 import { Nidoimovel } from "./components/Nidoimovel";
 
@@ -21,7 +21,7 @@ import { Testimonial } from "./components/testimonial";
 export default function Home() {
   return (
 <main>
-  <Navbar/>
+  <Navbar2/>
   <Banner/>
   <Produtos/>
   <About/>

@@ -20,7 +20,7 @@ const logosLinha1 = [
 
 export const Clientes = () => {
   return (
-    <section className="bg-[url('/fundo-parceiros.png')] bg-center lg:bg-repeat-x lg:bg-contain lg:py-16 py-5 flex flex-col items-center justify-center bg-white overflow-hidden">
+    <section id='clientes' className=" bg-[url('/fundo-parceiros.png')] bg-center lg:bg-repeat-x lg:bg-contain lg:py-16 py-5 flex flex-col items-center justify-center bg-white overflow-hidden">
 
       <div className="container px-2 sm:px-4 mx-auto max-w-7xl relative">
 

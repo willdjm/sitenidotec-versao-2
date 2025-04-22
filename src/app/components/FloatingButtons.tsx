@@ -11,39 +11,11 @@ export const FloatingButtons: React.FC = () => {
   return (
     <div className="fixed bottom-8 right-8 flex flex-col items-center space-y-4">
       {/* WhatsApp */}
-      <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/551145083724" target="_blank" rel="noopener noreferrer">
         <button className="bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition-colors">
           <FaWhatsapp size={24} />
         </button>
       </a>
-
-      {/* Instagram */}
-      {/* <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-        <button className="bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:from-purple-600 hover:to-pink-600 transition-colors">
-          <FaInstagram size={24} />
-        </button>
-      </a> */}
-
-      {/* Facebook */}
-      {/* <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-        <button className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors">
-          <FaFacebookF size={24} />
-        </button>
-      </a> */}
-
-      {/* YouTube */}
-      {/* <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">
-        <button className="bg-red-600 text-white p-4 rounded-full shadow-lg hover:bg-red-700 transition-colors">
-          <FaYoutube size={24} />
-        </button>
-      </a> */}
-
-      {/* LinkedIn */}
-      {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-        <button className="bg-blue-700 text-white p-4 rounded-full shadow-lg hover:bg-blue-800 transition-colors">
-          <FaLinkedinIn size={24} />
-        </button>
-      </a> */}
 
       {/* Botão de Voltar ao Topo */}
       <button

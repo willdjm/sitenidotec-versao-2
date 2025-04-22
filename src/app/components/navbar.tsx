@@ -48,7 +48,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav id="home" className={`bg-white border-b border-sky-500/5 px-4 w-full max-w-full mx-auto transition-all duration-700 ease-in-out ${scrolling ? 'fixed top-0 left-0 right-0 shadow-lg z-30' : 'shadow-none'}`}>
+    <nav className={`bg-white border-b border-sky-500/5 px-4 w-full max-w-full mx-auto transition-all duration-700 ease-in-out ${scrolling ? 'fixed top-0 left-0 right-0 shadow-lg z-30' : 'shadow-none'}`}>
       <div className="container mx-auto flex items-center justify-between py-6 max-w-7xl">
         {/* Logo */}
         <div className="text-sky-500 font-bold text-lg">
