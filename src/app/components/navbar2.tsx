@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { BiLogoPlayStore } from 'react-icons/bi';
-import { FaApple, FaRegComments, FaWhatsapp } from 'react-icons/fa';
+import { FaApple, FaBars, FaRegComments, FaTimes, FaWhatsapp } from 'react-icons/fa';
 import { IoCaretDown, IoFingerPrint } from 'react-icons/io5';
 import { LuNewspaper } from 'react-icons/lu';
 import { PiHandshake, PiNetwork } from 'react-icons/pi';
@@ -177,10 +177,17 @@ export const Navbar2 = () => {
 
           {/* Login à direita */}
           <div className="lg:flex items-center space-x-4 hidden">
-            <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
+
+          <Link href="https://wa.me/551145083724" target="_blank"
+    className="flex items-center relative text-sky-500 hover:text-sky-600 cursor-pointer transition-all ease-in-out before:transition-[width] before:ease-in-out before:duration-500 before:absolute before:bg-sky-500 before:origin-center before:h-[1.5px] before:w-0 hover:before:w-[50%] before:-bottom-1 before:left-[50%] after:transition-[width] after:ease-in-out after:duration-700 after:absolute after:bg-sky-500 after:origin-center after:h-[1.5px] after:w-0 hover:after:w-[50%] after:-bottom-1 after:right-[50%]">
+                      <FaWhatsapp className="w-5 h-5 mr-1" />
+                      (11) 4508-3724
+  </Link>
+
+            {/* <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
               <FaWhatsapp className="w-5 h-5 mr-1" />
               (11) 4508-3724
-            </Link>
+            </Link> */}
 
             <Link href="https://portal.nido.com.br" target="_blank" className="bg-gradient-to-r from-sky-600 to-sky-500 text-white py-3 px-6 rounded-md hover:bg-sky-600 transition duration-300">
               Portal do Cliente
@@ -192,13 +199,15 @@ export const Navbar2 = () => {
             <button
               type="button"
               onClick={toggleMobileMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-sky-500"
               aria-expanded={isMobileMenuOpen ? 'true' : 'false'}
             >
               <span className="sr-only">Open main menu</span>
-              <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              {isMobileMenuOpen ? (
+                <FaTimes className="block h-6 w-6" />
+              ) : (
+                <FaBars className="block h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
@@ -297,6 +306,7 @@ export const Navbar2 = () => {
 
             <div className="pt-4 pb-4 border-t border-sky-500/20">
               <div className="flex gap-4 items-center px-3 space-y-2 flex-col">
+  
                 <Link href="https://wa.me/551145083724" target="_blank" className="flex items-center text-sky-500 hover:text-sky-700 transition duration-300">
                   <FaWhatsapp className="w-5 h-5 mr-1" />
                   (11) 4508-3724
