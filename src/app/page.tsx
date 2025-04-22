@@ -3,6 +3,7 @@ import { About } from "./components/About";
 import { Banner } from "./components/Banner";
 import { Clientes } from "./components/Clientes";
 import { Contact } from "./components/contact";
+import { FloatingButtons } from "./components/FloatingButtons";
 import { Footer } from "./components/footer";
 import { IntegracaoPortais } from "./components/IntegracaoPortais";
 import { Navbar } from "./components/navbar";
@@ -35,6 +36,7 @@ export default function Home() {
 <Testimonial/>
 <Contact/>
   <Footer/>
+  <FloatingButtons/>
 
 </main>
   );

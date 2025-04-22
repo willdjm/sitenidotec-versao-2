@@ -48,7 +48,7 @@ export const FloatingButtons: React.FC = () => {
       {/* Botão de Voltar ao Topo */}
       <button
         onClick={scrollToTop}
-        className="bg-zinc-400 text-white p-4 rounded-full shadow-lg hover:bg-gray-500 transition-colors"
+        className="scroll-mt-28 bg-gradient-to-r from-sky-600 to-sky-500 text-white p-4 rounded-full shadow-lg hover:bg-sky-600 transition-colors"
       >
         <FaArrowUp size={24} />
       </button>

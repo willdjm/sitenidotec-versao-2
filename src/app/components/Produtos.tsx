@@ -25,7 +25,7 @@ export const Produtos = () => {
         <div className="grid gap-10 md:grid-cols-3 lg:gap-5 mb-10">
 
           {/* Card 1 - Gestão Imobiliária */}
-          <div className="rounded-xl bg-sky-500 p-2 lg:p-4 text-center shadow-lg hover:shadow-gray-300 transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
+          <div className="rounded-xl bg-gradient-to-r from-sky-600 to-sky-500 p-2 lg:p-4 text-center shadow-lg hover:shadow-gray-300 transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
             <div className="mx-auto flex h-16 w-16 lg:-translate-y-11 -translate-y-9 transform items-center justify-center">
               <picture>
                 <img
@@ -41,7 +41,7 @@ export const Produtos = () => {
             </p>
 
             {/* Link para mais informações */}
-            <Link href='' className="items-center mb-5 font-medium inline-flex justify-center group relative w-max text-white">
+            <Link href='#nidoimovel' className="items-center mb-5 font-medium inline-flex justify-center group relative w-max text-white">
               <span>Saiba mais</span>
               <IoArrowForward className="text-base ml-2" />
               <span className="absolute -bottom-0.5 left-0 w-0 transition-all duration-500 h-0.5 bg-white group-hover:w-full"></span>
@@ -49,7 +49,7 @@ export const Produtos = () => {
           </div>
 
           {/* Card 2 - Administração de Locações */}
-          <div className="rounded-xl bg-sky-500 p-2 lg:p-4 text-center shadow-lg hover:shadow-gray-300 transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
+          <div className="rounded-xl bg-gradient-to-r from-sky-600 to-sky-500 p-2 lg:p-4 text-center shadow-lg hover:shadow-gray-300 transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
             <div className="mx-auto flex h-16 w-16 lg:-translate-y-10 -translate-y-8 transform items-center justify-center">
               <picture>
                 <img
@@ -63,7 +63,7 @@ export const Produtos = () => {
             <p className="text-white text-center mb-2 lg:mb-4 text-sm lg:text-base">
               Gestão das locações na palma da mão. Com o NIDOAdm, imobiliárias e proprietários têm total controle e facilidade na administração de locações. O sistema oferece uma gestão eficiente, com recursos para monitorar contratos, pagamentos e manutenção, garantindo mais praticidade e organização no dia a dia.
             </p>
-            <Link href='' className="items-center mb-5 font-medium inline-flex justify-center group relative w-max text-white">
+            <Link href='#nidoadm' className="items-center mb-5 font-medium inline-flex justify-center group relative w-max text-white">
               <span>Saiba mais</span>
               <IoArrowForward className="text-base ml-2" />
               <span className="absolute -bottom-0.5 left-0 w-0 transition-all duration-500 h-0.5 bg-white group-hover:w-full"></span>
@@ -71,7 +71,7 @@ export const Produtos = () => {
           </div>
 
           {/* Card 3 - Sites para Imobiliárias */}
-          <div className="rounded-xl bg-sky-500 p-2 lg:p-4 text-center shadow-lg hover:shadow-gray-300 transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
+          <div className="rounded-xl bg-gradient-to-r from-sky-600 to-sky-500 p-2 lg:p-4 text-center shadow-lg hover:shadow-gray-300 transition-all duration-500 hover:shadow-xl hover:-translate-y-4">
             <div className="mx-auto flex h-16 w-16 lg:-translate-y-10 -translate-y-8 transform items-center justify-center">
               <picture>
                 <img
@@ -85,7 +85,7 @@ export const Produtos = () => {
             <p className="text-white text-center mb-2 lg:mb-4 text-sm lg:text-base">
               Os melhores sites para o mercado imobiliário. Oferecemos opções de sites prontos para o mercado imobiliário, com recursos que permitem personalizar cores, textos, logotipo e outras funcionalidades. Esses sites são ideais para profissionais que buscam praticidade, design moderno e uma presença online eficiente.
             </p>
-            <Link href='' className="items-center mb-5 font-medium inline-flex justify-center group relative w-max text-white">
+            <Link href='#sites' className="items-center mb-5 font-medium inline-flex justify-center group relative w-max text-white">
               <span>Saiba mais</span>
               <IoArrowForward className="text-base ml-2" />
               <span className="absolute -bottom-0.5 left-0 w-0 transition-all duration-500 h-0.5 bg-white group-hover:w-full"></span>

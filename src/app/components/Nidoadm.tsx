@@ -35,7 +35,7 @@ export const Nidoadm = () => {
   };
 
   return (
-    <section id='nidoadm' className="py-10 bg-white">
+    <section id='nidoadm' className="scroll-mt-28 py-10 bg-white">
       <div className="flex flex-col px-5 mx-auto max-w-7xl xl:px-0">
 
         {/* Header Section */}

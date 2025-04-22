@@ -8,7 +8,7 @@ export const SitesParaImobiliarias = () => {
 
 
   return (
-    <section className="lg:py-16 py-12 bg-gradient-to-r from-gray-50 to-gray-100">
+    <section id="sites" className="scroll-mt-28 lg:py-16 py-12 bg-gradient-to-r from-gray-50 to-gray-100">
       <div className="px-4 mx-auto max-w-7xl">
 
 

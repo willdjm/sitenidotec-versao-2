@@ -12,7 +12,7 @@ import { TbMessage2Check, TbReportAnalytics } from "react-icons/tb";
 export const Nidoimovel = () => {
 
   return (
-    <section className="py-10 bg-gradient-to-bl from-gray-50 to-gray-100">
+    <section id="nidoimovel" className="scroll-mt-28 py-10 bg-gradient-to-bl from-gray-50 to-gray-100">
       <div className="flex flex-col px-4 mx-auto max-w-7xl xl:px-0">
 
         {/* Header Section */}

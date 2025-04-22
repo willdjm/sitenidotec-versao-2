@@ -5,7 +5,7 @@ import { FiMenu, FiX, FiHome, FiSettings, FiUser } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';  // Importando o ícone do WhatsApp
 import Link from 'next/link';
 
-export const Navbar = () => {
+export const Navbar2 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   // Tipando o estado dropdownOpen para garantir que ele tenha apenas as chaves específicas
@@ -48,7 +48,7 @@ export const Navbar = () => {
   }, []);
 
   return (
-    <nav id="home" className={`bg-white border-b border-sky-500/5 px-4 w-full max-w-full mx-auto transition-all duration-700 ease-in-out ${scrolling ? 'fixed top-0 left-0 right-0 shadow-lg z-30' : 'shadow-none'}`}>
+    <nav className={`bg-white border-b border-sky-500/5 px-4 w-full max-w-full mx-auto transition-all duration-700 ease-in-out ${scrolling ? 'fixed top-0 left-0 right-0 shadow-lg z-30' : 'shadow-none'}`}>
       <div className="container mx-auto flex items-center justify-between py-6 max-w-7xl">
         {/* Logo */}
         <div className="text-sky-500 font-bold text-lg">
@@ -152,7 +152,7 @@ export const Navbar = () => {
             (11) 4508-3724
           </Link>
 
-          <Link href="https://portal.nido.com.br" target="_blank" className="bg-gradient-to-r from-sky-600 to-sky-500 text-white py-3 px-6 rounded-md hover:bg-sky-600 transition duration-300">
+          <Link href="https://portal.nido.com.br" target="_blank" className="bg-sky-500 text-white py-3 px-6 rounded-md hover:bg-sky-600 transition duration-300">
             Portal do Cliente
           </Link>
         </div>

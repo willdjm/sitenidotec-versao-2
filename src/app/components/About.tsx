@@ -59,9 +59,9 @@ export const About = () => {
               <p className="text-xl text-white text-justify hidden lg:block">|</p>
 
               <Link href='#' target="_blank" className="items-center font-medium inline-flex justify-center group relative w-max text-white">
-            <span>Conheça mais</span>
-            <IoArrowForward className="text-base ml-2 transition-transform duration-300 group-hover:translate-x-2" />
-          </Link>
+                <span>Conheça mais</span>
+                <IoArrowForward className="text-base ml-2 transition-transform duration-300 group-hover:translate-x-2" />
+              </Link>
 
 
             </div>
@@ -74,25 +74,25 @@ export const About = () => {
             {/* Círculo inferior esquerdo */}
             <div className="absolute lg:bottom-[-95px] lg:left-[-50px] lg:w-[200px] lg:h-[200px] h-28 w-28 -bottom-6 -left-4 bg-white rounded-full opacity-10 z-0"></div>
 
-            <div className="flex items-center justify-center w-full relative z-10">
-              <div className="flex flex-col items-end px-3">
+            <div className="flex items-center justify-center w-full relative z-10 gap-2 lg:gap-0">
+              <div className="flex flex-col items-end lg:px-3 gap-3 lg:gap-0">
                 <picture>
                   <img
-                    className="object-cover mb-6 rounded shadow-lg h-32 sm:h-48 xl:h-64 w-32 sm:w-48 xl:w-64 z-10"
+                    className="object-cover lg:mb-6 rounded shadow-lg h-36 sm:h-48 xl:h-64 w-36 sm:w-48 xl:w-64 z-10"
                     src="/banner-clientes-mobile.png"
                     alt=""
                   />
                 </picture>
                 <picture>
                   <img
-                    className="object-cover w-28 h-28 rounded shadow-lg sm:h-32 xl:h-48 sm:w-32 xl:w-48 z-10"
+                    className="object-cover w-32 h-32 rounded shadow-lg sm:h-32 xl:h-48 sm:w-32 xl:w-48 z-10"
                     src="/banner-gestao-mobile.png"
                     alt=""
                   />
                 </picture>
               </div>
 
-              <div className="px-3">
+              <div className="lg:px-3">
                 <picture>
                   <img
                     className="object-cover w-48 h-48 rounded shadow-lg sm:hbg-green-500ray-50-64 xl:h-96 sm:w-full xl:w-96 z-10"

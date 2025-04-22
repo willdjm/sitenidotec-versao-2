@@ -8,14 +8,14 @@ export const Footer = () => {
       <div className="max-w-screen-xl px-4 mx-auto lg:px-0">
         <div className="grid grid-cols-1 gap-6 lg:gap-16 lg:grid-cols-4 text-center lg:text-left">
           {/* Logo e Descrição */}
-          <div className="flex flex-col gap-4 text-white items-center lg:items-start">
+          <Link href='#home' className="scroll-mt-28 flex flex-col gap-4 text-white items-center lg:items-start">
             <picture>
               <img src="/logonovo.png" alt="logo" />
             </picture>
             <p className="lg:text-justify">
               Há mais de 32 anos especializada em soluções tecnológicas para o ramo imobiliário.
             </p>
-          </div>
+          </Link>
 
           {/* Links de navegação */}
           <div className="grid grid-cols-1 lg:gap-5 gap-14 lg:col-span-3 sm:grid-cols-2 lg:grid-cols-4 items-center lg:items-start">
