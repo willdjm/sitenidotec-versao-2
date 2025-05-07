@@ -10,21 +10,21 @@ const cardData = [
     id: 1,
     title: "Você sabia que a NIDO faz parte do Grupo Porto Seguro?",
     description: "Because it's about motivating the doers. Because I'm here to follow my dreams and inspire others.",
-    imgSrc: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80", 
+    imgSrc: "https://s3.amazonaws.com/static.nidoimovel.com.br/7143d7fbadfa4693b9eec507d9d37443/imovel/GB/GB38533/GB38533008.jpg?1737546401", 
     link: "https://www.nido.com.br"
   },
   {
     id: 2,
     title: "A NIDO está fazendo aniversário, mas quem ganha o presente é você!",
     description: "UI/UX design is all about making the experience seamless.",
-    imgSrc: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80",
+    imgSrc: "https://s3.amazonaws.com/static.nidoimovel.com.br/5c572eca050594c7bc3c36e7e8ab9550/imovel/MI/MI80147/dbedd6c2930ecced598441745afdc97e.jpg?1624136125",
     link: "https://www.nido.com.br"
   },
   {
     id: 3,
     title: "Você conhe o Aluguel Garantido Porto?",
     description: "Mastering the creative process is key to producing designs that stand out and perform well.",
-    imgSrc: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80", 
+    imgSrc: "https://s3.amazonaws.com/static.nidoimovel.com.br/7143d7fbadfa4693b9eec507d9d37443/imovel/GB/GB27846/4d01ce681731739a15e9890fb1ff5986.jpg?1575994941", 
     link: "https://www.nido.com.br"
   }
 ];
